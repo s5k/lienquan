@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Homepage from './containers/Homepage'
 import About from './containers/About'
+import './App.css'
 
 export default function BasicExample() {
   return (
