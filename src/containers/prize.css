@@ -1,0 +1,10 @@
+.prizepage{
+  width: 66.5%;
+  margin: 0 auto;
+  text-align: center;
+  height: 90vh;
+}
+.prizepage img{
+  max-width: 100%;
+  width: 100%;
+}

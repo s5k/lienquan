@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +8,105 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background-image: url(./images/bg.jpg);
+  background-size: 100% 100%;
+  color: #fff;
+  font-size: calc(0.1em + 1vw);
+}
+#root{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.main{
+  width: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+a,a:hover,a:focus{
+  text-decoration: none;
+  color: #fff;
+}
+/* sidebar css */
+.bnt-sidebar{
+  font-size: 2em;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+.sidebar ul,.sidebar li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sidebar{
+  position: fixed;
+  width: 15vw;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  top: 0px;
+  left: 0px;
+  z-index: 9;
+}
+.sidebar .logo-aic{
+  max-width: 68%;
+  margin: 5% 0 0 5%;
+}
+.top-sidebar{
+  position: relative;
+  margin-bottom: 20%;
+}
+.close-menu{
+  font-size: 2em;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar li{
+  font-size: calc(0.1em + 1vw);
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 5% 0px 5% 10%;
+  border-bottom: 1px solid #fff;
+  border-image: url(./images/sidebar-line.png) 1 round;
+  position: relative;
+}
+.sidebar li svg{
+  margin-right: 5%;
+}
+.sidebar li.active a,.sidebar li:hover a{
+  color: #ffc46f;
+}
+.sidebar li.active::before,.sidebar li:hover::before{
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 100%;
+  background: #ffc46f;
+  left: 0px;
+  top: 0px;
+  -webkit-box-shadow: -1px 0px 13px 2px #ffc46f;
+  -moz-box-shadow: -1px 0px 13px 2px #ffc46f;
+  box-shadow: -1px 0px 13px 2px #ffc46f;
+}
+.language{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+.language .select-language{
+  border:none;
+  background: none;
+  color: #fff;
+}
+.language .select-language:focus{
+  outline: none;
+}
+.language .select-language option{
+  color: #000;
 }

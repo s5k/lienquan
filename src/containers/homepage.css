@@ -1,0 +1,73 @@
+.homepage{
+  width: 62.5%;
+  margin: 0 auto;
+  text-align: center;
+  height: 90vh;
+  position: relative;
+}
+.home-intro img{
+  height: 21vh;
+}
+.btn-watch-now{
+  border: 1px solid #ffc46f;
+  font-style: italic;
+  padding: 5px 15px;
+  background: #000;
+  font-weight: 600;
+  display: inline-block;
+}
+.btn-watch-now svg.circle{
+  padding: 4px;
+  color: red;
+}
+.home-menu{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2vh;
+}
+.menu-item{
+  display: flex;
+  width: 23.5%;
+  position: relative;
+  flex-wrap: wrap;
+}
+.menu-item img{
+  max-width: 100%;
+  width: 100%;
+  max-height: 40vh;
+}
+.menu-item:nth-child(2),.menu-item:nth-child(3){
+  margin: 0px 1%;
+}
+.menu-item:nth-child(2){
+  margin-left: 2%;
+}
+.menu-item:nth-child(3){
+  margin-right: 2%;
+}
+.menu-text{
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background: rgba(0,0,0,0.8);
+}
+.menu-text .menu-icon{
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #000;
+  border: 1px solid #ffc46f;
+  width: calc(2em + 2px);
+  line-height: 2em;
+  border-radius: 50%;
+}
+.menu-text a{
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 1.3em 0px 0.5em 0px;
+  font-size: calc(0.2em + 1vw);
+}
