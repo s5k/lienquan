@@ -7,8 +7,12 @@ import { faHome,faTrophy,faList,faFile,faNewspaper,faBell,faUsers,faImage,faTime
 import logoAic from './images/logo-aic.png'
 import Homepage from './containers/Homepage'
 import About from './containers/About'
+<<<<<<< HEAD
 import Prize from './containers/Prize'
 import Schedule from './containers/Schedule'
+=======
+import './App.css'
+>>>>>>> 0c63646383d3ca8c4e34eee8369656f3dbdac092
 
 export default function BasicExample() {
   library.add(fab, faHome,faTrophy,faList,faFile,faNewspaper,faBell,faUsers,faImage,faTimes,faBars)
