@@ -16,10 +16,10 @@ import {
   faBars
 } from '@fortawesome/free-solid-svg-icons'
 import logoAic from './images/logo-aic.png'
-import Homepage from './containers/Homepage'
-import About from './containers/About'
-import Prize from './containers/Prize'
-import Schedule from './containers/Schedule'
+import Homepage from './containers/Homepage/Homepage'
+import About from './containers/About/About'
+import Prize from './containers/Prize/Prize'
+import Schedule from './containers/Schedule/Schedule'
 
 export default function BasicExample() {
   library.add(

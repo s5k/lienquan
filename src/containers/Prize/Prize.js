@@ -1,6 +1,6 @@
 import React from 'react'
-import './prize.css';
-import imagePrize from '../images/prize.png'
+import './prize.css'
+import imagePrize from '../../images/prize.png'
 export default () => {
   return (
     <div className="prizepage">
