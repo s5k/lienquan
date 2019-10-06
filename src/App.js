@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -23,8 +23,9 @@ import About from './containers/About/About'
 import Prize from './containers/Prize/Prize'
 import Schedule from './containers/Schedule/Schedule'
 
+export default function() {
+  const [isSidebarOpen, setCollapseSidebar] = useState(false)
 
-export default function BasicExample() {
   library.add(
     fab,
     faHome,
@@ -38,17 +39,25 @@ export default function BasicExample() {
     faTimes,
     faBars
   )
+
   return (
     <Router>
-      
-      <div className="sidebar">
+      <div className={isSidebarOpen ? 'sidebar open-sidebar' : 'sidebar'}>
         <div className="top-sidebar">
           <div className="btn-close-menu">
             <img src={logoAic} alt="Logo AIC" className="logo-aic" />
-            <FontAwesomeIcon icon="times" className="close-menu" />
+            <FontAwesomeIcon
+              icon="times"
+              className="close-menu"
+              onClick={() => setCollapseSidebar(false)}
+            />
           </div>
           <div className="bnt-sidebar">
-            <FontAwesomeIcon icon="bars" className="bnt-sidebar"/>
+            <FontAwesomeIcon
+              icon="bars"
+              className="bnt-sidebar"
+              onClick={() => setCollapseSidebar(true)}
+            />
           </div>
         </div>
         <ul>
