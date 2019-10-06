@@ -31,6 +31,26 @@ a,a:hover,a:focus{
   text-decoration: none;
   color: #fff;
 }
+.scroll-up-menu,.scroll-down-menu{
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  line-height: 1.5em;
+  color: #ffc46f;
+  border:1px solid #ffc46f;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(0,0,0,0.7)
+}
+.scroll-up-menu{
+  top: 1%;
+}
+.scroll-down-menu{
+  bottom: 1%;
+}
 /* sidebar css */
 .bnt-sidebar{
   font-size: 1.5em;
