@@ -46,6 +46,9 @@ export default function() {
 
   return (
     <Router>
+      <div className="scroll-up-menu">
+        <FontAwesomeIcon icon="arrow-up"/>
+      </div>
       <div className={isSidebarOpen ? 'sidebar open-sidebar' : 'sidebar'}>
         <div className="top-sidebar">
           <div className="btn-close-menu">
