@@ -42,7 +42,6 @@ export default function BasicExample() {
     <Router>
       
       <div className="sidebar">
-        
         <div className="top-sidebar">
           <div className="btn-close-menu">
             <img src={logoAic} alt="Logo AIC" className="logo-aic" />

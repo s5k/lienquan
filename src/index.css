@@ -43,7 +43,7 @@ a,a:hover,a:focus{
 }
 .sidebar{
   position: fixed;
-  width: 15vw;
+  width: 8vw;
   height: 100%;
   background: rgba(0,0,0,0.5);
   top: 0px;
@@ -83,6 +83,12 @@ a,a:hover,a:focus{
 }
 .sidebar li svg{
   margin-right: 5%;
+}
+.sidebar.open-sidebar{
+  width: 15vw;
+}
+.sidebar.open-sidebar li span{
+  display: block;
 }
 /* .sidebar li.active a,.sidebar li:hover a{
   color: #ffc46f;
