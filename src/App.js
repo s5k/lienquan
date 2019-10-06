@@ -13,7 +13,9 @@ import {
   faUsers,
   faImage,
   faTimes,
-  faBars
+  faBars,
+  faArrowUp,
+  faArrowDown
 } from '@fortawesome/free-solid-svg-icons'
 import logoAic from './images/logo-aic.png'
 import './App.css'
@@ -36,11 +38,15 @@ export default function BasicExample() {
     faUsers,
     faImage,
     faTimes,
-    faBars
+    faBars,
+    faArrowUp,
+    faArrowDown
   )
   return (
     <Router>
-      
+      <div className="scroll-up-menu">
+        <FontAwesomeIcon icon="arrow-up"/>
+      </div>
       <div className="sidebar">
         <div className="top-sidebar">
           <div className="btn-close-menu">
@@ -106,6 +112,9 @@ export default function BasicExample() {
         <Route path="/about" component={About} />
         <Route path="/prize" component={Prize} />
         <Route path="/schedule" component={Schedule} />
+      </div>
+      <div className="scroll-down-menu">
+        <FontAwesomeIcon icon="arrow-down" />
       </div>
     </Router>
   )
