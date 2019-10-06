@@ -40,53 +40,55 @@ export default function BasicExample() {
   )
   return (
     <Router>
-      <div className="bnt-sidebar">
-        <Link to="/">
-          <FontAwesomeIcon icon="bars" />
-        </Link>
-      </div>
+      
       <div className="sidebar">
+        
         <div className="top-sidebar">
-          <img src={logoAic} alt="Logo AIC" className="logo-aic" />
-          <FontAwesomeIcon icon="times" className="close-menu" />
+          <div className="btn-close-menu">
+            <img src={logoAic} alt="Logo AIC" className="logo-aic" />
+            <FontAwesomeIcon icon="times" className="close-menu" />
+          </div>
+          <div className="bnt-sidebar">
+            <FontAwesomeIcon icon="bars" className="bnt-sidebar"/>
+          </div>
         </div>
         <ul>
           <li className="active">
             <Link to="/">
-              <FontAwesomeIcon icon="home" /> Home
+              <FontAwesomeIcon icon="home" /> <span>Home</span>
             </Link>
           </li>
           <li>
             <Link to="/prize">
-              <FontAwesomeIcon icon="trophy" /> Prize Pool
+              <FontAwesomeIcon icon="trophy" /> <span>Prize Pool</span>
             </Link>
           </li>
           <li>
             <Link to="/schedule">
-              <FontAwesomeIcon icon="list" /> Schedule
+              <FontAwesomeIcon icon="list" /> <span>Schedule</span>
             </Link>
           </li>
           <li>
             <Link to="/about">
-              <FontAwesomeIcon icon="newspaper" /> News
+              <FontAwesomeIcon icon="newspaper" /> <span>News</span>
             </Link>
           </li>
           <li>
             <Link to="/about">
-              <FontAwesomeIcon icon="bell" /> Evnets
+              <FontAwesomeIcon icon="bell" /> <span>Evnets</span>
             </Link>
           </li>
           <li>
             <Link to="/about">
               <FontAwesomeIcon icon="users" />
-              Teams
+              <span>Teams</span>
             </Link>
           </li>
           <li>
             <Link to="/about">
               {' '}
               <FontAwesomeIcon icon="image" />
-              Photos & videos
+              <span>Photos & videos</span>
             </Link>
           </li>
         </ul>
