@@ -22,7 +22,7 @@ import {
 import logoAic from '../../images/logo-aic.png'
 
 export default () => {
-  const [isSidebarOpen, setCollapseSidebar] = useState(false)
+  const [isSidebarOpen, setCollapseSidebar] = useState(true)
 
   const [listMenu] = useState([
     {

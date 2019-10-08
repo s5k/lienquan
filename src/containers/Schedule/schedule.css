@@ -2,6 +2,230 @@
   width: 85vw;
   margin-left: 15vw;
   text-align: center;
-  height: 90vh;
   position: relative;
+}
+.slick-slider{
+  width: 90%;
+  margin: 0 auto;
+}
+.slide-schedule-match{
+  width: calc(90% + 50px);
+}
+.slick-slide :focus{
+  outline:none !important;
+}
+.slick-slide {
+  box-shadow: none;
+  border-color:none;
+  color: none;
+  background: none;
+  outline:none;
+}
+.title-schedule{
+  color: #ffedd3;
+  display: inline-block;
+  font-size:2em;
+  margin:10px 0px;
+  text-shadow: 2px 2px 8px #333;
+}
+.slide-day-match{
+  border: 1px solid #ffc46f;
+  background: rgba(25,9,28,0.5);
+}
+.day-match{
+  border-bottom: 1px solid #ffc46f;
+  padding: 10px 0px;
+  font-size: 1.5em;
+  position: relative;
+  font-weight: 600;
+}
+.day-match::before{
+  content: "";
+  position: absolute;
+  height: 60%;
+  width: 1px;
+  background: #ffc46f;
+  right: 0px;
+  top: 20%;
+}
+.day-round{
+  padding: 5px 0px;
+  color: #635d64;
+  font-weight: 700;
+}
+.slick-current .day-match{
+  color: #ffc46f;
+}
+.slick-current .day-round{
+  color: #fff;
+}
+.slick-prev:before{
+  content: url('../../images/icons/arrow-left.png')
+}
+.slick-next:before{
+  content: url('../../images/icons/arrow-right.png')
+}
+.slick-prev, .slick-next{
+  height: calc(100% + 2px);
+  background: rgba(25,9,28,0.5);
+  border: 1px solid #ffc46f;
+  width: 25px;
+}
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus{
+  background: rgba(25,9,28,0.5);
+}
+.schedule-match-day{
+  border:1px solid #ffc46f;
+  padding: 10px 15px;
+  margin-top: 3vh;
+  background: #170a1e;
+  width: calc(70% - 30px);
+  float: left;
+}
+.schedule-match-day-items{
+  height: 56vh;
+  padding-right: 15px;
+  overflow: auto;
+}
+.schedule-match-day-items::-webkit-scrollbar {
+  width: 3px;
+}
+.schedule-match-day-items::-webkit-scrollbar-thumb {
+  background: #8c6746; 
+  border-radius: 0px;
+}
+.schedule-match-day-item{
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  border-bottom: 1px solid #fff;
+  border-image: url('../../images/line-match.png') 1 round;
+}
+.match-time,.match-view{
+  width: 10%;
+  text-align: left;
+}
+.match-time{
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.match-view{
+  text-align: right;
+}
+.match-teams{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.match-teams .team{
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+.match-teams .team.team-disable{
+  opacity: 0.5;
+}
+.match-teams .team img{
+  max-height: 40px;
+  margin: 0px 10px;
+}
+.match-teams .match-bo{
+  margin: 0px 20px;
+}
+.match-teams .match-bo span{
+  display: block;
+  font-size: 0.6em;
+  font-weight: 700;
+  position: relative;
+}
+.team-1 .score{
+  position: relative;
+}
+.team-1 .score::before{
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 3px solid transparent;
+  border-right: 6px solid #8bbfee;
+  border-bottom: 3px solid transparent;
+  top: 50%;
+  left: 0px;
+  transform: translate(0px,-50%);
+}
+.team-2 .score::after{
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 3px solid transparent;
+  border-left: 6px solid #8bbfee;
+  border-bottom: 3px solid transparent;
+  top: 50%;
+  right: 0px;
+  transform: translate(0px,-50%);
+}
+.match-view img{
+  max-height: 15px;
+  display: inline-block;
+}
+.match-view span{
+  display: none;
+}
+.match-end .active-view,.match-live .active-live,.match-wait .active-view{
+  display: block;
+}
+.match-live .active-live svg.circle{
+  padding: 4px;
+  color: red;
+}
+.match-wait a{
+  pointer-events: none;
+  cursor: no-drop;
+  display: block;
+  opacity: 0.5;
+}
+.standings{
+  width: 30%;
+  float: right;
+  margin-top: 3vh;
+  border: 1px solid #ffc46f;
+  height: calc(56vh + 22px);
+  background: #170b1f;
+}
+.standings ul{
+  margin: 0px;
+  padding:0px;
+  list-style: none;
+  display: block;
+  border-bottom: 1px solid #ffc46f;
+}
+.standings ul li{
+  width: 50%;
+  display: inline-block;
+  padding: 15px 0px;
+  font-size: 1.5em;
+  line-height: 1em;
+  font-weight: 600;
+  color: #ffc46f;
+  opacity: 0.5;
+}
+.standings ul li:first-child{
+  border-right: 1px solid #ffc46f;
+}
+.standings .react-tabs{
+  height: 100%;
+}
+.standings .react-tabs .react-tabs__tab-panel{
+  height: calc(100% - 4em);
+}
+.standings .react-tabs .react-tabs__tab-panel img{
+  height: 100%;
+  width: 100%;
+}
+.standings .react-tabs .react-tabs__tab--selected{
+  opacity: 1;
 }

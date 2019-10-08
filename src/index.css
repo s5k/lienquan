@@ -10,7 +10,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
   background-image: url(./images/bg.jpg);
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
   color: #fff;
   font-size: calc(0.1em + 1vw);
 }
@@ -21,6 +22,9 @@ body {
 }
 .main{
   width: 100%;
+  min-height: 90vh;
+  position: relative;
+  text-align: center;
 }
 
 code {
@@ -32,7 +36,7 @@ a,a:hover,a:focus{
   color: #fff;
 }
 .scroll-up-menu,.scroll-down-menu{
-  position: fixed;
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
   width: 1.5em;
@@ -43,13 +47,16 @@ a,a:hover,a:focus{
   border:1px solid #ffc46f;
   border-radius: 50%;
   cursor: pointer;
-  background: rgba(0,0,0,0.7)
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
 }
 .scroll-up-menu{
-  top: 1%;
+  top:0;
+  transform: translate(-50%,-110%);
 }
 .scroll-down-menu{
-  bottom: 1%;
+  bottom: 0;
+  transform: translate(-50%,110%);
 }
 /* sidebar css */
 .bnt-sidebar{
@@ -63,23 +70,25 @@ a,a:hover,a:focus{
 }
 .sidebar{
   position: fixed;
-  width: 8vw;
+  width: 4.6vw;
   height: 100%;
   background: rgba(0,0,0,0.5);
   top: 0px;
   left: 0px;
   z-index: 9;
+  transition: all 0.05s;
 }
 .sidebar .logo-aic{
   max-width: 68%;
   margin: 5% 0 0 5%;
 }
 .top-sidebar{
+  top: 10px;
   position: relative;
   margin-bottom: 20%;
 }
 .top-sidebar .btn-close-menu{
-  /* display: none; */
+  display: none;
 }
 .close-menu{
   font-size: 2em;
@@ -92,7 +101,7 @@ a,a:hover,a:focus{
   font-size: calc(0.1em + 1vw);
   text-transform: uppercase;
   font-weight: 600;
-  padding: 5% 0px 5% 10%;
+  padding: 1em 0px;
   border-bottom: 1px solid #fff;
   border-image: url(./images/sidebar-line.png) 1 round;
   position: relative;
@@ -104,16 +113,26 @@ a,a:hover,a:focus{
 .sidebar li svg{
   margin-right: 5%;
 }
+.sidebar.open-sidebar .btn-close-menu{
+  display: block;
+}
+.sidebar.open-sidebar .bnt-sidebar{
+  display: none;
+}
 .sidebar.open-sidebar{
   width: 15vw;
 }
-.sidebar.open-sidebar li span{
-  display: block;
+.sidebar.open-sidebar li{
+  text-align: left;
+  padding-left: 10%;
 }
-/* .sidebar li.active a,.sidebar li:hover a{
+.sidebar.open-sidebar li span{
+  display: inline-block;
+}
+.sidebar li.active a,.sidebar li:hover a{
   color: #ffc46f;
 }
-.sidebar li.active::before,.sidebar li:hover::before{
+.sidebar.open-sidebar li.active::before,.sidebar.open-sidebar li:hover::before{
   position: absolute;
   content: "";
   width: 5px;
@@ -124,7 +143,7 @@ a,a:hover,a:focus{
   -webkit-box-shadow: -1px 0px 13px 2px #ffc46f;
   -moz-box-shadow: -1px 0px 13px 2px #ffc46f;
   box-shadow: -1px 0px 13px 2px #ffc46f;
-} */
+}
 .language{
   position: fixed;
   top: 10px;

@@ -11,7 +11,8 @@ import {
   faFile,
   faNewspaper,
   faBell,
-  faUsers
+  faUsers,
+  faArrowDown
 } from '@fortawesome/free-solid-svg-icons'
 import cupAic from '../../images/cup-aic.png'
 import imageSchedule from '../../images/home-schedule.jpg'
@@ -20,7 +21,7 @@ import imageNews from '../../images/home-news.jpg'
 import imageTeam from '../../images/home-team.jpg'
 
 export default () => {
-  library.add(fab, faCircle, faList, faFile, faNewspaper, faBell, faUsers)
+  library.add(fab, faCircle, faList, faFile, faNewspaper, faBell, faUsers, faArrowDown)
   return (
     <div className="homepage">
       <div className="home-intro">
@@ -79,6 +80,9 @@ export default () => {
             <Link to="#">MEET THE TEAMS</Link>
           </div>
         </div>
+      </div>
+      <div className="scroll-down-menu">
+        <Link to="/prize"> <FontAwesomeIcon icon="arrow-down" /> </Link>
       </div>
     </div>
   )
