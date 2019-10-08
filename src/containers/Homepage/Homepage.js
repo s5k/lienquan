@@ -21,7 +21,17 @@ import imageNews from '../../images/home-news.jpg'
 import imageTeam from '../../images/home-team.jpg'
 
 export default () => {
-  library.add(fab, faCircle, faList, faFile, faNewspaper, faBell, faUsers, faArrowDown)
+  library.add(
+    fab,
+    faCircle,
+    faList,
+    faFile,
+    faNewspaper,
+    faBell,
+    faUsers,
+    faArrowDown
+  )
+
   return (
     <div className="homepage">
       <div className="home-intro">
@@ -38,7 +48,11 @@ export default () => {
           including versions of Lorem Ipsum.
         </p>
         <div className="watch-now">
-          <a href="https://www.youtube.com" target="blank" className="btn-watch-now">
+          <a
+            href="https://www.youtube.com"
+            target="blank"
+            className="btn-watch-now"
+          >
             <FontAwesomeIcon icon="circle" className="circle" /> WATCH NOW
           </a>
         </div>
@@ -82,7 +96,10 @@ export default () => {
         </div>
       </div>
       <div className="scroll-down-menu">
-        <Link to="/prize"> <FontAwesomeIcon icon="arrow-down" /> </Link>
+        <Link to="/prize">
+          {' '}
+          <FontAwesomeIcon icon="arrow-down" />{' '}
+        </Link>
       </div>
     </div>
   )
