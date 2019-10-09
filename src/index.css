@@ -12,6 +12,7 @@ body {
   background-image: url(./images/bg.jpg);
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   color: #fff;
   font-size: calc(0.1em + 1vw);
 }

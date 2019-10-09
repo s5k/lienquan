@@ -1,0 +1,50 @@
+.title-schedule{
+  color: #ffedd3;
+  display: inline-block;
+  font-size:2em;
+  margin:0px;
+  text-shadow: 2px 2px 8px #333;
+}
+.eventspage {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.events-item{
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  padding:10px;
+}
+.events-item-content{
+  display: flex;
+  flex-wrap: wrap;
+  border:1px solid #ffc46f;
+}
+.events-item .events-item-img img{
+  width: 100%;
+}
+.events-item .events-item-text{
+  display: flex;
+  padding:5px;
+  background: #150c21;
+  margin-top: -5px;
+  border-top: 1px solid #ffc46f;
+  width: 100%;
+}
+.events-item .events-item-text-title{
+  text-transform: uppercase;
+  font-size: 1em;
+  text-align: center;
+  border: 1px solid #ffc46f;
+  padding: 10px 0px;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #ffedd3;
+  display: block;
+  width: 100%;
+}
