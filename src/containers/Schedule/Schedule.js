@@ -47,6 +47,7 @@ export default () => {
           focusOnSelect={true}
           centerMode={false}
           infinite={true}
+          initialSlide={0}
           className="slide-day-match"
         >
           <div>
@@ -83,7 +84,8 @@ export default () => {
           ref={slider => setNav1(slider)}
           arrows={false}
           focusOnSelect={false}
-          infinite={false}
+          infinite={true}
+          initialSlide={0}
           className="slide-schedule-match"
         >
           <div>
