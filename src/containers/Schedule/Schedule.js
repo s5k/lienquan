@@ -319,7 +319,7 @@ export default () => {
         </Slider>
       </div>
       <div className="scroll-down-menu">
-        <Link to="/schedule">
+        <Link to="/news">
           {' '}
           <FontAwesomeIcon icon="arrow-down" />
         </Link>
