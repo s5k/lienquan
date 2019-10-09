@@ -1,3 +1,9 @@
+/*
+ * Created on Wed Oct 01 2019
+ *
+ * Author: Quy Pham - s5k.github.io
+ */
+
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './App.css'
