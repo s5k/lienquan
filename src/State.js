@@ -17,6 +17,14 @@ export const StateProvider = ({ reducer, initialState, children }) => (
 export const useStateValue = () => useContext(StateContext)
 
 export const initialState = {
+  loading: true,
+  error: false,
+  events: [],
+  videos: [],
+  schedule: [],
+  images: [],
+  posts: [],
+  teams: [],
   menu: [
     {
       id: 0,
