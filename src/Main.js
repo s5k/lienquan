@@ -1,3 +1,9 @@
+/*
+ * Created on Thu Oct 10 2019
+ *
+ * Author: Quy Pham - s5k.github.io
+ */
+
 import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Homepage from './containers/Homepage/Homepage'

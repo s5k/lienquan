@@ -1,3 +1,9 @@
+/*
+ * Created on Thu Oct 10 2019
+ *
+ * Author: Quy Pham - s5k.github.io
+ */
+
 import React from 'react'
 
 export default ({ children, loading }) => {
