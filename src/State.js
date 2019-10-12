@@ -21,7 +21,10 @@ export const initialState = {
   error: false,
   events: [],
   videos: [],
-  schedule: [],
+  schedule: {
+    dates: [],
+    matches: []
+  },
   images: [],
   posts: [],
   teams: [],
