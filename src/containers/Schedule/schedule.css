@@ -4,12 +4,15 @@
   text-align: center;
   position: relative;
 }
-.slick-slider{
+.schedulepage .slick-slider{
   width: 90%;
   margin: 0 auto;
 }
-.slide-schedule-match{
+.schedulepage .slide-schedule-match{
   width: calc(90% + 50px);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 .slick-slide :focus{
   outline:none !important;
@@ -59,19 +62,19 @@
 .slick-current .day-round{
   color: #fff;
 }
-.slick-prev:before{
+.schedulepage .slick-prev:before{
   content: url('../../images/icons/arrow-left.png')
 }
-.slick-next:before{
+.schedulepage .slick-next:before{
   content: url('../../images/icons/arrow-right.png')
 }
-.slick-prev, .slick-next{
+.schedulepage .slick-prev, .schedulepage .slick-next{
   height: calc(100% + 2px);
   background: rgba(25,9,28,0.5);
   border: 1px solid #ffc46f;
   width: 25px;
 }
-.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus{
+.schedulepage .slick-prev:hover, .schedulepage .slick-prev:focus, .schedulepage .slick-next:hover, .schedulepage .slick-next:focus{
   background: rgba(25,9,28,0.5);
 }
 .schedule-match-day{
@@ -79,7 +82,7 @@
   padding: 10px 15px;
   margin-top: 3vh;
   background: #170a1e;
-  width: calc(70% - 30px);
+  width: 70%;
   float: left;
 }
 .schedule-match-day-items{
@@ -177,9 +180,10 @@
 }
 .match-end .active-view,.match-live .active-live,.match-wait .active-view{
   display: block;
+  font-size: 0.7em;
 }
 .match-live .active-live svg.circle{
-  padding: 4px;
+  padding: 2px;
   color: red;
 }
 .match-wait a{
@@ -221,6 +225,10 @@
 }
 .standings .react-tabs .react-tabs__tab-panel{
   height: calc(100% - 4em);
+  display: none;
+}
+.standings .react-tabs .react-tabs__tab-panel--selected{
+  display: block;
 }
 .standings .react-tabs .react-tabs__tab-panel img{
   height: 100%;
