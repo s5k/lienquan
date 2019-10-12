@@ -13,6 +13,7 @@ import News from './containers/News/News'
 import Sidebar from './containers/Sidebar'
 import NewPage from './containers/News/Newpage'
 import Events from './containers/Events/Events'
+import Teams from './containers/Teams/Teams'
 import { useStateValue } from './State'
 import Loading from './components/Loading'
 import Error from './components/Error'
@@ -59,6 +60,7 @@ export default () => {
             <Route path="/news" component={News} />
             <Route path="/newpage" component={NewPage} />
             <Route path="/events" component={Events} />
+            <Route path="/teams" component={Teams} />
           </div>
         </Error>
       </Loading>
