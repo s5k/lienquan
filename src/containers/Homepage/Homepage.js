@@ -25,8 +25,11 @@ import imageSchedule from '../../images/home-schedule.jpg'
 import imageEvent from '../../images/home-event.jpg'
 import imageNews from '../../images/home-news.jpg'
 import imageTeam from '../../images/home-team.jpg'
+import { useStateValue } from '../../State'
 
 export default () => {
+  const [{ params }] = useStateValue()
+
   library.add(
     fab,
     faCircle,
@@ -55,7 +58,7 @@ export default () => {
         </p>
         <div className="watch-now">
           <a
-            href="https://www.youtube.com"
+            href={params['Watch Now'].value}
             target="blank"
             className="btn-watch-now"
           >
@@ -70,7 +73,7 @@ export default () => {
             <div className="menu-icon">
               <FontAwesomeIcon icon="list" className="icon-schedule" />
             </div>
-            <Link to="#">SCHEDULE</Link>
+            <Link to="/schedule">SCHEDULE</Link>
           </div>
         </div>
         <div className="menu-item menu-event">
@@ -79,7 +82,7 @@ export default () => {
             <div className="menu-icon">
               <FontAwesomeIcon icon="bell" className="icon-schedule" />
             </div>
-            <Link to="#">EVENTS</Link>
+            <Link to="/events">EVENTS</Link>
           </div>
         </div>
         <div className="menu-item menu-news">
@@ -88,7 +91,7 @@ export default () => {
             <div className="menu-icon">
               <FontAwesomeIcon icon="newspaper" className="icon-schedule" />
             </div>
-            <Link to="#">NEWS</Link>
+            <Link to="/news">NEWS</Link>
           </div>
         </div>
         <div className="menu-item menu-team">
@@ -97,7 +100,7 @@ export default () => {
             <div className="menu-icon">
               <FontAwesomeIcon icon="users" className="icon-schedule" />
             </div>
-            <Link to="#">MEET THE TEAMS</Link>
+            <Link to="/teams">MEET THE TEAMS</Link>
           </div>
         </div>
       </div>
