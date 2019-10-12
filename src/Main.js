@@ -25,10 +25,14 @@ export default () => {
       fetch('http://aic2019.lienquan.garena.vn/api/user/get')
         .then(res => res.json())
         .then(res =>
-          dispatch({
-            type: 'FETCH_SUCCESS',
-            payload: res.payload
-          })
+          res.status === 'successful'
+            ? dispatch({
+                type: 'FETCH_SUCCESS',
+                payload: res.payload
+              })
+            : dispatch({
+                type: 'FETCH_ERROR'
+              })
         )
         .catch(err =>
           dispatch({
