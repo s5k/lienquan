@@ -54,7 +54,9 @@ export default () => {
           centerMode={false}
           infinite={true}
           swipe={false}
-          initialSlide={0}
+          initialSlide={
+            schedule.dates.findIndex(x => x.date === today.format('DD.MM')) || 0
+          }
           afterChange={i => set_date_chosen(schedule.dates[i].date)}
           className="slide-day-match"
         >
