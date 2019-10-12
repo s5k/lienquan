@@ -101,7 +101,7 @@ export default () => {
         <Slider
           asNavFor={nav1}
           ref={slider => setNav2(slider)}
-          slidesToShow={teams.length > 12 ? 12 : teams.length}
+          slidesToShow={teams.length > 12 ? 12 : teams.length - 1}
           focusOnSelect={true}
           centerMode={false}
           infinite={true}
