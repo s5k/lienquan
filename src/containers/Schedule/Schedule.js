@@ -47,6 +47,7 @@ export default () => {
           focusOnSelect={true}
           centerMode={false}
           infinite={true}
+          swipe={false}
           initialSlide={0}
           className="slide-day-match"
         >
@@ -79,246 +80,230 @@ export default () => {
             <div className="day-round">GRAND FINAL</div>
           </div>
         </Slider>
-        <Slider
-          asNavFor={nav2}
-          ref={slider => setNav1(slider)}
-          arrows={false}
-          focusOnSelect={false}
-          infinite={true}
-          initialSlide={0}
-          className="slide-schedule-match"
-        >
-          <div>
-            <div className="schedule-match-day">
-              <div className="schedule-match-day-items">
-                {/*Start*/}
-                <div className="schedule-match-day-item">
-                  <div className="match-time">16:00</div>
-                  <div className="match-teams team-1">
-                    <div className="team team-win">
-                      Team A <img src={require('../../images/logo-t1.png')} />
-                    </div>
-                    <div className="match-bo">
-                      <span className="score">2-1</span>
-                      <span>BEST OF 3</span>
-                    </div>
-                    <div className="team team-disable">
-                      <img src={require('../../images/logo-t2.png')} /> Team 2
-                    </div>
+        <div className="slide-schedule-match">
+          <div className="schedule-match-day">
+            <div className="schedule-match-day-items">
+              {/*Start*/}
+              <div className="schedule-match-day-item">
+                <div className="match-time">16:00</div>
+                <div className="match-teams team-1">
+                  <div className="team team-win">
+                    Team A <img src={require('../../images/logo-t1.png')} />
                   </div>
-                  <div className="match-view match-end">
-                    <a href="https://www.youtube.com" target="blank">
-                      <img
-                        src={require('../../images/icons/youtube-icon.png')}
-                      />
-                      <span className="active-view">LINK YOU</span>
-                      <span className="active-live">
-                        <FontAwesomeIcon icon="circle" className="circle" />{' '}
-                        LIVE
-                      </span>
-                    </a>
+                  <div className="match-bo">
+                    <span className="score">2-1</span>
+                    <span>BEST OF 3</span>
+                  </div>
+                  <div className="team team-disable">
+                    <img src={require('../../images/logo-t2.png')} /> Team 2
                   </div>
                 </div>
-                {/*End*/}
-                {/*Start*/}
-                <div className="schedule-match-day-item">
-                  <div className="match-time">16:00</div>
-                  <div className="match-teams team-2">
-                    <div className="team team-disable">
-                      Team A <img src={require('../../images/logo-t1.png')} />
-                    </div>
-                    <div className="match-bo">
-                      <span className="score">2-1</span>
-                      <span>BEST OF 3</span>
-                    </div>
-                    <div className="team team-win">
-                      <img src={require('../../images/logo-t2.png')} /> Team 2
-                    </div>
-                  </div>
-                  <div className="match-view match-end">
-                    <a href="https://www.youtube.com" target="blank">
-                      <img
-                        src={require('../../images/icons/youtube-icon.png')}
-                      />
-                      <span className="active-view">LINK YOU</span>
-                      <span className="active-live">
-                        <FontAwesomeIcon icon="circle" className="circle" />{' '}
-                        LIVE
-                      </span>
-                    </a>
-                  </div>
+                <div className="match-view match-end">
+                  <a href="https://www.youtube.com" target="blank">
+                    <img
+                      src={require('../../images/icons/youtube-icon.png')}
+                    />
+                    <span className="active-view">LINK YOU</span>
+                    <span className="active-live">
+                      <FontAwesomeIcon icon="circle" className="circle" />{' '}
+                      LIVE
+                    </span>
+                  </a>
                 </div>
-                {/*End*/}
-                {/*Start*/}
-                <div className="schedule-match-day-item">
-                  <div className="match-time">16:00</div>
-                  <div className="match-teams">
-                    <div className="team team-win">
-                      Team A <img src={require('../../images/logo-t1.png')} />
-                    </div>
-                    <div className="match-bo">
-                      <span className="score">1-1</span>
-                      <span>BEST OF 3</span>
-                    </div>
-                    <div className="team">
-                      <img src={require('../../images/logo-t2.png')} /> Team 2
-                    </div>
-                  </div>
-                  <div className="match-view match-live">
-                    <a href="https://www.youtube.com" target="blank">
-                      <img
-                        src={require('../../images/icons/youtube-icon.png')}
-                      />
-                      <span className="active-view">LINK YOU</span>
-                      <span className="active-live">
-                        <FontAwesomeIcon icon="circle" className="circle" />{' '}
-                        LIVE
-                      </span>
-                    </a>
-                  </div>
-                </div>
-                {/*End*/}
-                {/*Start*/}
-                <div className="schedule-match-day-item">
-                  <div className="match-time">16:00</div>
-                  <div className="match-teams">
-                    <div className="team team-win">
-                      Team A <img src={require('../../images/logo-t1.png')} />
-                    </div>
-                    <div className="match-bo">
-                      <span className="score">VS</span>
-                      <span>BEST OF 3</span>
-                    </div>
-                    <div className="team">
-                      <img src={require('../../images/logo-t2.png')} /> Team 2
-                    </div>
-                  </div>
-                  <div className="match-view match-wait">
-                    <a href="https://www.youtube.com" target="blank">
-                      <img
-                        src={require('../../images/icons/youtube-icon.png')}
-                      />
-                      <span className="active-view">LINK YOU</span>
-                      <span className="active-live">
-                        <FontAwesomeIcon icon="circle" className="circle" />{' '}
-                        LIVE
-                      </span>
-                    </a>
-                  </div>
-                </div>
-                {/*End*/}
-                {/*Start*/}
-                <div className="schedule-match-day-item">
-                  <div className="match-time">16:00</div>
-                  <div className="match-teams">
-                    <div className="team team-win">
-                      Team A <img src={require('../../images/logo-t1.png')} />
-                    </div>
-                    <div className="match-bo">
-                      <span className="score">VS</span>
-                      <span>BEST OF 3</span>
-                    </div>
-                    <div className="team">
-                      <img src={require('../../images/logo-t2.png')} /> Team 2
-                    </div>
-                  </div>
-                  <div className="match-view match-wait">
-                    <a href="https://www.youtube.com" target="blank">
-                      <img
-                        src={require('../../images/icons/youtube-icon.png')}
-                      />
-                      <span className="active-view">LINK YOU</span>
-                      <span className="active-live">
-                        <FontAwesomeIcon icon="circle" className="circle" />{' '}
-                        LIVE
-                      </span>
-                    </a>
-                  </div>
-                </div>
-                {/*End*/}
-                {/*Start*/}
-                <div className="schedule-match-day-item">
-                  <div className="match-time">16:00</div>
-                  <div className="match-teams">
-                    <div className="team team-win">
-                      Team A <img src={require('../../images/logo-t1.png')} />
-                    </div>
-                    <div className="match-bo">
-                      <span className="score">VS</span>
-                      <span>BEST OF 3</span>
-                    </div>
-                    <div className="team">
-                      <img src={require('../../images/logo-t2.png')} /> Team 2
-                    </div>
-                  </div>
-                  <div className="match-view match-wait">
-                    <a href="https://www.youtube.com" target="blank">
-                      <img
-                        src={require('../../images/icons/youtube-icon.png')}
-                      />
-                      <span className="active-view">LINK YOU</span>
-                      <span className="active-live">
-                        <FontAwesomeIcon icon="circle" className="circle" />{' '}
-                        LIVE
-                      </span>
-                    </a>
-                  </div>
-                </div>
-                {/*End*/}
-                {/*Start*/}
-                <div className="schedule-match-day-item">
-                  <div className="match-time">16:00</div>
-                  <div className="match-teams team-1">
-                    <div className="team team-win">
-                      Team A <img src={require('../../images/logo-t1.png')} />
-                    </div>
-                    <div className="match-bo">
-                      <span className="score">2-1</span>
-                      <span>BEST OF 3</span>
-                    </div>
-                    <div className="team">
-                      <img src={require('../../images/logo-t2.png')} /> Team 2
-                    </div>
-                  </div>
-                  <div className="match-view match-wait">
-                    <a href="https://www.youtube.com" target="blank">
-                      <img
-                        src={require('../../images/icons/youtube-icon.png')}
-                      />
-                      <span className="active-view">LINK YOU</span>
-                      <span className="active-live">
-                        <FontAwesomeIcon icon="circle" className="circle" />{' '}
-                        LIVE
-                      </span>
-                    </a>
-                  </div>
-                </div>
-                {/*End*/}
               </div>
-            </div>
-            <div className="standings">
-              <Tabs>
-                <TabList>
-                  <Tab>GROUP A</Tab>
-                  <Tab>GROUP B</Tab>
-                </TabList>
-
-                <TabPanel>
-                  <img src={require('../../images/standings.jpg')} />
-                </TabPanel>
-                <TabPanel>
-                  <h2>Any content 2</h2>
-                </TabPanel>
-              </Tabs>
+              {/*End*/}
+              {/*Start*/}
+              <div className="schedule-match-day-item">
+                <div className="match-time">16:00</div>
+                <div className="match-teams team-2">
+                  <div className="team team-disable">
+                    Team A <img src={require('../../images/logo-t1.png')} />
+                  </div>
+                  <div className="match-bo">
+                    <span className="score">2-1</span>
+                    <span>BEST OF 3</span>
+                  </div>
+                  <div className="team team-win">
+                    <img src={require('../../images/logo-t2.png')} /> Team 2
+                  </div>
+                </div>
+                <div className="match-view match-end">
+                  <a href="https://www.youtube.com" target="blank">
+                    <img
+                      src={require('../../images/icons/youtube-icon.png')}
+                    />
+                    <span className="active-view">LINK YOU</span>
+                    <span className="active-live">
+                      <FontAwesomeIcon icon="circle" className="circle" />{' '}
+                      LIVE
+                    </span>
+                  </a>
+                </div>
+              </div>
+              {/*End*/}
+              {/*Start*/}
+              <div className="schedule-match-day-item">
+                <div className="match-time">16:00</div>
+                <div className="match-teams">
+                  <div className="team team-win">
+                    Team A <img src={require('../../images/logo-t1.png')} />
+                  </div>
+                  <div className="match-bo">
+                    <span className="score">1-1</span>
+                    <span>BEST OF 3</span>
+                  </div>
+                  <div className="team">
+                    <img src={require('../../images/logo-t2.png')} /> Team 2
+                  </div>
+                </div>
+                <div className="match-view match-live">
+                  <a href="https://www.youtube.com" target="blank">
+                    <img
+                      src={require('../../images/icons/youtube-icon.png')}
+                    />
+                    <span className="active-view">LINK YOU</span>
+                    <span className="active-live">
+                      <FontAwesomeIcon icon="circle" className="circle" />{' '}
+                      LIVE
+                    </span>
+                  </a>
+                </div>
+              </div>
+              {/*End*/}
+              {/*Start*/}
+              <div className="schedule-match-day-item">
+                <div className="match-time">16:00</div>
+                <div className="match-teams">
+                  <div className="team team-win">
+                    Team A <img src={require('../../images/logo-t1.png')} />
+                  </div>
+                  <div className="match-bo">
+                    <span className="score">VS</span>
+                    <span>BEST OF 3</span>
+                  </div>
+                  <div className="team">
+                    <img src={require('../../images/logo-t2.png')} /> Team 2
+                  </div>
+                </div>
+                <div className="match-view match-wait">
+                  <a href="https://www.youtube.com" target="blank">
+                    <img
+                      src={require('../../images/icons/youtube-icon.png')}
+                    />
+                    <span className="active-view">LINK YOU</span>
+                    <span className="active-live">
+                      <FontAwesomeIcon icon="circle" className="circle" />{' '}
+                      LIVE
+                    </span>
+                  </a>
+                </div>
+              </div>
+              {/*End*/}
+              {/*Start*/}
+              <div className="schedule-match-day-item">
+                <div className="match-time">16:00</div>
+                <div className="match-teams">
+                  <div className="team team-win">
+                    Team A <img src={require('../../images/logo-t1.png')} />
+                  </div>
+                  <div className="match-bo">
+                    <span className="score">VS</span>
+                    <span>BEST OF 3</span>
+                  </div>
+                  <div className="team">
+                    <img src={require('../../images/logo-t2.png')} /> Team 2
+                  </div>
+                </div>
+                <div className="match-view match-wait">
+                  <a href="https://www.youtube.com" target="blank">
+                    <img
+                      src={require('../../images/icons/youtube-icon.png')}
+                    />
+                    <span className="active-view">LINK YOU</span>
+                    <span className="active-live">
+                      <FontAwesomeIcon icon="circle" className="circle" />{' '}
+                      LIVE
+                    </span>
+                  </a>
+                </div>
+              </div>
+              {/*End*/}
+              {/*Start*/}
+              <div className="schedule-match-day-item">
+                <div className="match-time">16:00</div>
+                <div className="match-teams">
+                  <div className="team team-win">
+                    Team A <img src={require('../../images/logo-t1.png')} />
+                  </div>
+                  <div className="match-bo">
+                    <span className="score">VS</span>
+                    <span>BEST OF 3</span>
+                  </div>
+                  <div className="team">
+                    <img src={require('../../images/logo-t2.png')} /> Team 2
+                  </div>
+                </div>
+                <div className="match-view match-wait">
+                  <a href="https://www.youtube.com" target="blank">
+                    <img
+                      src={require('../../images/icons/youtube-icon.png')}
+                    />
+                    <span className="active-view">LINK YOU</span>
+                    <span className="active-live">
+                      <FontAwesomeIcon icon="circle" className="circle" />{' '}
+                      LIVE
+                    </span>
+                  </a>
+                </div>
+              </div>
+              {/*End*/}
+              {/*Start*/}
+              <div className="schedule-match-day-item">
+                <div className="match-time">16:00</div>
+                <div className="match-teams team-1">
+                  <div className="team team-win">
+                    Team A <img src={require('../../images/logo-t1.png')} />
+                  </div>
+                  <div className="match-bo">
+                    <span className="score">2-1</span>
+                    <span>BEST OF 3</span>
+                  </div>
+                  <div className="team">
+                    <img src={require('../../images/logo-t2.png')} /> Team 2
+                  </div>
+                </div>
+                <div className="match-view match-wait">
+                  <a href="https://www.youtube.com" target="blank">
+                    <img
+                      src={require('../../images/icons/youtube-icon.png')}
+                    />
+                    <span className="active-view">LINK YOU</span>
+                    <span className="active-live">
+                      <FontAwesomeIcon icon="circle" className="circle" />{' '}
+                      LIVE
+                    </span>
+                  </a>
+                </div>
+              </div>
+              {/*End*/}
             </div>
           </div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
-          <div>7</div>
-        </Slider>
+          <div className="standings">
+            <Tabs>
+              <TabList>
+                <Tab>GROUP A</Tab>
+                <Tab>GROUP B</Tab>
+              </TabList>
+
+              <TabPanel>
+                <img src={require('../../images/standings.jpg')} />
+              </TabPanel>
+              <TabPanel>
+                <h2>Any content 2</h2>
+              </TabPanel>
+            </Tabs>
+          </div>
+        </div>
       </div>
       <div className="scroll-down-menu">
         <Link to="/news">
