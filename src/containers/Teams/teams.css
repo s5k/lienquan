@@ -60,6 +60,7 @@
   display: none;
   left: -75%;
   width: 250%;
+  height: auto!important;
 }
 .slick-active.slick-center.slick-current .member-info-text{
   display: block;
@@ -111,17 +112,20 @@
 .title-team-name{
   font-size: 2em;
   color: #ffedd3;
+  height: auto!important;
 }
 .team-area{
   font-size: 0.8em;
   font-weight: 600;
   color: #ffc46f;
   margin-bottom: 2vh;
+  height: auto!important;
 }
 .team-des{
   font-size: 0.7em;
   text-align: justify;
   padding: 0px 10px;
+  height: auto!important;
 }
 .team-video a{
   display: inline-block;
@@ -132,6 +136,7 @@
   bottom: 1vh;
   left: 50%;
   transform: translateX(-50%);
+  height: auto!important;
 }
 .teams-name{
   border:1px solid #ffc46f;
@@ -150,4 +155,7 @@
   background-image: url('../../images/active-button-team-name.png');
   background-size: 100% 100%;
   color: #ffc46f;
+}
+.teams-info div{
+  height: 100%;
 }

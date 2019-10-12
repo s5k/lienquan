@@ -14,6 +14,7 @@ import Sidebar from './containers/Sidebar'
 import NewPage from './containers/News/Newpage'
 import Events from './containers/Events/Events'
 import Teams from './containers/Teams/Teams'
+import Photos from './containers/Photos/Photos'
 import { useStateValue } from './State'
 import Loading from './components/Loading'
 import Error from './components/Error'
@@ -65,6 +66,7 @@ export default () => {
             <Route path="/newpage" component={NewPage} />
             <Route path="/events" component={Events} />
             <Route path="/teams" component={Teams} />
+            <Route path="/photos" component={Photos} />
           </div>
         </Error>
       </Loading>
