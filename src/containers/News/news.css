@@ -5,8 +5,68 @@
   margin: 0px;
   text-shadow: 2px 2px 8px #333;
 }
-.newspage {
-  width: 60%;
+.newspage{
+  width: 62.5%;
+  margin: 0 auto;
+}
+.newspage-top{
+  width: 100%;
+}
+.news-top-item{
+  position: relative;
+  margin: 0px 10px;
+}
+.news-top-item::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-image: url('../../images/bg-news-top.png');
+  background-size: 100% 100%;
+}
+.news-top-item img{
+  max-width: 100%;
+}
+.news-top-text{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.news-top-text p{
+  font-size: 0.8em;
+  text-align: left;
+  font-weight: 600;
+  margin: 0px;
+  color: #ffc46f;
+}
+.news-top-text .news-top-title{
+  text-transform: uppercase;
+  color: #ffedd3;
+  position: relative;
+  font-size: 1em;
+  padding-bottom: 10px;
+}
+.news-top-text .news-top-title::after{
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 5px;
+  width: 50px;
+  height: 1px;
+  background: #ffc46f;
+}
+.newspage-top .slick-dots{
+  bottom: 10px;
+}
+.newspage-top .slick-dots li button:before{
+  font-size: 10px;
+  color: #565050;
+}
+.newspage-items {
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   position: relative;

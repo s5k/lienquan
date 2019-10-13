@@ -15,10 +15,13 @@ import {
   faArrowDown,
   faCircle
 } from '@fortawesome/free-solid-svg-icons'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import './news.css'
 
 export default () => {
-  const [paginate, setPaginate] = useState(4)
+  const [paginate, setPaginate] = useState(2)
 
   const news = [
     {
@@ -136,7 +139,7 @@ export default () => {
   library.add(fab, faArrowUp, faArrowDown, faCircle)
 
   return (
-    <div>
+    <div className="newspage">
       <div className="scroll-up-menu">
         <Link to="/schedule">
           {' '}
@@ -144,7 +147,47 @@ export default () => {
         </Link>
       </div>
       <h3 className="title-schedule">NEWS</h3>
-      <div className="newspage">
+      <div className ="newspage-top">
+        <Slider 
+          arrows={false}
+          dots={true}
+        >
+          <div>
+            <Link to={'./newpage'}>
+              <div className="news-top-item">
+                <img src={require('../../images/news-top.jpg')} alt="newstop"/>
+                <div className="news-top-text">
+                  <p className="news-top-title">aic 2019 format annoucement and venue</p>
+                  <p className="news-top-des">Find out the details of AIC 2019 Events</p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div>
+            <Link to={'./newpage'}>
+              <div className="news-top-item">
+                <img src={require('../../images/news-top.jpg')} alt="newstop"/>
+                <div className="news-top-text">
+                  <p className="news-top-title">aic 2019 format annoucement and venue</p>
+                  <p className="news-top-des">Find out the details of AIC 2019 Events</p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div>
+            <Link to={'./newpage'}>
+              <div className="news-top-item">
+                <img src={require('../../images/news-top.jpg')} alt="newstop"/>
+                <div className="news-top-text">
+                  <p className="news-top-title">aic 2019 format annoucement and venue</p>
+                  <p className="news-top-des">Find out the details of AIC 2019 Events</p>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </Slider>
+      </div>
+      <div className="newspage-items">
         {news.slice(0, paginate).map((item, key) => (
           <div className="news-item">
             <Link to={'./newpage'}>
