@@ -6,7 +6,7 @@
 
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './news.css'
 
 export default () => {
@@ -19,11 +19,50 @@ export default () => {
     create_time: '11:34:10 - 09/10/2019',
     is_hot_news: 0
   }
-
   return (
-    <div
-      className="newpage"
-      dangerouslySetInnerHTML={{ __html: contentChild.body }}
-    ></div>
+    <div className="newpage" >
+      <div className="content-news-detail" dangerouslySetInnerHTML={{ __html: contentChild.body }}></div>
+      <div className="content-related">
+        <div className="content-related-title">RELATED ARTICLES</div>
+        <div className="content-related-items">
+          <div className="news-item">
+            <Link to={'./newpage'}>
+              <div className="news-item-content">
+                <div className="news-item-img">
+                  <img src={require('../../images/news-item.jpg')} />
+                </div>
+                <div className="news-item-text">
+                  <div className="news-item-text-title">aic 2019 format annoucement and venue</div>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="news-item">
+            <Link to={'./newpage'}>
+              <div className="news-item-content">
+                <div className="news-item-img">
+                  <img src={require('../../images/news-item.jpg')} />
+                </div>
+                <div className="news-item-text">
+                  <div className="news-item-text-title">aic 2019 format annoucement and venue</div>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="news-item">
+            <Link to={'./newpage'}>
+              <div className="news-item-content">
+                <div className="news-item-img">
+                  <img src={require('../../images/news-item.jpg')} />
+                </div>
+                <div className="news-item-text">
+                  <div className="news-item-text-title">aic 2019 format annoucement and venue</div>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }

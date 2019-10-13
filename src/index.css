@@ -149,6 +149,7 @@ a,a:hover,a:focus{
   position: fixed;
   top: 10px;
   right: 10px;
+  z-index: 9999;
 }
 .language .select-language{
   border:none;

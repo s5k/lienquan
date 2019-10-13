@@ -2,7 +2,7 @@
   width: 62.5%;
   margin: 0 auto;
   text-align: center;
-  height: 90vh;
+  min-height: 90vh;
   position: relative;
 }
 .home-intro img{
