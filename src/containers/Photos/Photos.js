@@ -10,23 +10,18 @@ import { Link } from 'react-router-dom'
 import './photos.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab, faFacebookSquare, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import {
-  faArrowUp,
-  faImage
-} from '@fortawesome/free-solid-svg-icons'
+  fab,
+  faFacebookSquare,
+  faYoutube
+} from '@fortawesome/free-brands-svg-icons'
+import { faArrowUp, faImage } from '@fortawesome/free-solid-svg-icons'
 import photoFace from '../../images/facebook.jpg'
 import photoAlbums from '../../images/photo-albums.jpg'
 import photoVideo from '../../images/match-video.jpg'
 
-export default () => {
-  library.add(
-    fab,
-    faArrowUp,
-    faFacebookSquare,
-    faYoutube,
-    faImage
-  )
+export default ({ match }) => {
+  library.add(fab, faArrowUp, faFacebookSquare, faYoutube, faImage)
 
   return (
     <div className="photospage">
@@ -54,9 +49,9 @@ export default () => {
           <img src={photoAlbums} alt="photoalbums" />
           <div className="photo-text">
             <div className="photo-icon">
-              <FontAwesomeIcon icon='image' className="" />
+              <FontAwesomeIcon icon="image" className="" />
             </div>
-            <Link to="./photodetail">
+            <Link to="./media/photos">
               <p className="title-photo-menu">PHOTO ALBUMS</p>
               <p>PLAYER, VENUE AND MORE</p>
             </Link>
@@ -68,7 +63,7 @@ export default () => {
             <div className="photo-icon">
               <FontAwesomeIcon icon={['fab', 'youtube']} className="" />
             </div>
-            <Link to="./photovideo">
+            <Link to="./media/videos">
               <p className="title-photo-menu">WATCH VIDEO</p>
               <p>FIND OUT WHAT'S GOING ON</p>
             </Link>
@@ -77,11 +72,15 @@ export default () => {
       </div>
       <div className="company-info">
         <div className="logo-partner">
-          <img src={require('../../images/partner.png')} alt="logo partner"/>
+          <img src={require('../../images/partner.png')} alt="logo partner" />
         </div>
         <div className="company-address">
           <p>CÔNG TY CỔ PHẦN GIẢI TRÍ VÀ THỂ THAO ĐIỆN TỬ VIỆT NAM</p>
-          <p>Văn phòng đại diện: Tầng 29, tòa nhà Trung tâm Lotte Hà Nội, số 54, đường Liễu Giai, Phường Cống Vị, Quận Ba Đình, Thành phố Hà Nội, Việt Nam.</p>
+          <p>
+            Văn phòng đại diện: Tầng 29, tòa nhà Trung tâm Lotte Hà Nội, số 54,
+            đường Liễu Giai, Phường Cống Vị, Quận Ba Đình, Thành phố Hà Nội,
+            Việt Nam.
+          </p>
           <p>Điện thoại: 024 73053939</p>
         </div>
       </div>

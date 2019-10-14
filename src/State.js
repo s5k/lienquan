@@ -69,7 +69,7 @@ export const initialState = {
       id: 6,
       name: 'Photos & videos',
       icon: 'image',
-      link: '/photos'
+      link: '/media'
     }
   ]
 }

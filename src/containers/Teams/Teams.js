@@ -120,7 +120,7 @@ export default () => {
         </Slider>
       </div>
       <div className="scroll-down-menu">
-        <Link to="/photos">
+        <Link to="/media">
           {' '}
           <FontAwesomeIcon icon="arrow-down" />
         </Link>
