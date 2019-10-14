@@ -28,7 +28,7 @@ import './schedule.css'
 import { useStateValue } from '../../State'
 
 export default () => {
-  const [{ schedule }] = useStateValue()
+  const [{ schedule, params }] = useStateValue()
   const today = moment()
   const [date_chosen, set_date_chosen] = useState(today.format('DD.MM'))
 
@@ -97,13 +97,7 @@ export default () => {
                           <img src={item.team_2.logo} /> {item.team_2.name}
                         </div>
                       </div>
-                      <div
-                        className={
-                          item.status === 'off'
-                            ? 'match-view match-wait'
-                            : 'match-view match-end'
-                        }
-                      >
+                      <div className={`match-view match-${item.status} `}>
                         <a href={item.video_link} target="blank">
                           <img
                             src={require('../../images/icons/youtube-icon.png')}
@@ -128,10 +122,10 @@ export default () => {
               </TabList>
 
               <TabPanel>
-                <img src={require('../../images/standings.jpg')} />
+                <img src={params['Group A'].value} />
               </TabPanel>
               <TabPanel>
-                <h2>Any content 2</h2>
+                <img src={params['Group B'].value} />
               </TabPanel>
             </Tabs>
           </div>
