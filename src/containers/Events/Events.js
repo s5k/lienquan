@@ -24,7 +24,7 @@ export default () => {
   library.add(fab, faArrowUp, faArrowDown, faCircle)
 
   return (
-    <div>
+    <div className="eventspage">
       <div className="scroll-up-menu">
         <Link to="/news">
           {' '}
@@ -32,7 +32,7 @@ export default () => {
         </Link>
       </div>
       <h3 className="title-schedule">EVENTS</h3>
-      <div className="eventspage">
+      <div className="eventspage-items">
         {events.map((item, key) => (
           <div className="events-item" key={key}>
             <a href={item.link} target="blank">

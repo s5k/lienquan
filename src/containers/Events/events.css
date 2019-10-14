@@ -5,8 +5,16 @@
   margin:0px;
   text-shadow: 2px 2px 8px #333;
 }
-.eventspage {
-  width: 60%;
+.eventspage{
+  width: 62.5%;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 90vh;
+  position: relative;
+  padding: 2em 0px;
+}
+.eventspage-items {
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   position: relative;
@@ -47,4 +55,28 @@
   color: #ffedd3;
   display: block;
   width: 100%;
+}
+@media (max-width: 800px) and (min-height:480px){
+  .eventspage{
+    width: 75%;
+  }
+  .events-item{
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    position: relative;
+  }
+  .eventspage .title-schedule {
+    margin: 2vh 0px;
+  }
+  .eventspage-items{
+    height: 70vh;
+  }
+  .events-item .events-item-text{
+    position: absolute;
+    width: calc(100% - 22px);
+    border-bottom: 1px solid #ffc46f;
+    bottom: 0;
+    left: 11px;
+  }
 }

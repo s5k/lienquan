@@ -4,6 +4,7 @@
   text-align: center;
   min-height: 90vh;
   position: relative;
+  padding: 2em 0px;
 }
 .home-intro img{
   height: 21vh;
@@ -76,6 +77,10 @@
 @media (max-width: 800px) and (min-height:480px){
   .homepage{
     width: 75%;
+    height: 85vh;
+    position: fixed;
+    left: 12.5%;
+    top: 1vh;
   }
   .btn-watch-now svg.circle{
     padding: 0px;
@@ -84,7 +89,8 @@
     height: 14vh;
   }
   .home-menu{
-    height: 56vh;
+    height: 60%;
+    margin-top: 0px;
   }
   .menu-item{
     width: 46%;
