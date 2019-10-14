@@ -64,8 +64,17 @@ export default () => {
             <Route exact path="/" component={Homepage} />
             <Route path="/prize" component={Prize} />
             <Route path="/schedule" component={Schedule} />
-            <Route path="/news" component={News} />
-            <Route path="/newpage" component={NewPage} />
+
+            <Route
+              path="/news"
+              render={({ match: { url } }) => (
+                <>
+                  <Route path={`${url}/`} component={News} exact />
+                  <Route path={`${url}/:id`} component={NewPage} />
+                </>
+              )}
+            />
+
             <Route path="/events" component={Events} />
             <Route path="/teams" component={Teams} />
             <Route
