@@ -48,7 +48,7 @@ export default () => {
           slidesToShow={
             schedule.dates.length && schedule.dates.length > 6
               ? 6
-              : schedule.dates.length
+              : schedule.dates.length - 1
           }
           focusOnSelect={true}
           centerMode={false}
@@ -75,18 +75,17 @@ export default () => {
                 .filter(el => el.date === date_chosen)
                 .map((item, key) => {
                   let scores = item.score.split('-')
-
                   return (
                     <div className="schedule-match-day-item" key={key}>
                       <div className="match-time">{item.time}</div>
-                      <div className="match-teams team-1">
-                        <div
-                          className={
-                            'team' + scores[0] > scores[0]
-                              ? 'team team-1'
-                              : 'team team-2'
-                          }
-                        >
+                      <div
+                        className={
+                          parseInt(scores[0]) > parseInt(scores[1])
+                            ? 'match-teams team-1'
+                            : 'match-teams team-2'
+                        }
+                      >
+                        <div className="team">
                           {item.team_1.name} <img src={item.team_1.logo} />
                         </div>
                         <div className="match-bo">
