@@ -9,3 +9,18 @@
   max-width: 100%;
   width: 100%;
 }
+.prize-mb{
+  display: none;
+}
+@media (max-width: 800px) and (min-height:480px){
+  .prizepage{
+    width: 100%;
+  }
+  .prize-mb{
+    display: block;
+    margin-top: 20px;
+  }
+  .prize-desktop{
+    display: none;
+  }
+}

@@ -29,7 +29,7 @@ import { useStateValue } from '../../State'
 import NavItem from '../../components/NavItem'
 
 export default () => {
-  const [isSidebarOpen, setCollapseSidebar] = useState(true)
+  const [isSidebarOpen, setCollapseSidebar] = useState(false)
 
   const [{ menu }] = useStateValue()
 

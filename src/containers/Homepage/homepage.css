@@ -63,6 +63,7 @@
   width: calc(2em + 2px);
   line-height: 2em;
   border-radius: 50%;
+  color: #ffc46f;
 }
 .menu-text a{
   display: block;
@@ -70,4 +71,36 @@
   width: 100%;
   padding: 1.3em 0px 0.5em 0px;
   font-size: calc(0.2em + 1vw);
+  border-top:1px solid #ffc46f;
+}
+@media (max-width: 800px) and (min-height:480px){
+  .homepage{
+    width: 75%;
+  }
+  .btn-watch-now svg.circle{
+    padding: 0px;
+  }
+  .home-intro img{
+    height: 14vh;
+  }
+  .home-menu{
+    height: 56vh;
+  }
+  .menu-item{
+    width: 46%;
+    margin: 2%!important;
+    height: 46%;
+    overflow: hidden;
+  }
+  .menu-text .menu-icon{
+    width: calc(4em + 2px);
+    line-height: 4em;
+  }
+  .menu-icon svg.svg-inline--fa{
+    width: 1.5em;
+    height: 1.5em;
+  }
+  .menu-text a{
+    font-size: calc(1.2em + 1vw);
+  }
 }

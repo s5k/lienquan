@@ -17,17 +17,20 @@ body {
   font-size: calc(0.1em + 1vw);
 }
 #root{
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  top:0px;
 }
 .main{
   width: 100%;
-  min-height: 90vh;
+  min-height: 90%;
   position: relative;
   text-align: center;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -161,4 +164,57 @@ a,a:hover,a:focus{
 }
 .language .select-language option{
   color: #000;
+}
+.play-game{
+  display: none;
+  position: fixed;
+  bottom: 2vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: calc(1.2em + 1vw);
+  font-weight: 700;
+}
+.play-game a{
+  display: inline-block;
+  background: #0f0510;
+  color: #ffc46f;
+  border:1px solid #ffc46f;
+  padding: 5px 15px;
+}
+@media (max-width: 800px) and (min-height:480px){
+  .language,.scroll-down-menu,.scroll-up-menu{
+    display: none;
+  }
+  .play-game{
+    display: block;
+  }
+  .sidebar{
+    background: none;
+  }
+  .bnt-sidebar{
+    font-size:2em;
+  }
+  .sidebar ul{
+    display: none;
+  }
+  .sidebar.open-sidebar{
+    width: 50vw;
+    background: rgba(0,0,0,0.9);
+  }
+  .sidebar.open-sidebar .btn-close-menu{
+    font-size: 2em;
+  }
+  .top-sidebar{
+    left: 10px;
+  }
+  .sidebar.open-sidebar .top-sidebar{
+    top:0px;
+    left: 0px;
+  }
+  .sidebar.open-sidebar ul{
+    display: block;
+  }
+  .sidebar.open-sidebar li{
+    font-size: 2.5em;
+  }
 }

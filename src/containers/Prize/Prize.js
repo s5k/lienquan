@@ -11,7 +11,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons'
-import imagePrize from '../../images/prize.png'
 export default () => {
   library.add(fab, faArrowUp, faArrowDown)
   return (
@@ -22,7 +21,9 @@ export default () => {
           <FontAwesomeIcon icon="arrow-up" />
         </Link>
       </div>
-      <img src={imagePrize} alt="Giải thưởng" />
+      <h3 className="title-schedule">PRIZE POOL</h3>
+      <img className="prize-desktop" src={require('../../images/prize.png')} alt="Giải thưởng" />
+      <img className="prize-mb" src={require('../../images/prize-mb.png')} alt="Giải thưởng"/>
       <div className="scroll-down-menu">
         <Link to="/schedule">
           {' '}

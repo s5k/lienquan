@@ -72,6 +72,9 @@ export default () => {
             <Route path="/photodetail" component={Photodetail} />
             <Route path="/photovideo" component={Photovideo} />
           </div>
+          <div className="play-game">
+            <a href="https://www.youtube.com">PLAY GAME</a>
+          </div>
         </Error>
       </Loading>
     </Router>
