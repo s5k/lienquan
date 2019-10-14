@@ -73,7 +73,10 @@ export default () => {
                           <div className="member-info-text">
                             <img
                               className="member-lane"
-                              src={require('../../images/lane.png')}
+                              src={`../../images/icons/lane-${member.description
+                                .split(' ')
+                                .join('-')
+                                .toLowerCase()}.png`}
                             />
                             <p className="member-name">{member.name}</p>
                             <p className="lane-name">{member.description}</p>
@@ -88,7 +91,7 @@ export default () => {
                   <div className="team-area">{item.region}</div>
                   <div className="team-des">{item.description}</div>
                   <div className="team-video">
-                    <a href="https://www.youtube.com" target="blank">
+                    <a href={item.video_link} target="blank">
                       {' '}
                       <FontAwesomeIcon icon="play-circle" /> WATCH VIDEO{' '}
                     </a>
