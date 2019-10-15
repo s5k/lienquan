@@ -113,7 +113,7 @@ export default () => {
           className="teams-name"
           responsive= {[
             {
-              breakpoint: 769,
+              breakpoint: 480,
               settings: {
                 slidesToShow: 3,
                 slidesToScroll: 0,

@@ -51,7 +51,7 @@ a,a:hover,a:focus{
   z-index: 9999;
 }
 .scroll-up-menu{
-  top:0;
+  top:10px;
 }
 .scroll-down-menu{
   bottom: 0;

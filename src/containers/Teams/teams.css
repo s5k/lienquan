@@ -137,7 +137,7 @@
   display: inline-block;
   border: 1px solid #ffc46f;
   color: #ffc46f;
-  padding: 5px 15px;
+  padding: 5px 5%;
   position: absolute;
   bottom: 1vh;
   left: 50%;
@@ -165,7 +165,7 @@
 .teams-info div{
   height: 100%;
 }
-@media (max-width: 800px) and (min-height:480px){
+@media (max-width: 767px) and (min-height:480px){
   .teamspage{
     width: 95%;
   }
