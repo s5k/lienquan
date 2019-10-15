@@ -88,7 +88,7 @@ export default () => {
           </div>
         </div>
         <Slider
-          slidesToShow={teams.length > 12 ? 12 : teams.length - 1}
+          slidesToShow={teams.length > 12 ? 12 : teams.length}
           focusOnSelect={true}
           centerMode={false}
           infinite={true}
@@ -102,7 +102,7 @@ export default () => {
             {
               breakpoint: 480,
               settings: {
-                slidesToShow: 3,
+                slidesToShow: 6,
                 slidesToScroll: 3,
                 rows: 2,
                 infinite: true,
@@ -113,7 +113,7 @@ export default () => {
               }
             }
           ]}
-          afterChange={index => setTeamIndex(index)}
+          // afterChange={index => setTeamIndex(index)}
         >
           {teams.map((item, key) => (
             <div key={key} onClick={() => setTeamIndex(key)}>

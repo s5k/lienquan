@@ -57,7 +57,7 @@ export default () => {
           slidesToShow={
             schedule.dates.length && schedule.dates.length > 6
               ? 6
-              : schedule.dates.length - 1
+              : schedule.dates.length
           }
           focusOnSelect={true}
           centerMode={false}
