@@ -68,6 +68,14 @@ export default () => {
           }
           afterChange={i => set_date_chosen(schedule.dates[i].date)}
           className="slide-day-match"
+          responsive= {[
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 3,
+              }
+            }
+          ]}
         >
           {schedule.dates.map((item, key) => (
             <div key={key} onClick={() => set_date_chosen(item.date)}>
