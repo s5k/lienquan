@@ -4,7 +4,7 @@
  * Author: Quy Pham - s5k.github.io
  */
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -30,8 +30,22 @@ import NavItem from '../../components/NavItem'
 
 export default () => {
   const [isSidebarOpen, setCollapseSidebar] = useState(true)
+  const [is_mobile, setIs_Mobile] = useState(false)
 
   const [{ menu }] = useStateValue()
+
+  const resize = () => {
+    setIs_Mobile(window.innerWidth <= 760)
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', resize)
+    resize()
+  })
+
+  const menuClicking = () => {
+    return is_mobile && setCollapseSidebar(false)
+  }
 
   library.add(
     fab,
@@ -72,7 +86,9 @@ export default () => {
         {menu.map((item, key) => {
           return (
             <NavItem to={item.link} key={key} exact>
-              <FontAwesomeIcon icon={item.icon} /> <span>{item.name}</span>
+              <div onClick={() => menuClicking()}>
+                <FontAwesomeIcon icon={item.icon} /> <span>{item.name}</span>
+              </div>
             </NavItem>
           )
         })}
