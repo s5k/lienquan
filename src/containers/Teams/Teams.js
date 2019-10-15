@@ -84,14 +84,16 @@ export default () => {
                 </div>
                 <div className="team-info">
                   <img className="logo-team" src={item.logo} />
-                  <div className="title-team-name">{item.name}</div>
-                  <div className="team-area">{item.region}</div>
-                  <div className="team-des">{item.description}</div>
-                  <div className="team-video">
-                    <a href="https://www.youtube.com" target="blank">
-                      {' '}
-                      <FontAwesomeIcon icon="play-circle" /> WATCH VIDEO{' '}
-                    </a>
+                  <div className="team-info-content">
+                    <div className="title-team-name">{item.name}</div>
+                    <div className="team-area">{item.region}</div>
+                    <div className="team-des">{item.description}</div>
+                    <div className="team-video">
+                      <a href="https://www.youtube.com" target="blank">
+                        {' '}
+                        <FontAwesomeIcon icon="play-circle" /> WATCH VIDEO{' '}
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

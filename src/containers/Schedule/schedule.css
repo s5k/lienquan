@@ -237,3 +237,79 @@
 .standings .react-tabs .react-tabs__tab--selected{
   opacity: 1;
 }
+.active-schedule-mb{
+  display: none;
+}
+@media (max-width: 767px) and (min-height:480px){
+  .schedulepage,.active-schedule-mb{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .match-live .active-live svg.circle{
+    padding: 0.1px;
+  }
+  .match-teams .team img{
+    max-height:20px;
+  }
+  .match-teams .match-bo{
+    margin: 0px;
+    font-size: 1.4em;
+  }
+  .team-1 .score::before{
+    border-top: 2px solid transparent;
+    border-right: 4px solid #8bbfee;
+    border-bottom: 2px solid transparent;
+  }
+  .team-2 .score::after {
+    border-top: 2px solid transparent;
+    border-left: 4px solid #8bbfee;
+    border-bottom: 2px solid transparent;
+  }
+  .schedulepage .slick-slider{
+    width: calc(100% - 50px);
+  }
+  .schedulepage .slide-schedule-match{
+    width: 100%;
+  }
+  .schedule-match-day{
+    margin-top: 1vh;
+  }
+  .schedule-match-day,.standings{
+    width: 100%;
+    height: 56vh;
+  }
+  .match-teams .team{
+    font-size: 2em;
+  }
+  .active-schedule-mb{
+    margin: 2% auto;
+    border:1px solid #ffc46f;
+    font-size:3em;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .active-schedule-mb div{
+    width: 50%;
+    text-align: center;
+    padding: 5px;
+  }
+  .active-schedule-mb .active-schedule-mb-item{
+    border-right: 1px solid #ffc46f;
+  }
+  .active-schedule-match,.active-standing{
+    color: #ffc46f;
+  }
+  .schedulepage .schedule-match-day,.schedulepage .standings{
+    display: none;
+  }
+  .schedulepage-match-active .schedule-match-day,.schedulepage-standing-active .standings{
+    display: block;
+  }
+  .standings ul{
+    font-size:2em;
+  }
+  .standings .react-tabs .react-tabs__tab-panel img{
+    height: calc(100% - 5em);
+  }
+}

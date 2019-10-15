@@ -223,10 +223,17 @@
     margin-left: 3%;
     float: left;
     text-align: left;
-    padding-top: 10%;
+    padding-top: 5%;
+  }
+  .title-team-name{
+    font-size: 4em;
+  }
+  .team-area{
+    font-size: 3em;
   }
   .team-des{
     padding: 0px;
+    font-size: 1.2em;
   }
   .team-video a {
     left: 3%;
