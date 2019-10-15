@@ -38,14 +38,18 @@ export default () => {
     setIs_Mobile(window.innerWidth <= 760)
   }
 
-  useEffect(() => {
-    window.addEventListener('resize', resize)
-    resize()
-  })
-
   const menuClicking = () => {
     return is_mobile && setCollapseSidebar(false)
   }
+
+  useEffect(() => {
+    window.addEventListener('resize', resize)
+    resize()
+
+    if (window.innerWidth <= 760) {
+      setCollapseSidebar(false)
+    }
+  }, [])
 
   library.add(
     fab,

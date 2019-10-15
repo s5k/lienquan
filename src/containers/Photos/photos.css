@@ -4,6 +4,7 @@
   text-align: center;
   min-height: 90vh;
   position: relative;
+  padding: 2em 0px;
 }
 .photo-menu{
   display: flex;
@@ -27,7 +28,7 @@
   top: -8px;
   left: 7px;
   background: rgba(0,0,0,0.8);
-  z-index: 0;
+  z-index: -1;
 }
 .photo-item img{
   max-width: 100%;
@@ -266,4 +267,86 @@
   text-align: left;
   margin-top: -4px;
   border-top:1px solid #ffc46f;
+}
+@media (max-width: 800px) and (min-height:480px){
+  .photospage{
+    width: 80%;
+    padding: 2em 0px;
+  }
+  .company-info{
+    display: none;
+  }
+  .photo-menu{
+    height: 70vh;
+  }
+  .photo-item img{
+    height: 100%;
+    width: 60%;
+  }
+  .photo-item{
+    width: 100%;
+    margin:4% 0px!important;
+    height: 29.3%;
+    z-index: initial;
+  }
+  .photo-item .photo-text{
+    width: 40%;
+    right: 0px;
+    left:initial;
+    height: 100%;
+    top:0px;
+    align-items: center;
+    background: rgba(0,0,0,1);
+    border-top-width: 0px;
+    border-left: 1px solid #ffc46f;
+  }
+  .photo-text .photo-icon{
+    top:50%;
+    left: 0px;
+  }
+  .photo-icon svg{
+    width: 1.5em!important;
+    height: 1.5em!important;
+  }
+  .photo-text .photo-icon{
+    width: calc(4em + 2px);
+    line-height: 4em;
+  }
+  .photo-text a p{
+    font-size: 1.4em;
+  }
+  .photo-text a p.title-photo-menu{
+    font-size: 3em;
+    padding: 0px 10%;
+  }
+  .photodetailpage{
+    width: 80%;
+  }
+  .photo-details-item{
+    width: 47%;
+  }
+  .photo-details-item .photo-text{
+    font-size:2em;
+  }
+  .photo-details-item::after{
+    top: -2%;
+  }
+  .photo-details-item::before{
+    top: -4%;
+  }
+  .photovideopage{
+    width: 90%;
+  }
+  .video-heightlight-clip,.video-heightlight-text{
+    width: 100%;
+    padding-left:0px;
+    font-size: 2em;
+  }
+  .video-heighlight .slick-dots{
+    bottom: 0px;
+    transform: translate(0%,0%);
+  }
+  .video-other-item-text{
+    margin-top:0px;
+  }
 }

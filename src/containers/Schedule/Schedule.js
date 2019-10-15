@@ -31,11 +31,12 @@ export default () => {
   const [{ schedule, params }] = useStateValue()
   const today = moment()
   const [date_chosen, set_date_chosen] = useState(today.format('DD.MM'))
+  const [isCheck, setCheck] = useState(true)
 
   library.add(fab, faArrowUp, faArrowDown, faCircle)
 
   return (
-    <div>
+    <div className="schedulepageall">
       <div className="scroll-up-menu">
         <Link to="/prize">
           {' '}
@@ -43,7 +44,15 @@ export default () => {
         </Link>
       </div>
       <h3 className="title-schedule">SCHEDULE</h3>
-      <div className="schedulepage">
+      <div className="active-schedule-mb">
+        <div className={isCheck ? 'active-schedule-mb-item active-schedule-match' : 'active-schedule-mb-item'} onClick={() => setCheck(true)}>
+          SCHEDULE
+        </div>
+        <div className={isCheck ? 'active-schedule-mb-item' : 'active-schedule-mb-item active-standing'} onClick={() => setCheck(false)}>
+          STANDING
+        </div>
+      </div>
+      <div className={isCheck ? 'schedulepage schedulepage-match-active' : 'schedulepage schedulepage-standing-active'}>
         <Slider
           slidesToShow={
             schedule.dates.length && schedule.dates.length > 6
@@ -59,6 +68,14 @@ export default () => {
           }
           afterChange={i => set_date_chosen(schedule.dates[i].date)}
           className="slide-day-match"
+          responsive= {[
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 3,
+              }
+            }
+          ]}
         >
           {schedule.dates.map((item, key) => (
             <div key={key} onClick={() => set_date_chosen(item.date)}>

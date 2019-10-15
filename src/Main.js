@@ -88,6 +88,9 @@ export default () => {
               )}
             />
           </div>
+          <div className="play-game">
+            <a href="https://www.youtube.com">PLAY GAME</a>
+          </div>
         </Error>
       </Loading>
     </Router>

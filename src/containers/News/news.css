@@ -8,6 +8,8 @@
 .newspage{
   width: 62.5%;
   margin: 0 auto;
+  position: relative;
+  padding: 2em 0px;
 }
 .newspage-top{
   width: 100%;
@@ -165,4 +167,31 @@
 }
 .content-related-items .news-item .news-item-img img{
   border:1px solid #ffc46f;
+}
+@media (max-width: 800px) and (min-height:480px){
+  .newspage{
+    width: 100%;
+    padding-bottom: 8vh;
+  }
+  .news-top-item{
+    margin: 0px;
+  }
+  .newspage .title-schedule{
+    margin:2vh 0px;
+  }
+  .news-top-text{
+    top: initial;
+    bottom: 10px;
+  }
+  .newspage-top .slick-dots{
+    display: none!important;
+  }
+  .newspage-items{
+    width: 80%;
+    margin:0 auto;
+  }
+  .news-item{
+    width: 100%;
+    padding: 5px 10px;
+  }
 }

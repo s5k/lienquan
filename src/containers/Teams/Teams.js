@@ -33,7 +33,7 @@ export default () => {
   library.add(fab, faArrowUp, faArrowDown, faCircle, faPlayCircle)
 
   return (
-    <div>
+    <div className="teamspage">
       <div className="scroll-up-menu">
         <Link to="/events">
           {' '}
@@ -41,7 +41,7 @@ export default () => {
         </Link>
       </div>
       <h3 className="title-teams">MEET THE TEAMS</h3>
-      <div className="teamspage">
+      <div className="teamspage-items">
         <Slider
           asNavFor={nav2}
           ref={slider => setNav1(slider)}
@@ -87,14 +87,16 @@ export default () => {
                 </div>
                 <div className="team-info">
                   <img className="logo-team" src={item.logo} />
-                  <div className="title-team-name">{item.name}</div>
-                  <div className="team-area">{item.region}</div>
-                  <div className="team-des">{item.description}</div>
-                  <div className="team-video">
-                    <a href={item.video_link} target="blank">
-                      {' '}
-                      <FontAwesomeIcon icon="play-circle" /> WATCH VIDEO{' '}
-                    </a>
+                  <div className="team-info-content">
+                    <div className="title-team-name">{item.name}</div>
+                    <div className="team-area">{item.region}</div>
+                    <div className="team-des">{item.description}</div>
+                    <div className="team-video">
+                      <a href={item.video_link} target="blank">
+                        {' '}
+                        <FontAwesomeIcon icon="play-circle" /> WATCH VIDEO{' '}
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -114,6 +116,21 @@ export default () => {
           verticalSwiping={true}
           arrows={false}
           className="teams-name"
+          responsive={[
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 0,
+                rows: 2,
+                infinite: true,
+                dots: false,
+                vertical: false,
+                slidesPerRow: 1,
+                verticalSwiping: false
+              }
+            }
+          ]}
         >
           {teams.map((item, key) => (
             <div key={key}>

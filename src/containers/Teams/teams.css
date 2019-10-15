@@ -1,5 +1,11 @@
 .teamspage{
-  width: 61%;
+  width: 62.5%;
+  margin: 0 auto;
+  position: relative;
+  padding: 2em 0px;
+}
+.teamspage-items{
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   position: relative;
@@ -131,7 +137,7 @@
   display: inline-block;
   border: 1px solid #ffc46f;
   color: #ffc46f;
-  padding: 5px 15px;
+  padding: 5px 5%;
   position: absolute;
   bottom: 1vh;
   left: 50%;
@@ -158,4 +164,96 @@
 }
 .teams-info div{
   height: 100%;
+}
+@media (max-width: 767px) and (min-height:480px){
+  .teamspage{
+    width: 95%;
+  }
+  .teams-info,.teams-name{
+    display: flex;
+    width: 100%;
+  }
+  .teams-name{
+    order:1;
+    border-left-width: 1px;
+    border-bottom-width: 0px;
+  }
+  .teams-info{
+    order:2;
+  }
+  .teams-name.slick-vertical .slick-current{
+    border-left-width: 1px;
+    background-image: none;
+  }
+  .team-name{
+    font-size: 2em;
+    line-height: 2em;
+  }
+  .teamspage .teams-info-item .slick-slide:not(.slick-active){
+    padding: 3vh 0px;
+  }
+  .slick-active.slick-center.slick-current{
+    padding-bottom: 6vh;
+  }
+  .teams-info div{
+    height: auto;
+  }
+  .team-member, .team-info{
+    width: 100%;
+    height: 50%!important;
+  }
+  .teams-info-item{
+    height: 68vh!important;
+    overflow: hidden;
+  }
+  .team-member{
+    order: 2;
+  }
+  .team-info{
+    order: 1;
+    border-bottom: 1px solid #5e4135;
+  }
+  .team-info .logo-team{
+    width: 35%;
+    margin:5%;
+    float: right;
+  }
+  .team-info-content{
+    width: 52%;
+    margin-left: 3%;
+    float: left;
+    text-align: left;
+    padding-top: 5%;
+  }
+  .title-team-name{
+    font-size: 4em;
+  }
+  .team-area{
+    font-size: 3em;
+  }
+  .team-des{
+    padding: 0px;
+    font-size: 1.2em;
+  }
+  .team-video a {
+    left: 3%;
+    transform: translateX(0%);
+  }
+  .team-member{
+    width: 70%;
+    margin: 0 auto;
+    border-right-width: 0px;
+  }
+  .team-member .slick-slider{
+    height: 100%;
+  }
+  .slick-center .member-img{
+    transform: scale(1.5);
+  }
+  .team-member .slick-prev{
+    left: calc(-15% - 17px)
+  }
+  .team-member .slick-next {
+    right: calc(-15% - 17px);
+  }
 }

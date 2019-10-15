@@ -17,17 +17,16 @@ body {
   font-size: calc(0.1em + 1vw);
 }
 #root{
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
-  align-items: center;
+  position: relative;
 }
 .main{
   width: 100%;
-  min-height: 90vh;
+  min-height: 90%;
   position: relative;
   text-align: center;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -52,12 +51,10 @@ a,a:hover,a:focus{
   z-index: 9999;
 }
 .scroll-up-menu{
-  top:0;
-  transform: translate(-50%,-110%);
+  top:10px;
 }
 .scroll-down-menu{
   bottom: 0;
-  transform: translate(-50%,110%);
 }
 /* sidebar css */
 .bnt-sidebar{
@@ -76,7 +73,7 @@ a,a:hover,a:focus{
   background: rgba(0,0,0,0.5);
   top: 0px;
   left: 0px;
-  z-index: 9;
+  z-index: 9999999;
   transition: all 0.05s;
 }
 .sidebar .logo-aic{
@@ -161,4 +158,65 @@ a,a:hover,a:focus{
 }
 .language .select-language option{
   color: #000;
+}
+.play-game{
+  display: none;
+  position: absolute;
+  bottom: 2.5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: calc(1.2em + 1vw);
+  font-weight: 700;
+  z-index: 999999;
+}
+.play-game a{
+  display: inline-block;
+  background: #0f0510;
+  color: #ffc46f;
+  border:1px solid #ffc46f;
+  padding: 5px 15px;
+}
+.title-teams,.title-schedule{
+  margin:0px!important;
+}
+@media (max-width: 800px) and (min-height:480px){
+  .title-teams,.title-schedule{
+    font-size:4em!important;
+    margin:1% 0px!important;
+  }
+  .language,.scroll-down-menu,.scroll-up-menu{
+    display: none;
+  }
+  .play-game{
+    display: block;
+  }
+  .sidebar{
+    background: none;
+  }
+  .bnt-sidebar{
+    font-size:2em;
+  }
+  .sidebar ul{
+    display: none;
+  }
+  .sidebar.open-sidebar{
+    width: 50vw;
+    background: rgba(0,0,0,0.9);
+  }
+  .sidebar.open-sidebar .btn-close-menu{
+    font-size: 2em;
+  }
+  .top-sidebar{
+    left: 10px;
+  }
+  .sidebar.open-sidebar .top-sidebar{
+    top:0px;
+    left: 0px;
+  }
+  .sidebar.open-sidebar ul{
+    display: block;
+  }
+  .sidebar.open-sidebar li{
+    font-size: 2.5em;
+  }
 }
