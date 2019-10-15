@@ -176,6 +176,9 @@ a,a:hover,a:focus{
   border:1px solid #ffc46f;
   padding: 5px 15px;
 }
+.title-teams,.title-schedule{
+  margin:0px!important;
+}
 @media (max-width: 800px) and (min-height:480px){
   .title-teams,.title-schedule{
     font-size:4em!important;

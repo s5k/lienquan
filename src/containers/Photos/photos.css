@@ -4,6 +4,7 @@
   text-align: center;
   min-height: 90vh;
   position: relative;
+  padding: 2em 0px;
 }
 .photo-menu{
   display: flex;
