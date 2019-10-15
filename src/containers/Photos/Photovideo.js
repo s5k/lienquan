@@ -5,25 +5,24 @@
  */
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React,{ useState } from 'react'
-// import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+
+import * as moment from 'moment'
+
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import FsLightbox from 'fslightbox-react';
+import FsLightbox from 'fslightbox-react'
 import './photos.css'
+import { useStateValue } from '../../State'
 
 export default () => {
-  const [toggler, setToggler] = useState(false);
-  const [imageVideo, setImageVideo] = useState(0);
+  const [{ videos }] = useStateValue()
 
-  const hinhanh = [
-    "https://www.youtube.com/watch?v=qYjB584rhtM",
-    "https://www.youtube.com/watch?v=qILhS-Vvd2U",
-    "https://www.youtube.com/watch?v=lfHvC8yd9Sw",
-  ]
+  const [toggler, setToggler] = useState(false)
+  const [imageVideo, setImageVideo] = useState(0)
 
-  const toggleVideo = (index) => {
+  const toggleVideo = index => {
     setToggler(!toggler)
     setImageVideo(index)
   }
@@ -33,63 +32,64 @@ export default () => {
       <div className="photo-video-items">
         <div className="video-heighlight">
           <FsLightbox
-            toggler={ toggler }
-            sources={ [hinhanh[imageVideo]] }
-            key={ imageVideo }
+            toggler={toggler}
+            sources={[videos[imageVideo].link]}
+            key={imageVideo}
           />
-          <Slider 
-            arrows={false}
-            dots={true}
-            swipe={false}
-          >
-            <div>
-              <div className="video-heighlight-item">
-                <div className="video-heightlight-clip" onClick={ () => toggleVideo(0) }>
-                  <img src={require('../../images/photovideo.jpg')} alt="photovideo"  />
+          <Slider arrows={false} dots={true} swipe={false}>
+            {videos
+              .sort(
+                item =>
+                  moment(item.create_time, 'HH:mm:ss - DD/MM/YYYY').unix() >
+                  moment().unix()
+              )
+              .map((item, key) => (
+                <div key={key}>
+                  <div className="video-heighlight-item">
+                    <div
+                      className="video-heightlight-clip"
+                      onClick={() => toggleVideo(key)}
+                    >
+                      <img
+                        src={`//i3.ytimg.com/vi/${
+                          item.link.split('?v=')[1]
+                        }/maxresdefault.jpg`}
+                        alt="photovideo"
+                      />
+                    </div>
+                    <div className="video-heightlight-text">
+                      <p className="video-text-title">{item.name}</p>
+                      <p className="video-text-des">
+                        Find out the details of AIC 2019 Events
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className="video-heightlight-text">
-                  <p className="video-text-title">aic 2019 format annoucement and venue</p>
-                  <p className="video-text-des">Find out the details of AIC 2019 Events</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="video-heighlight-item">
-                <div className="video-heightlight-clip" onClick={ () => toggleVideo(1) }>
-                  <img src={require('../../images/photovideo.jpg')} alt="photovideo" />
-                </div>
-                <div className="video-heightlight-text">
-                  <p className="video-text-title">aic 2019 format annoucement and venue</p>
-                  <p className="video-text-des">Find out the details of AIC 2019 Events</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="video-heighlight-item">
-                <div className="video-heightlight-clip" onClick={ () => toggleVideo(2) }>
-                  <img src={require('../../images/photovideo.jpg')} alt="photovideo" />
-                </div>
-                <div className="video-heightlight-text">
-                  <p className="video-text-title">aic 2019 format annoucement and venue</p>
-                  <p className="video-text-des">Find out the details of AIC 2019 Events</p>
-                </div>
-              </div>
-            </div>
+              ))}
           </Slider>
         </div>
         <div className="video-other">
-          <div className="video-other-item">
-            <img src={require('../../images/photovideo.jpg')} alt="photovideo"/>
-            <div className="video-other-item-text">VIDEO RANDOM 1</div>
-          </div>
-          <div className="video-other-item">
-            <img src={require('../../images/photovideo.jpg')} alt="photovideo"/>
-            <div className="video-other-item-text">VIDEO RANDOM 1</div>
-          </div>
-          <div className="video-other-item">
-            <img src={require('../../images/photovideo.jpg')} alt="photovideo"/>
-            <div className="video-other-item-text">VIDEO RANDOM 1</div>
-          </div>
+          {videos
+            .sort(
+              item =>
+                moment(item.create_time, 'HH:mm:ss - DD/MM/YYYY').unix() >
+                moment().unix()
+            )
+            .map((item, key) => (
+              <div
+                className="video-other-item"
+                key={key}
+                onClick={() => toggleVideo(key)}
+              >
+                <img
+                  src={`//i3.ytimg.com/vi/${
+                    item.link.split('?v=')[1]
+                  }/maxresdefault.jpg`}
+                  alt="photovideo"
+                />
+                <div className="video-other-item-text">{item.name}</div>
+              </div>
+            ))}
         </div>
       </div>
     </div>
