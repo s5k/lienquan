@@ -36,7 +36,7 @@ export default () => {
   library.add(fab, faArrowUp, faArrowDown, faCircle)
 
   return (
-    <div>
+    <div className="schedulepageall">
       <div className="scroll-up-menu">
         <Link to="/prize">
           {' '}
