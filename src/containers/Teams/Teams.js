@@ -103,7 +103,7 @@ export default () => {
               breakpoint: 480,
               settings: {
                 slidesToShow: 3,
-                slidesToScroll: 0,
+                slidesToScroll: 3,
                 rows: 2,
                 infinite: true,
                 dots: false,
@@ -116,8 +116,12 @@ export default () => {
           afterChange={index => setTeamIndex(index)}
         >
           {teams.map((item, key) => (
-            <div key={key}>
-              <div className="team-name" onClick={() => setTeamIndex(key)}>
+            <div key={key} onClick={() => setTeamIndex(key)}>
+              <div
+                className={
+                  key === teamIndex ? 'team-name active-team' : 'team-name'
+                }
+              >
                 {item.name}
               </div>
             </div>
