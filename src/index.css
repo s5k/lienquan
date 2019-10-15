@@ -179,7 +179,26 @@ a,a:hover,a:focus{
 .title-teams,.title-schedule{
   margin:0px!important;
 }
+.back-home a{
+  display: inline-block;
+  border:1px solid #ffc46f;
+  background: rgba(0,0,0,0.8);
+  text-align: center;
+  color: #ffedd3;
+}
+.back-home a div:first-child{
+  padding: 10px 0px;
+}
+.back-home a div:last-child{
+  padding: 5px 10px;
+  border-top: 1px solid #ffc46f;
+  font-size: 0.7em;
+  font-weight: 700;
+}
 @media (max-width: 800px) and (min-height:480px){
+  .back-home{
+    display: none;
+  }
   .title-teams,.title-schedule{
     font-size:4em!important;
     margin:1% 0px!important;

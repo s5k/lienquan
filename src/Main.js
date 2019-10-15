@@ -20,7 +20,13 @@ import Photovideo from './containers/Photos/Photovideo'
 import { useStateValue } from './State'
 import Loading from './components/Loading'
 import Error from './components/Error'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import {
+  faHome,
+  faArrowLeft
+} from '@fortawesome/free-solid-svg-icons'
 export default () => {
   const [state, dispatch] = useStateValue()
 
@@ -47,17 +53,27 @@ export default () => {
 
     fetchData()
   }, [dispatch])
-
+  library.add(fab, faHome, faArrowLeft)
   return (
     <Router>
       <Loading loading={state.loading}>
         <Error error={state.error}>
           <Sidebar />
           <div className="language">
-            <select className="select-language">
+            {/* <select className="select-language">
               <option defaultValue="english">North America (English)</option>
               <option defaultValue="vietnames">Vietnamese (Tiếng Việt)</option>
-            </select>
+            </select> */}
+            <div className="back-home">
+              <a href=".">
+                <div>
+                  <FontAwesomeIcon icon="home" />
+                </div>
+                <div className="home-left">
+                  <FontAwesomeIcon icon="arrow-left" /> HOME
+                </div>
+              </a>
+            </div>
           </div>
           {/* Thêm một trang mới, thì anh làm giống trang About nhé ('exact' để chỉ định trang chủ) */}
           <div className="main">

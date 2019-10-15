@@ -10,6 +10,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 2vh;
+  height: 55vh;
 }
 .photo-item{
   display: flex;
