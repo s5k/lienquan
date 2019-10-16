@@ -33,6 +33,9 @@
   flex-wrap: wrap;
   border:1px solid #ffc46f;
 }
+.events-item-img{
+  width: 100%;
+}
 .events-item .events-item-img img{
   width: 100%;
 }

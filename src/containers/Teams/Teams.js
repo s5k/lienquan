@@ -34,8 +34,7 @@ export default () => {
     <div className="teamspage">
       <div className="scroll-up-menu">
         <Link to="/events">
-          {' '}
-          <FontAwesomeIcon icon="arrow-up" />
+          <img src={require('../../images/icons/prev-button.png')} alt="next-button"/>
         </Link>
       </div>
       <h3 className="title-teams">MEET THE TEAMS</h3>
@@ -130,8 +129,7 @@ export default () => {
       </div>
       <div className="scroll-down-menu">
         <Link to="/media">
-          {' '}
-          <FontAwesomeIcon icon="arrow-down" />
+          <img src={require('../../images/icons/next-button.png')} alt="next-button"/>
         </Link>
       </div>
     </div>

@@ -1,11 +1,38 @@
 *{
   box-sizing: border-box;
 }
+@font-face {
+	font-family: 'ALP Antonio-Bold';
+	src: url('fonts/ALP Antonio-Bold.eot');
+	src: local('☺'), url('fonts/ALP Antonio-Bold.woff') format('woff'), url('fonts/ALP Antonio-Bold.ttf') format('truetype'), url('fonts/ALP Antonio-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Antonio-Regular';
+	src: url('fonts/Antonio-Regular.eot');
+	src: local('☺'), url('fonts/Antonio-Regular.woff') format('woff'), url('fonts/Antonio-Regular.ttf') format('truetype'), url('fonts/Antonio-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Massimo SemiBold';
+	src: url('fonts/Massimo SemiBold.eot');
+	src: local('☺'), url('fonts/Massimo SemiBold.woff') format('woff'), url('fonts/Massimo SemiBold.ttf') format('truetype'), url('fonts/Massimo SemiBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Massimo UltraLight';
+	src: url('fonts/Massimo UltraLight.eot');
+	src: local('☺'), url('fonts/Massimo UltraLight.woff') format('woff'), url('fonts/Massimo UltraLight.ttf') format('truetype'), url('fonts/Massimo UltraLight.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
@@ -15,11 +42,22 @@ body {
   background-attachment: fixed;
   color: #fff;
   font-size: calc(0.1em + 1vw);
+  position: relative;
 }
+
 #root{
   min-height: 90vh;
   display: flex;
   position: relative;
+}
+body::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0px;
+  left: 0px;
+  background: rgba(0,0,0,0.4);
 }
 .main{
   width: 100%;
@@ -27,6 +65,7 @@ body {
   position: relative;
   text-align: center;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -41,14 +80,11 @@ a,a:hover,a:focus{
   transform: translateX(-50%);
   width: 1.5em;
   height: 1.5em;
-  text-align: center;
-  line-height: 1.5em;
-  color: #ffc46f;
-  border:1px solid #ffc46f;
-  border-radius: 50%;
-  cursor: pointer;
-  background: rgba(0,0,0,0.7);
   z-index: 9999;
+}
+.scroll-up-menu img,.scroll-down-menu img{
+  width: 100%;
+  height: 100%;
 }
 .scroll-up-menu{
   top:5px;
@@ -126,9 +162,19 @@ a,a:hover,a:focus{
 }
 .sidebar.open-sidebar li span{
   display: inline-block;
+  font-family: 'ALP Antonio-Bold';
+}
+.sidebar-item img{
+  height: 1em;
+  margin-bottom: -1px;
+  margin-right: 5px;
+  filter:brightness(1000);
 }
 .sidebar li.active a,.sidebar li:hover a{
   color: #ffc46f;
+}
+.sidebar li.active .sidebar-item img,.sidebar li:hover .sidebar-item img{
+  filter:brightness(1);
 }
 .sidebar.open-sidebar li.active::before,.sidebar.open-sidebar li:hover::before{
   position: absolute;
@@ -178,6 +224,7 @@ a,a:hover,a:focus{
 }
 .title-teams,.title-schedule{
   margin:0px!important;
+  font-family: 'Massimo SemiBold';
 }
 .back-home a{
   display: inline-block;

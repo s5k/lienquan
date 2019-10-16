@@ -8,7 +8,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './photos.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   fab,
@@ -27,47 +26,53 @@ export default ({ match }) => {
     <div className="photospage">
       <div className="scroll-up-menu">
         <Link to="/teams">
-          {' '}
-          <FontAwesomeIcon icon="arrow-up" />
+          <img src={require('../../images/icons/prev-button.png')} alt="prev-button"/>
         </Link>
       </div>
       <h3 className="title-teams">PHOTO AND VIDEO</h3>
       <div className="photo-menu">
+      
         <div className="photo-item">
-          <img src={photoFace} alt="facebook" />
-          <div className="photo-text">
-            <div className="photo-icon">
-              <FontAwesomeIcon icon={['fab', 'facebook-square']} className="" />
+          <Link to="#">
+            <img src={photoFace} alt="facebook" />
+            <div className="photo-text">
+              <div className="photo-icon">
+                <img src={require('../../images/icons/fb-icon.png')} alt="facebook"/>
+              </div>
+              <div className="photo-text-content">
+                <p className="title-photo-menu">VISIT OUR FANPAGE</p>
+                <p>AND EARN REWARD</p>
+              </div>
             </div>
-            <Link to="#">
-              <p className="title-photo-menu">VISIT OUR FANPAGE</p>
-              <p>AND EARN REWARD</p>
-            </Link>
-          </div>
+          </Link>
         </div>
         <div className="photo-item">
-          <img src={photoAlbums} alt="photoalbums" />
-          <div className="photo-text">
-            <div className="photo-icon">
-              <FontAwesomeIcon icon="image" className="" />
+          <Link to="./media/photos">
+            <img src={photoAlbums} alt="photoalbums" />
+            <div className="photo-text">
+              <div className="photo-icon">
+                <img src={require('../../images/icons/picture.png')} alt="albums" />
+              </div>
+              <div className="photo-text-content">
+                <p className="title-photo-menu">PHOTO ALBUMS</p>
+                <p>PLAYER, VENUE AND MORE</p>
+              </div>
             </div>
-            <Link to="./media/photos">
-              <p className="title-photo-menu">PHOTO ALBUMS</p>
-              <p>PLAYER, VENUE AND MORE</p>
-            </Link>
-          </div>
+          </Link>
         </div>
         <div className="photo-item">
-          <img src={photoVideo} alt="photovideo" />
-          <div className="photo-text">
-            <div className="photo-icon">
-              <FontAwesomeIcon icon={['fab', 'youtube']} className="" />
+          <Link to="./media/videos">
+            <img src={photoVideo} alt="photovideo" />
+            <div className="photo-text">
+              <div className="photo-icon">
+                <img src={require('../../images/icons/youtube-photos.png')} alt="video"/>
+              </div> 
+              <div className="photo-text-content">
+                <p className="title-photo-menu">WATCH VIDEO</p>
+                <p>FIND OUT WHAT'S GOING ON</p>
+              </div>
             </div>
-            <Link to="./media/videos">
-              <p className="title-photo-menu">WATCH VIDEO</p>
-              <p>FIND OUT WHAT'S GOING ON</p>
-            </Link>
-          </div>
+          </Link>
         </div>
       </div>
       <div className="company-info">

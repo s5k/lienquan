@@ -21,7 +21,7 @@ import Error from './components/Error'
 import Photodetail from './containers/Photos/Photodetail'
 import PhotoVideo from './containers/Photos/Photovideo'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faHome, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
@@ -57,11 +57,11 @@ export default () => {
       <Loading loading={state.loading}>
         <Error error={state.error}>
           <Sidebar />
-          <div className="language">
-            {/* <select className="select-language">
+          {/* <div className="language">
+            <select className="select-language">
               <option defaultValue="english">North America (English)</option>
               <option defaultValue="vietnames">Vietnamese (Tiếng Việt)</option>
-            </select> */}
+            </select>
             <div className="back-home">
               <a href=".">
                 <div>
@@ -72,7 +72,7 @@ export default () => {
                 </div>
               </a>
             </div>
-          </div>
+          </div> */}
           {/* Thêm một trang mới, thì anh làm giống trang About nhé ('exact' để chỉ định trang chủ) */}
           <div className="main">
             <Route exact path="/" component={Homepage} />

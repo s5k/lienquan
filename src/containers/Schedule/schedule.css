@@ -44,6 +44,7 @@
   font-size: 1.5em;
   position: relative;
   font-weight: 600;
+  font-family: 'Massimo SemiBold';
 }
 .day-match::before {
   content: '';
@@ -55,9 +56,12 @@
   top: 20%;
 }
 .day-round {
-  padding: 5px 0px;
+  padding: 5px 0px 7px 0px;
   color: #635d64;
   font-weight: 700;
+  font-family: 'ALP Antonio-Bold';
+  text-transform: uppercase;
+  font-size: 0.9em;
 }
 .slick-current .day-match {
   color: #ffc46f;
@@ -91,9 +95,10 @@
   background: #170a1e;
   width: 70%;
   float: left;
+  height: 66vh;
 }
 .schedule-match-day-items {
-  height: 56vh;
+  height: 100%;
   padding-right: 15px;
   overflow: auto;
 }
@@ -117,8 +122,9 @@
   text-align: left;
 }
 .match-time {
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 600;
+  font-family: 'ALP Antonio-Bold';
 }
 .match-view {
   text-align: right;
@@ -135,6 +141,7 @@
   text-transform: uppercase;
   font-size: 1.2em;
   font-weight: 700;
+  font-family: 'Massimo SemiBold';
 }
 .match-teams .team.team-disable {
   opacity: 0.5;
@@ -148,9 +155,15 @@
 }
 .match-teams .match-bo span {
   display: block;
-  font-size: 0.6em;
+  font-size: 0.5em;
   font-weight: 700;
   position: relative;
+  font-family: 'Massimo UltraLight';
+  text-transform: uppercase;
+}
+.match-teams .match-bo span.score{
+  font-size: 0.8em;
+  font-family: 'Massimo SemiBold';
 }
 .team-1 .score {
   position: relative;
@@ -209,6 +222,7 @@
   border: 1px solid #ffc46f;
   height: calc(56vh + 22px);
   background: #170b1f;
+  height: 66vh;
 }
 .standings ul {
   margin: 0px;
@@ -241,8 +255,8 @@
   display: block;
 }
 .standings .react-tabs .react-tabs__tab-panel img {
-  height: 100%;
   width: 100%;
+  max-height: 100%;
 }
 .standings .react-tabs .react-tabs__tab--selected {
   opacity: 1;

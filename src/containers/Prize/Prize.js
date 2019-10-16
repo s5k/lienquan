@@ -7,7 +7,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './prize.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons'
@@ -17,8 +16,7 @@ export default () => {
     <div className="prizepage">
       <div className="scroll-up-menu">
         <Link to="/">
-          {' '}
-          <FontAwesomeIcon icon="arrow-up" />
+          <img src={require('../../images/icons/prev-button.png')} alt="next-button"/>
         </Link>
       </div>
       <h3 className="title-schedule">PRIZE POOL</h3>
@@ -26,8 +24,7 @@ export default () => {
       <img className="prize-mb" src={require('../../images/prize-mb.png')} alt="Giải thưởng"/>
       <div className="scroll-down-menu">
         <Link to="/schedule">
-          {' '}
-          <FontAwesomeIcon icon="arrow-down" />
+          <img src={require('../../images/icons/next-button.png')} alt="next-button"/>
         </Link>
       </div>
     </div>

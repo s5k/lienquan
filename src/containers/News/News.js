@@ -7,7 +7,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react'
 import { Link, useRouteMatch } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import {
@@ -18,6 +17,7 @@ import {
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import FsLightbox from 'fslightbox-react';
 import './news.css'
 import { useStateValue } from '../../State'
 
@@ -29,13 +29,12 @@ export default () => {
   const [{ posts }] = useStateValue()
 
   library.add(fab, faArrowUp, faArrowDown, faCircle)
-
+  const [toggler, setToggler] = useState(false);
   return (
     <div className="newspage">
       <div className="scroll-up-menu">
         <Link to="/schedule">
-          {' '}
-          <FontAwesomeIcon icon="arrow-up" />
+          <img src={require('../../images/icons/prev-button.png')} alt="next-button"/>
         </Link>
       </div>
       <h3 className="title-schedule">NEWS</h3>
@@ -44,7 +43,7 @@ export default () => {
           {posts
             .filter(item => item.is_hot_news)
             .map((item, key) => (
-              <div key={key}>
+              <div key={key} className="news-top-item-content">
                 <Link to={`${url}/${item.id}`}>
                   <div className="news-top-item">
                     <img src={item.thumbnail} alt="newstop" />
@@ -56,9 +55,18 @@ export default () => {
                     </div>
                   </div>
                 </Link>
+                <div className="watch-video" onClick={ () => setToggler(!toggler) }>
+                  <img src={require('../../images/icons/watch-video.png')} alt="watch video"/> watch video
+                </div>
               </div>
             ))}
         </Slider>
+        <FsLightbox
+          toggler={ toggler }
+          sources={ [
+          'https://www.youtube.com/watch?v=xshEZzpS4CQ'
+          ] }
+        />
       </div>
       <div className="newspage-items">
         {posts
@@ -82,18 +90,19 @@ export default () => {
             </div>
           ))}
         {paginate < posts.filter(item => !item.is_hot_news).length && (
-          <div
-            className="btn-seemore"
-            onClick={() => setPaginate(paginate + 4)}
-          >
-            SEE MORE
+          <div className="btn-seemore-div">
+            <div
+              className="btn-seemore"
+              onClick={() => setPaginate(paginate + 4)}
+            >
+              SEE MORE
+            </div>
           </div>
         )}
       </div>
       <div className="scroll-down-menu">
         <Link to="/events">
-          {' '}
-          <FontAwesomeIcon icon="arrow-down" />
+          <img src={require('../../images/icons/next-button.png')} alt="next-button"/>
         </Link>
       </div>
     </div>

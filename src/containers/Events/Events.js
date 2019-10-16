@@ -7,7 +7,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import {
@@ -27,8 +26,7 @@ export default () => {
     <div className="eventspage">
       <div className="scroll-up-menu">
         <Link to="/news">
-          {' '}
-          <FontAwesomeIcon icon="arrow-up" />
+          <img src={require('../../images/icons/prev-button.png')} alt="next-button"/>
         </Link>
       </div>
       <h3 className="title-schedule">EVENTS</h3>
@@ -50,8 +48,7 @@ export default () => {
       </div>
       <div className="scroll-down-menu">
         <Link to="/teams">
-          {' '}
-          <FontAwesomeIcon icon="arrow-down" />
+          <img src={require('../../images/icons/next-button.png')} alt="next-button"/>
         </Link>
       </div>
     </div>

@@ -39,8 +39,7 @@ export default () => {
     <div className="schedulepageall">
       <div className="scroll-up-menu">
         <Link to="/prize">
-          {' '}
-          <FontAwesomeIcon icon="arrow-up" />
+          <img src={require('../../images/icons/prev-button.png')} alt="next-button"/>
         </Link>
       </div>
       <h3 className="title-schedule">SCHEDULE</h3>
@@ -57,7 +56,7 @@ export default () => {
           slidesToShow={
             schedule.dates.length && schedule.dates.length > 6
               ? 6
-              : schedule.dates.length
+              : schedule.dates.length - 1
           }
           focusOnSelect={true}
           centerMode={false}
@@ -149,8 +148,7 @@ export default () => {
       </div>
       <div className="scroll-down-menu">
         <Link to="/news">
-          {' '}
-          <FontAwesomeIcon icon="arrow-down" />
+          <img src={require('../../images/icons/next-button.png')} alt="next-button"/>
         </Link>
       </div>
     </div>
