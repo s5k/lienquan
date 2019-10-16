@@ -27,11 +27,8 @@ jobs:
             sudo apt-get update -q
             sudo apt-get install -y lftp
       - run:
-          name: Deletes Public_html
-          command: lftp -c "set ftp:ssl-allow no; open -u 'aic19','~XhmDpfeO]mN' aic19.devvn.us; -e 'rm /public_html; bye'"
-      - run:
           name: Deploy
-          command: lftp -c "set ftp:ssl-allow no; open -u 'aic19','~XhmDpfeO]mN' aic19.devvn.us; mirror -Rnv ./build/ /public_html/ --ignore-time --parallel=10"
+          command: lftp -c "set ftp:ssl-allow no; open -u 'aic19','~XhmDpfeO]mN' aic19.devvn.us; rm -rf /public_html/; mirror -Rnv ./build/ /public_html/ --ignore-time --parallel=10"
 
 workflows:
   version: 2
