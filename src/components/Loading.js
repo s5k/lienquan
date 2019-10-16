@@ -4,13 +4,21 @@
  * Author: Quy Pham - s5k.github.io
  */
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 export default ({ children, loading }) => {
+  const [threeDots, setDots] = useState('...')
+
+  useEffect(() => {
+    setInterval(() => {
+      threeDots.length === 3 ? setDots('.') : setDots(threeDots + '.')
+    }, 500)
+  }, [setDots, threeDots])
+
   return (
     <>
       {loading === true ? (
-        <h1 className="text-center">Vui lòng đợi...</h1>
+        <h1 className="text-center">Vui lòng đợi{threeDots}</h1>
       ) : (
         children
       )}
