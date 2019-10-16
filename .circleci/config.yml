@@ -1,0 +1,40 @@
+version: 2.0
+jobs:
+  deploy: # deploy script
+    working_directory: ~/repository
+    docker:
+      - image: circleci/node:10.16.3
+    steps:
+      - checkout
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install-npm
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run: # build react
+          name: react-build
+          command: npm run build
+      - run:
+          name: install-lftp
+          command: |
+            sudo apt-get update -q
+            sudo apt-get install -y lftp
+      - run:
+          name: Deploy
+          command: lftp -c "set ftp:ssl-allow no; open -u 'aic19','~XhmDpfeO]mN' aic19.devvn.us; mirror -Rnv ./build/ /public_html/ --ignore-time --parallel=10"
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - deploy: # perform second
+          filters: # only for the master branch
+            branches:
+              only: master
