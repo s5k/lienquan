@@ -30,7 +30,7 @@ export default () => {
 
   useEffect(() => {
     async function fetchData() {
-      fetch('http://aic2019.lienquan.garena.vn/api/user/get')
+      fetch('//aic2019.lienquan.garena.vn/api/user/get')
         .then(res => res.json())
         .then(res =>
           res.status === 'successful'
