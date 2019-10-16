@@ -19,6 +19,12 @@ export default () => {
   return (
     <div className="newpage">
       <Backhome/>
+      <div className="newpage-title">
+        aic 2019 format annoucement and venue
+      </div>
+      <div className="newpage-post-by">
+        By Son.nguyen.97 | September 23, 2019
+      </div>
       <div
         className="content-news-detail"
         dangerouslySetInnerHTML={{
