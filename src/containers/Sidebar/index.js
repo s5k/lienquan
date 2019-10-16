@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /*
  * Created on Wed Oct 08 2019
  *
@@ -23,7 +24,7 @@ import {
   faArrowUp,
   faArrowDown
 } from '@fortawesome/free-solid-svg-icons'
-
+import closeBnt from '../../images/icons/x-button.png'
 import logoAic from '../../images/logo-aic.png'
 import { useStateValue } from '../../State'
 import NavItem from '../../components/NavItem'
@@ -72,11 +73,7 @@ export default () => {
       <div className="top-sidebar">
         <div className="btn-close-menu">
           <img src={logoAic} alt="Logo AIC" className="logo-aic" />
-          <FontAwesomeIcon
-            icon="times"
-            className="close-menu"
-            onClick={() => setCollapseSidebar(false)}
-          />
+          <img src={closeBnt} className="close-menu" onClick={() => setCollapseSidebar(false)} />
         </div>
         <div className="bnt-sidebar">
           <FontAwesomeIcon
@@ -90,8 +87,8 @@ export default () => {
         {menu.map((item, key) => {
           return (
             <NavItem to={item.link} key={key} exact>
-              <div onClick={() => menuClicking()}>
-                <FontAwesomeIcon icon={item.icon} /> <span>{item.name}</span>
+              <div className="sidebar-item" onClick={() => menuClicking()}>
+                <img src={item.icon} /> <span>{item.name}</span>
               </div>
             </NavItem>
           )

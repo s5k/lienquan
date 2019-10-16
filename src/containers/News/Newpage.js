@@ -7,6 +7,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
+import Backhome from '../../components/Backhome'
 import './news.css'
 import { useStateValue } from '../../State'
 
@@ -17,6 +18,7 @@ export default () => {
 
   return (
     <div className="newpage">
+      <Backhome/>
       <div
         className="content-news-detail"
         dangerouslySetInnerHTML={{

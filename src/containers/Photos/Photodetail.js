@@ -8,6 +8,7 @@
 import React, { useState } from 'react'
 // import { Link } from 'react-router-dom'
 import FsLightbox from 'fslightbox-react'
+import Backhome from '../../components/Backhome'
 import './photos.css'
 import { useStateValue } from '../../State'
 
@@ -23,6 +24,7 @@ export default () => {
 
   return (
     <div className="photodetailpage">
+      <Backhome/>
       <FsLightbox
         toggler={toggler}
         sources={images[imageIndex].images}

@@ -13,6 +13,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import FsLightbox from 'fslightbox-react'
+import Backhome from '../../components/Backhome'
 import './photos.css'
 import { useStateValue } from '../../State'
 
@@ -29,6 +30,7 @@ export default () => {
 
   return (
     <div className="photovideopage">
+      <Backhome/>
       <div className="photo-video-items">
         <div className="video-heighlight">
           <FsLightbox
