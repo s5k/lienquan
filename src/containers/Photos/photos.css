@@ -286,10 +286,15 @@
   .photo-menu{
     height: 70vh;
   }
-  .photo-item  > img{
+  .photo-item a{
+    height: 100%;
+    overflow: hidden;
+  }
+  /* .photo-item a  > img{
     height: 100%;
     width: 60%;
-  }
+    float: left;
+  } */
   .photo-item{
     width: 100%;
     margin:4% 0px!important;
