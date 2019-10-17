@@ -20,10 +20,10 @@
   text-shadow: 2px 2px 8px #333;
 }
 .teams-info{
-  width: 85%;
+  width: 90%;
 }
 .teams-name{
-  width: 15%;
+  width: 10%;
 }
 .teams-info-item{
   display: flex;
@@ -86,6 +86,7 @@
   -moz-box-shadow: 0px 0px 40px 40px rgba(20,13,34,1);
   box-shadow: 0px 0px 40px 40px rgba(20,13,34,1); 
   font-family: 'Massimo SemiBold';
+  padding: 2% 0px;
 }
 .member-info-text p.lane-name{
   font-size: 0.8em;

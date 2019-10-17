@@ -8,7 +8,7 @@
 import React, { useEffect } from 'react'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import {
   faHome,
@@ -25,6 +25,7 @@ import {
   faArrowDown
 } from '@fortawesome/free-solid-svg-icons'
 import closeBnt from '../../images/icons/x-button.png'
+import btnSidebar from '../../images/icons/menu-button.png'
 import logoAic from '../../images/logo-aic.png'
 import { useStateValue } from '../../State'
 import NavItem from '../../components/NavItem'
@@ -84,8 +85,8 @@ export default () => {
           />
         </div>
         <div className="bnt-sidebar">
-          <FontAwesomeIcon
-            icon="bars"
+          <img
+            src={btnSidebar}
             className="bnt-sidebar"
             onClick={() =>
               dispatch({ type: 'COLLAPSE_SIDEBAR', payload: true })

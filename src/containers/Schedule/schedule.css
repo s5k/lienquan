@@ -44,7 +44,7 @@
   font-size: 1.5em;
   position: relative;
   font-weight: 600;
-  font-family: 'Massimo Bold';
+  font-family: 'Massimo SemiBold';
 }
 .day-match::before {
   content: '';
@@ -246,7 +246,7 @@
   width: 50%;
   display: inline-block;
   padding: 15px 0px;
-  font-size: 1.5em;
+  font-size: 1.1em;
   line-height: 1em;
   font-weight: 600;
   color: #ffc46f;

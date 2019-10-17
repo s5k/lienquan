@@ -30,6 +30,9 @@
   background: rgba(0,0,0,0.8);
   z-index: -1;
 }
+.photo-item a{
+  width: 100%;
+}
 .photo-item a > img{
   max-width: 100%;
   width: 100%;
@@ -165,6 +168,8 @@
   background: none;
   background-image: url('../../images/bg-photo-detail.png');
   background-size: 100% 100%;
+  width: calc(100% - 2px);
+  margin: 0px 1px 1px;
 }
 .photo-details-item .photo-text p{
   margin: 0px;
