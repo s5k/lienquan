@@ -33,7 +33,7 @@ export default ({ match }) => {
       <div className="photo-menu">
       
         <div className="photo-item">
-          <Link to="#">
+          <a href=" https://www.facebook.com/pg/caothuLQM" target="blank">
             <img src={photoFace} alt="facebook" />
             <div className="photo-text">
               <div className="photo-icon">
@@ -44,7 +44,7 @@ export default ({ match }) => {
                 <p>AND EARN REWARD</p>
               </div>
             </div>
-          </Link>
+          </a>
         </div>
         <div className="photo-item">
           <Link to="./media/photos">
