@@ -7,6 +7,9 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
+
+import * as moment from 'moment'
+
 import Backhome from '../../components/Backhome'
 import './news.css'
 import { useStateValue } from '../../State'
@@ -18,12 +21,16 @@ export default () => {
 
   return (
     <div className="newpage">
-      <Backhome/>
+      <Backhome />
       <div className="newpage-title">
-        aic 2019 format annoucement and venue
+        {posts.filter(item => item.id === parseInt(id))[0].title}
       </div>
       <div className="newpage-post-by">
-        By Son.nguyen.97 | September 23, 2019
+        By Son.nguyen.97 |{' '}
+        {moment(
+          posts.filter(item => item.id === parseInt(id))[0].create_time,
+          'HH:mm:ss - DD/MM/YYYY'
+        ).format('MMMM DD, YYYY')}
       </div>
       <div
         className="content-news-detail"
@@ -37,20 +44,39 @@ export default () => {
           {posts
             .filter(item => item.id === parseInt(id))[0]
             .related_posts.split(',')
-            .map((item, key) => (
-              <div className="news-item" key={key}>
-                <Link to={`./${item.id}`}>
-                  <div className="news-item-content">
-                    <div className="news-item-img">
-                      <img src={item.thumbnail} />
-                    </div>
-                    <div className="news-item-text">
-                      <div className="news-item-text-title">{item.title}</div>
-                    </div>
+            .map(
+              (itemId, key) =>
+                posts.filter(item => item.id === parseInt(itemId))[0] && (
+                  <div className="news-item" key={key}>
+                    <Link
+                      to={`./${
+                        posts.filter(item => item.id === parseInt(itemId))[0].id
+                      }`}
+                    >
+                      <div className="news-item-content">
+                        <div className="news-item-img">
+                          <img
+                            src={
+                              posts.filter(
+                                item => item.id === parseInt(itemId)
+                              )[0].thumbnail
+                            }
+                          />
+                        </div>
+                        <div className="news-item-text">
+                          <div className="news-item-text-title">
+                            {
+                              posts.filter(
+                                item => item.id === parseInt(itemId)
+                              )[0].title
+                            }
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
                   </div>
-                </Link>
-              </div>
-            ))}
+                )
+            )}
         </div>
       </div>
     </div>
