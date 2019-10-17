@@ -212,6 +212,9 @@
 .content-related-items .news-item .news-item-img img{
   border:1px solid #ffc46f;
 }
+.see-more-clicked{
+  position: absolute;
+}
 @media (max-width: 800px) and (min-height:480px){
   .newspage{
     width: 100%;
