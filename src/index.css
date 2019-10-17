@@ -16,7 +16,7 @@
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Massimo Bold';
+	font-family: 'Massimo SemiBold';
 	src: url('fonts/ALP Massimo Bold.eot');
 	src: local('☺'), url('fonts/ALP Massimo Bold.woff') format('woff'), url('fonts/ALP Massimo Bold.ttf') format('truetype'), url('fonts/ALP Massimo Bold.svg') format('svg');
 	font-weight: normal;
