@@ -20,10 +20,10 @@
   text-shadow: 2px 2px 8px #333;
 }
 .teams-info{
-  width: 89%;
+  width: 85%;
 }
 .teams-name{
-  width: 11%;
+  width: 15%;
 }
 .teams-info-item{
   display: flex;
@@ -80,17 +80,20 @@
   background: #140d22;
 }
 .member-info-text p.member-name{
-  font-size: 2em;
+  font-size: 2.2em;
   color: #ffedd3;
   -webkit-box-shadow: 0px 0px 40px 40px rgba(20,13,34,1);
   -moz-box-shadow: 0px 0px 40px 40px rgba(20,13,34,1);
   box-shadow: 0px 0px 40px 40px rgba(20,13,34,1); 
+  font-family: 'Massimo SemiBold';
 }
 .member-info-text p.lane-name{
   font-size: 0.8em;
   font-weight: 600;
   color: #ffc46f;
   padding-bottom: 1vh;
+  font-family: 'Massimo SemiBold';
+  text-transform: uppercase;
 }
 .team-member .slick-prev, .team-member .slick-next {
   height: 100px;
@@ -112,13 +115,14 @@
   content: url('../../images/icons/arrow-right.png')
 }
 .team-info .logo-team{
-  width: 64%;
-  margin: 8% auto;
+  max-width: 64%;
+  height: 45%;
 }
 .title-team-name{
   font-size: 2em;
   color: #ffedd3;
   height: auto!important;
+  font-family: 'Massimo SemiBold';
 }
 .team-area{
   font-size: 0.8em;
@@ -126,6 +130,7 @@
   color: #ffc46f;
   margin-bottom: 2vh;
   height: auto!important;
+  font-family: 'Massimo SemiBold';
 }
 .team-des{
   font-size: 0.7em;
@@ -134,7 +139,8 @@
   height: auto!important;
 }
 .team-video a{
-  display: inline-block;
+  display: flex;
+  align-items: center;
   border: 1px solid #ffc46f;
   color: #ffc46f;
   padding: 5px 5%;
@@ -143,6 +149,11 @@
   left: 50%;
   transform: translateX(-50%);
   height: auto!important;
+  font-size: 0.6em;
+}
+.team-video a svg{
+  font-size: 1.5em;
+  margin-right: 3px;
 }
 .teams-name{
   border:1px solid #ffc46f;
@@ -220,6 +231,7 @@
     width: 35%;
     margin:5%;
     float: right;
+    height: auto;
   }
   .team-info-content{
     width: 52%;
@@ -236,11 +248,12 @@
   }
   .team-des{
     padding: 0px;
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
   .team-video a {
     left: 3%;
     transform: translateX(0%);
+    font-size: 1.3em;
   }
   .team-member{
     width: 70%;
@@ -264,5 +277,8 @@
   }
   .teams-name .slick-list{
     width: 100%;
+  }
+  .member-info-text p.lane-name{
+    font-size: 1.1em;
   }
 }

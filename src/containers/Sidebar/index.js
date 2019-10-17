@@ -8,7 +8,7 @@
 import React, { useState, useEffect } from 'react'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import {
   faHome,
@@ -28,6 +28,7 @@ import closeBnt from '../../images/icons/x-button.png'
 import logoAic from '../../images/logo-aic.png'
 import { useStateValue } from '../../State'
 import NavItem from '../../components/NavItem'
+import menuButton from '../../images/icons/menu-button.png'
 
 export default () => {
   const [isSidebarOpen, setCollapseSidebar] = useState(true)
@@ -76,11 +77,7 @@ export default () => {
           <img src={closeBnt} className="close-menu" onClick={() => setCollapseSidebar(false)} />
         </div>
         <div className="bnt-sidebar">
-          <FontAwesomeIcon
-            icon="bars"
-            className="bnt-sidebar"
-            onClick={() => setCollapseSidebar(true)}
-          />
+          <img src={menuButton} alt="menu button" onClick={() => setCollapseSidebar(true)}/>
         </div>
       </div>
       <ul>
