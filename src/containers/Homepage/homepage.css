@@ -112,11 +112,14 @@
     overflow: hidden;
   }
   .menu-text .menu-icon{
-    width: calc(4em + 2px);
-    line-height: 4em;
+    width: calc(3.2em + 2px);
+    height: 3.2em;
   }
   .menu-icon svg.svg-inline--fa{
     width: 1.5em;
+    height: 1.5em;
+  }
+  .menu-text .menu-icon img{
     height: 1.5em;
   }
   .menu-text span{
