@@ -143,14 +143,20 @@ export default () => {
                         }
                       >
                         <div className="team">
-                          <div className="team-name-row">{item.team_1.name}</div> <img src={item.team_1.logo} />
+                          <div className="team-name-row">
+                            {item.team_1.code}
+                          </div>{' '}
+                          <img src={item.team_1.logo} />
                         </div>
                         <div className="match-bo">
                           <span className="score">{item.score}</span>
                           <span>{item.description}</span>
                         </div>
                         <div className="team team-disable">
-                          <img src={item.team_2.logo} /> <div className="team-name-row">{item.team_2.name}</div>
+                          <img src={item.team_2.logo} />{' '}
+                          <div className="team-name-row">
+                            {item.team_2.code}
+                          </div>
                         </div>
                       </div>
                       <div className={`match-view match-${item.status} `}>
