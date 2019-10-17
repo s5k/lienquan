@@ -30,7 +30,7 @@ export default () => {
 
   return (
     <div className="photovideopage">
-      <Backhome/>
+      <Backhome />
       <div className="photo-video-items">
         <div className="video-heighlight">
           <FsLightbox

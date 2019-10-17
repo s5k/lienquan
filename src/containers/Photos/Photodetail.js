@@ -24,10 +24,13 @@ export default () => {
 
   return (
     <div className="photodetailpage">
-      <Backhome/>
+      <Backhome />
       <FsLightbox
         toggler={toggler}
-        sources={images[imageIndex].images}
+        sources={images[imageIndex].images.filter(item =>
+          encodeURIComponent(item)
+        )}
+        type="image"
         key={imageIndex}
       />
       <div className="photo-details">

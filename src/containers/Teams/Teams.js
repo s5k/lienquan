@@ -34,7 +34,10 @@ export default () => {
     <div className="teamspage">
       <div className="scroll-up-menu">
         <Link to="/events">
-          <img src={require('../../images/icons/prev-button.png')} alt="next-button"/>
+          <img
+            src={require('../../images/icons/prev-button.png')}
+            alt="next-button"
+          />
         </Link>
       </div>
       <h3 className="title-teams">MEET THE TEAMS</h3>
@@ -121,7 +124,7 @@ export default () => {
                   key === teamIndex ? 'team-name active-team' : 'team-name'
                 }
               >
-                {item.name}
+                {item.code}
               </div>
             </div>
           ))}
@@ -129,7 +132,10 @@ export default () => {
       </div>
       <div className="scroll-down-menu">
         <Link to="/media">
-          <img src={require('../../images/icons/next-button.png')} alt="next-button"/>
+          <img
+            src={require('../../images/icons/next-button.png')}
+            alt="next-button"
+          />
         </Link>
       </div>
     </div>
