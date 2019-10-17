@@ -19,6 +19,23 @@ export default (state, action) => {
         error: 'Không thể tải dữ liệu!',
         loading: false
       }
+    case 'SEEMORE_CLICKING':
+      return {
+        ...state,
+        SEEMORE_CLICKING: true
+      }
+
+    case 'WINDOW_WIDTH':
+      return {
+        ...state,
+        ...action.payload
+      }
+
+    case 'COLLAPSE_SIDEBAR':
+      return {
+        ...state,
+        COLLAPSE_SIDEBAR: action.payload
+      }
 
     default:
       return state

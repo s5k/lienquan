@@ -26,6 +26,10 @@ export const useStateValue = () => useContext(StateContext)
 export const initialState = {
   loading: true,
   error: false,
+  SEEMORE_CLICKING: false,
+  width: 0,
+  is_mobile: false,
+  COLLAPSE_SIDEBAR: true,
   events: [],
   videos: [],
   schedule: {
