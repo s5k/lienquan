@@ -5,7 +5,7 @@
  */
 
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import Slider from 'react-slick'
@@ -32,26 +32,67 @@ export default () => {
   const today = moment()
   const [date_chosen, set_date_chosen] = useState(today.format('DD.MM'))
   const [isCheck, setCheck] = useState(true)
+  const [dated, setDated] = useState(false)
 
   library.add(fab, faArrowUp, faArrowDown, faCircle)
+
+  useEffect(() => {
+    if (
+      dated === false &&
+      today.unix() >
+        moment(schedule.dates[schedule.dates.length - 1].date, 'DD.MM').unix()
+    ) {
+      set_date_chosen(schedule.dates[schedule.dates.length - 1].date)
+      setDated(true)
+    } else if (
+      dated === false &&
+      today.unix() < moment(schedule.dates[0].date, 'DD.MM').unix()
+    ) {
+      set_date_chosen(schedule.dates[0].date)
+      setDated(true)
+    }
+  }, [today, schedule.dates, dated])
 
   return (
     <div className="schedulepageall">
       <div className="scroll-up-menu">
         <Link to="/prize">
-          <img src={require('../../images/icons/prev-button.png')} alt="next-button"/>
+          <img
+            src={require('../../images/icons/prev-button.png')}
+            alt="next-button"
+          />
         </Link>
       </div>
       <h3 className="title-schedule">SCHEDULE</h3>
       <div className="active-schedule-mb">
-        <div className={isCheck ? 'active-schedule-mb-item active-schedule-match' : 'active-schedule-mb-item'} onClick={() => setCheck(true)}>
+        <div
+          className={
+            isCheck
+              ? 'active-schedule-mb-item active-schedule-match'
+              : 'active-schedule-mb-item'
+          }
+          onClick={() => setCheck(true)}
+        >
           SCHEDULE
         </div>
-        <div className={isCheck ? 'active-schedule-mb-item' : 'active-schedule-mb-item active-standing'} onClick={() => setCheck(false)}>
+        <div
+          className={
+            isCheck
+              ? 'active-schedule-mb-item'
+              : 'active-schedule-mb-item active-standing'
+          }
+          onClick={() => setCheck(false)}
+        >
           STANDING
         </div>
       </div>
-      <div className={isCheck ? 'schedulepage schedulepage-match-active' : 'schedulepage schedulepage-standing-active'}>
+      <div
+        className={
+          isCheck
+            ? 'schedulepage schedulepage-match-active'
+            : 'schedulepage schedulepage-standing-active'
+        }
+      >
         <Slider
           slidesToShow={
             schedule.dates.length && schedule.dates.length > 6
@@ -63,21 +104,21 @@ export default () => {
           infinite={true}
           swipe={false}
           initialSlide={
-            schedule.dates.findIndex(x => x.date === today.format('DD.MM')) || 0
+            schedule.dates.findIndex(x => x.date === date_chosen) || 0
           }
           afterChange={i => set_date_chosen(schedule.dates[i].date)}
           className="slide-day-match"
-          responsive= {[
+          responsive={[
             {
               breakpoint: 480,
               settings: {
-                slidesToShow: 3,
+                slidesToShow: 3
               }
             }
           ]}
         >
           {schedule.dates.map((item, key) => (
-            <div key={key} onClick={() => set_date_chosen(item.date)}>
+            <div key={key}>
               <div className="day-match">{item.date}</div>
               <div className="day-round">{item.name}</div>
             </div>
@@ -148,7 +189,10 @@ export default () => {
       </div>
       <div className="scroll-down-menu">
         <Link to="/news">
-          <img src={require('../../images/icons/next-button.png')} alt="next-button"/>
+          <img
+            src={require('../../images/icons/next-button.png')}
+            alt="next-button"
+          />
         </Link>
       </div>
     </div>
