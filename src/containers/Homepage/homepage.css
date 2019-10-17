@@ -82,10 +82,13 @@
   display: block;
   text-align: center;
   width: 100%;
-  padding: 1.1em 0px 0.5em 0px;
-  font-size: calc(0.2em + 1vw);
+  padding: 1.3em 0px 0.5em 0px;
+  font-size: calc(0em + 1vw);
   border-top:1px solid #ffc46f;
-  font-family: 'Massimo SemiBold';
+  font-family: 'Massimo Bold';
+}
+.intro-content{
+  font-size: 0.8em;
 }
 @media (max-width: 800px) and (min-height:480px){
   .homepage{
@@ -122,5 +125,8 @@
   }
   .menu-text span{
     font-size: calc(1.2em + 1vw);
+  }
+  .intro-content{
+    font-size: 1em;
   }
 }

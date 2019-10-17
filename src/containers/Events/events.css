@@ -58,6 +58,7 @@
   color: #ffedd3;
   display: block;
   width: 100%;
+  font-family: 'Massimo Bold';
 }
 @media (max-width: 800px) and (min-height:480px){
   .eventspage{
@@ -81,5 +82,8 @@
     border-bottom: 1px solid #ffc46f;
     bottom: 0;
     left: 11px;
+  }
+  .events-item .events-item-text-title{
+    font-size: 1.5em;
   }
 }

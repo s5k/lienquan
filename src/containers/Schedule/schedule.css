@@ -44,7 +44,7 @@
   font-size: 1.5em;
   position: relative;
   font-weight: 600;
-  font-family: 'Massimo SemiBold';
+  font-family: 'Massimo Bold';
 }
 .day-match::before {
   content: '';
@@ -114,6 +114,7 @@
   align-items: center;
   padding: 10px 0px;
   border-bottom: 1px solid #fff;
+  border-top-width: 0px;
   border-image: url('../../images/line-match.png') 1 round;
 }
 .match-time,
@@ -139,9 +140,18 @@
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  font-size: 1.2em;
-  font-weight: 700;
+  font-size: 1em;
   font-family: 'Massimo SemiBold';
+  width: 42.5%;
+  justify-content: flex-start;
+}
+.team-name-row{
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+.match-teams .team:nth-child(1){
+  justify-content: flex-end;
 }
 .match-teams .team.team-disable {
   opacity: 0.5;
@@ -151,7 +161,7 @@
   margin: 0px 10px;
 }
 .match-teams .match-bo {
-  margin: 0px 20px;
+  width: 15%;
 }
 .match-teams .match-bo span {
   display: block;
@@ -162,8 +172,9 @@
   text-transform: uppercase;
 }
 .match-teams .match-bo span.score{
-  font-size: 0.8em;
-  font-family: 'Massimo SemiBold';
+  font-size: 0.95em;
+  font-family: 'Massimo Bold';
+  display: inline-block;
 }
 .team-1 .score {
   position: relative;
@@ -177,7 +188,7 @@
   border-right: 6px solid #8bbfee;
   border-bottom: 3px solid transparent;
   top: 50%;
-  left: 0px;
+  left: -10px;
   transform: translate(0px, -50%);
 }
 .team-2 .score::after {
@@ -189,7 +200,7 @@
   border-left: 6px solid #8bbfee;
   border-bottom: 3px solid transparent;
   top: 50%;
-  right: 0px;
+  right: -10px;
   transform: translate(0px, -50%);
 }
 .match-view img {
@@ -240,6 +251,7 @@
   font-weight: 600;
   color: #ffc46f;
   opacity: 0.5;
+  font-family: 'Massimo SemiBold';
 }
 .standings ul li:first-child {
   border-right: 1px solid #ffc46f;
@@ -314,6 +326,7 @@
     text-align: center;
     display: flex;
     flex-wrap: wrap;
+    font-family: 'Massimo SemiBold';
   }
   .active-schedule-mb div {
     width: 50%;
@@ -340,5 +353,15 @@
   }
   .standings .react-tabs .react-tabs__tab-panel img {
     height: calc(100% - 5em);
+  }
+  .day-match{
+    font-size: 2em;
+    padding: 6px;
+  }
+  .day-round,.match-time{
+    font-size: 1.3em;
+  }
+  .match-on .active-view, .match-live .active-live, .match-off .active-view{
+    font-size: 0.9em;
   }
 }
