@@ -104,6 +104,10 @@ a,a:hover,a:focus{
 .bnt-sidebar{
   font-size: 1.5em;
   text-align: center;
+  padding-top: 5px;
+}
+.bnt-sidebar img{
+  max-width: 25px;
 }
 .sidebar ul,.sidebar li{
   margin: 0;
@@ -136,6 +140,7 @@ a,a:hover,a:focus{
   position: absolute;
   right: 5%;
   margin-top: 7%;
+  max-width: 25px;
 }
 .sidebar li{
   font-size: 1vw;
