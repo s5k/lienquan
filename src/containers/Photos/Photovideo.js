@@ -5,7 +5,7 @@
  */
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import * as moment from 'moment'
 
@@ -18,26 +18,31 @@ import './photos.css'
 import { useStateValue } from '../../State'
 
 export default () => {
-  const [{ videos }] = useStateValue()
+  const [{ videos }, dispatch] = useStateValue()
 
-  const [toggler, setToggler] = useState(false)
-  const [imageVideo, setImageVideo] = useState(0)
+  const [state, setState] = useState({ toggler: false, imageVideo: 0 })
 
   const toggleVideo = index => {
-    setToggler(!toggler)
-    setImageVideo(index)
+    setState({ toggler: !state.toggler, imageVideo: index })
   }
+
+  useEffect(() => {
+    dispatch({
+      type: 'COLLAPSE_SIDEBAR',
+      payload: false
+    })
+  }, [dispatch])
 
   return (
     <div className="photovideopage">
       <Backhome />
+      <FsLightbox
+        toggler={state.toggler === true}
+        sources={[videos[state.imageVideo].link]}
+        slide={0}
+      />
       <div className="photo-video-items">
         <div className="video-heighlight">
-          <FsLightbox
-            toggler={toggler}
-            sources={[videos[imageVideo].link]}
-            key={imageVideo}
-          />
           <Slider arrows={false} dots={true} swipe={true}>
             {videos
               .sort(
@@ -46,12 +51,9 @@ export default () => {
                   moment().unix()
               )
               .map((item, key) => (
-                <div key={key}>
+                <div key={key} onClick={() => toggleVideo(key)}>
                   <div className="video-heighlight-item">
-                    <div
-                      className="video-heightlight-clip"
-                      onClick={() => toggleVideo(key)}
-                    >
+                    <div className="video-heightlight-clip">
                       <img
                         src={`//i3.ytimg.com/vi/${
                           item.link.split('?v=')[1]

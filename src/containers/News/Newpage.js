@@ -5,7 +5,7 @@
  */
 
 /* eslint-disable jsx-a11y/alt-text */
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
 import * as moment from 'moment'
@@ -15,9 +15,16 @@ import './news.css'
 import { useStateValue } from '../../State'
 
 export default () => {
-  const [{ posts }] = useStateValue()
+  const [{ posts }, dispatch] = useStateValue()
 
   let { id } = useParams()
+
+  useEffect(() => {
+    dispatch({
+      type: 'COLLAPSE_SIDEBAR',
+      payload: false
+    })
+  }, [dispatch])
 
   return (
     <div className="newpage">

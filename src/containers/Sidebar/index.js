@@ -5,7 +5,7 @@
  * Author: Quy Pham - s5k.github.io
  */
 
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -30,27 +30,29 @@ import { useStateValue } from '../../State'
 import NavItem from '../../components/NavItem'
 
 export default () => {
-  const [isSidebarOpen, setCollapseSidebar] = useState(true)
-  const [is_mobile, setIs_Mobile] = useState(false)
-
-  const [{ menu }] = useStateValue()
-
-  const resize = () => {
-    setIs_Mobile(window.innerWidth <= 760)
-  }
+  const [{ menu, is_mobile, COLLAPSE_SIDEBAR }, dispatch] = useStateValue()
 
   const menuClicking = () => {
-    return is_mobile && setCollapseSidebar(false)
+    return is_mobile && dispatch({ type: 'COLLAPSE_SIDEBAR', payload: false })
   }
 
   useEffect(() => {
+    const resize = () => {
+      dispatch({
+        type: 'WINDOW_WIDTH',
+        payload: {
+          width: window.innerWidth,
+          is_mobile: window.innerWidth <= 760
+        }
+      })
+    }
     window.addEventListener('resize', resize)
     resize()
 
     if (window.innerWidth <= 760) {
-      setCollapseSidebar(false)
+      dispatch({ type: 'COLLAPSE_SIDEBAR', payload: true })
     }
-  }, [])
+  }, [dispatch])
 
   library.add(
     fab,
@@ -69,17 +71,25 @@ export default () => {
   )
 
   return (
-    <div className={isSidebarOpen ? 'sidebar open-sidebar' : 'sidebar'}>
+    <div className={COLLAPSE_SIDEBAR ? 'sidebar open-sidebar' : 'sidebar'}>
       <div className="top-sidebar">
         <div className="btn-close-menu">
           <img src={logoAic} alt="Logo AIC" className="logo-aic" />
-          <img src={closeBnt} className="close-menu" onClick={() => setCollapseSidebar(false)} />
+          <img
+            src={closeBnt}
+            className="close-menu"
+            onClick={() =>
+              dispatch({ type: 'COLLAPSE_SIDEBAR', payload: false })
+            }
+          />
         </div>
         <div className="bnt-sidebar">
           <FontAwesomeIcon
             icon="bars"
             className="bnt-sidebar"
-            onClick={() => setCollapseSidebar(true)}
+            onClick={() =>
+              dispatch({ type: 'COLLAPSE_SIDEBAR', payload: true })
+            }
           />
         </div>
       </div>
