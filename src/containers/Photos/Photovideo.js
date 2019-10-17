@@ -38,7 +38,7 @@ export default () => {
             sources={[videos[imageVideo].link]}
             key={imageVideo}
           />
-          <Slider arrows={false} dots={true} swipe={false}>
+          <Slider arrows={false} dots={true} swipe={true}>
             {videos
               .sort(
                 item =>
