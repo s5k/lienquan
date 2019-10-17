@@ -50,7 +50,7 @@ export default () => {
     resize()
 
     if (window.innerWidth <= 760) {
-      dispatch({ type: 'COLLAPSE_SIDEBAR', payload: true })
+      dispatch({ type: 'COLLAPSE_SIDEBAR', payload: false })
     }
   }, [dispatch])
 
