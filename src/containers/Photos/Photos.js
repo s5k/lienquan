@@ -26,18 +26,23 @@ export default ({ match }) => {
     <div className="photospage">
       <div className="scroll-up-menu">
         <Link to="/teams">
-          <img src={require('../../images/icons/prev-button.png')} alt="prev-button"/>
+          <img
+            src={require('../../images/icons/prev-button.png')}
+            alt="prev-button"
+          />
         </Link>
       </div>
-      <h3 className="title-teams">PHOTO AND VIDEO</h3>
+      <h3 className="title-teams">PHOTOS AND VIDEOS</h3>
       <div className="photo-menu">
-      
         <div className="photo-item">
           <a href=" https://www.facebook.com/pg/caothuLQM" target="blank">
             <img src={photoFace} alt="facebook" />
             <div className="photo-text">
               <div className="photo-icon">
-                <img src={require('../../images/icons/fb-icon.png')} alt="facebook"/>
+                <img
+                  src={require('../../images/icons/fb-icon.png')}
+                  alt="facebook"
+                />
               </div>
               <div className="photo-text-content">
                 <p className="title-photo-menu">VISIT OUR FANPAGE</p>
@@ -51,7 +56,10 @@ export default ({ match }) => {
             <img src={photoAlbums} alt="photoalbums" />
             <div className="photo-text">
               <div className="photo-icon">
-                <img src={require('../../images/icons/picture.png')} alt="albums" />
+                <img
+                  src={require('../../images/icons/picture.png')}
+                  alt="albums"
+                />
               </div>
               <div className="photo-text-content">
                 <p className="title-photo-menu">PHOTO ALBUMS</p>
@@ -65,8 +73,11 @@ export default ({ match }) => {
             <img src={photoVideo} alt="photovideo" />
             <div className="photo-text">
               <div className="photo-icon">
-                <img src={require('../../images/icons/youtube-photos.png')} alt="video"/>
-              </div> 
+                <img
+                  src={require('../../images/icons/youtube-photos.png')}
+                  alt="video"
+                />
+              </div>
               <div className="photo-text-content">
                 <p className="title-photo-menu">WATCH VIDEO</p>
                 <p>FIND OUT WHAT'S GOING ON</p>

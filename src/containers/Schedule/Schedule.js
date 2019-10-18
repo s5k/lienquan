@@ -23,6 +23,7 @@ import {
   faCircle
 } from '@fortawesome/free-solid-svg-icons'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
+import FsLightbox from 'fslightbox-react'
 // import "react-tabs/style/react-tabs.css";
 import './schedule.css'
 import { useStateValue } from '../../State'
@@ -33,6 +34,7 @@ export default () => {
   const [date_chosen, set_date_chosen] = useState(today.format('DD.MM'))
   const [isCheck, setCheck] = useState(true)
   const [dated, setDated] = useState(false)
+  const [state, setState] = useState({ toggler: false, imageVideo: 0 })
 
   library.add(fab, faArrowUp, faArrowDown, faCircle)
 
@@ -55,6 +57,15 @@ export default () => {
 
   return (
     <div className="schedulepageall">
+      <FsLightbox
+        toggler={state.toggler === true}
+        sources={[
+          schedule.matches.filter(el => el.date === date_chosen)[
+            state.imageVideo
+          ].video_link
+        ]}
+        slide={0}
+      />
       <div className="scroll-up-menu">
         <Link to="/prize">
           <img
@@ -160,7 +171,15 @@ export default () => {
                         </div>
                       </div>
                       <div className={`match-view match-${item.status} `}>
-                        <a href={item.video_link} target="blank">
+                        <div
+                          onClick={() =>
+                            item.status !== 'off' &&
+                            setState({
+                              toggler: !state.toggler,
+                              imageVideo: key
+                            })
+                          }
+                        >
                           <img
                             src={require('../../images/icons/youtube-icon.png')}
                           />
@@ -169,7 +188,7 @@ export default () => {
                             <FontAwesomeIcon icon="circle" className="circle" />{' '}
                             LIVE
                           </span>
-                        </a>
+                        </div>
                       </div>
                     </div>
                   )
