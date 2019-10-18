@@ -286,6 +286,10 @@
   border-top:1px solid #ffc46f;
   font-family: 'Massimo Bold';
 }
+.fslightbox-source-outer img.fslightbox-source.fslightbox-opacity-1{
+  height: initial!important;
+  width: initial!important;
+}
 @media (max-width: 800px) and (min-height:480px){
   .photospage{
     width: 80%;
