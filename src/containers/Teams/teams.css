@@ -87,6 +87,7 @@
   box-shadow: 0px 0px 40px 40px rgba(20,13,34,1); 
   font-family: 'Massimo SemiBold';
   padding: 2% 0px;
+  text-transform: uppercase;
 }
 .member-info-text p.lane-name{
   font-size: 0.8em;
@@ -124,6 +125,7 @@
   color: #ffedd3;
   height: auto!important;
   font-family: 'Massimo SemiBold';
+  text-transform: uppercase;
 }
 .team-area{
   font-size: 0.8em;
@@ -132,6 +134,7 @@
   margin-bottom: 2vh;
   height: auto!important;
   font-family: 'Massimo SemiBold';
+  text-transform: uppercase;
 }
 .team-des{
   font-size: 0.7em;
