@@ -20,11 +20,6 @@ import {
   faUsers,
   faArrowDown
 } from '@fortawesome/free-solid-svg-icons'
-import cupAic from '../../images/cup-aic.png'
-import imageSchedule from '../../images/home-schedule.jpg'
-import imageEvent from '../../images/home-event.jpg'
-import imageNews from '../../images/home-news.jpg'
-import imageTeam from '../../images/home-team.jpg'
 import { useStateValue } from '../../State'
 
 export default () => {
@@ -44,7 +39,11 @@ export default () => {
   return (
     <div className="homepage">
       <div className="home-intro">
-        <img src={cupAic} alt=">Cup Aic" className="cup-aic" />
+        <img
+          src={'https://cdn.vn.garenanow.com/web/kg/aic2019/images/cup-aic.png'}
+          alt=">Cup Aic"
+          className="cup-aic"
+        />
         <p className="intro-content">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -56,23 +55,35 @@ export default () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </p>
-        <div className="watch-now">
-          <a
-            href={params['Watch Now'].value}
-            target="blank"
-            className="btn-watch-now"
-          >
-            <FontAwesomeIcon icon="circle" className="circle" /> WATCH NOW
-          </a>
-        </div>
+        {params['Watch Now'].value !== '' && (
+          <div className="watch-now">
+            <a
+              href={params['Watch Now'].value}
+              target="blank"
+              className="btn-watch-now"
+            >
+              <FontAwesomeIcon icon="circle" className="circle" /> WATCH NOW
+            </a>
+          </div>
+        )}
       </div>
       <div className="home-menu">
         <div className="menu-item menu-schedule">
           <Link to={'./schedule'}>
-            <img src={imageSchedule} alt="menu-schedule" />
+            <img
+              src={
+                'https://cdn.vn.garenanow.com/web/kg/aic2019/images/home-schedule.jpg'
+              }
+              alt="menu-schedule"
+            />
             <div className="menu-text">
               <div className="menu-icon">
-                <img src={require('../../images/icons/schedule-acti.png')} alt="schedule"/>
+                <img
+                  src={
+                    'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/schedule-acti.png'
+                  }
+                  alt="schedule"
+                />
               </div>
               <span>SCHEDULE</span>
             </div>
@@ -80,10 +91,20 @@ export default () => {
         </div>
         <div className="menu-item menu-event">
           <Link to={'./events'}>
-            <img src={imageEvent} alt="menu-event" />
+            <img
+              src={
+                'https://cdn.vn.garenanow.com/web/kg/aic2019/images/home-event.jpg'
+              }
+              alt="menu-event"
+            />
             <div className="menu-text">
               <div className="menu-icon">
-                <img src={require('../../images/icons/events-acti.png')} alt="events"/>
+                <img
+                  src={
+                    'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/events-acti.png'
+                  }
+                  alt="events"
+                />
               </div>
               <span>EVENTS</span>
             </div>
@@ -91,10 +112,20 @@ export default () => {
         </div>
         <div className="menu-item menu-news">
           <Link to={'./news'}>
-            <img src={imageNews} alt="menu-news" />
+            <img
+              src={
+                'https://cdn.vn.garenanow.com/web/kg/aic2019/images/home-news.jpg'
+              }
+              alt="menu-news"
+            />
             <div className="menu-text">
               <div className="menu-icon">
-                <img src={require('../../images/icons/news-acti.png')} alt="news"/>
+                <img
+                  src={
+                    'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/news-acti.png'
+                  }
+                  alt="news"
+                />
               </div>
               <span>NEWS</span>
             </div>
@@ -102,10 +133,20 @@ export default () => {
         </div>
         <div className="menu-item menu-team">
           <Link to={'./teams'}>
-            <img src={imageTeam} alt="menu-team" />
+            <img
+              src={
+                'https://cdn.vn.garenanow.com/web/kg/aic2019/images/home-team.jpg'
+              }
+              alt="menu-team"
+            />
             <div className="menu-text">
               <div className="menu-icon">
-                <img src={require('../../images/icons/teams-acti.png')} alt="teams"/>
+                <img
+                  src={
+                    'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/teams-acti.png'
+                  }
+                  alt="teams"
+                />
               </div>
               <span>MEET THE TEAMS</span>
             </div>
@@ -114,7 +155,12 @@ export default () => {
       </div>
       <div className="scroll-down-menu">
         <Link to="/prize">
-          <img src={require('../../images/icons/next-button.png')} alt="next-button"/>
+          <img
+            src={
+              'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/next-button.png'
+            }
+            alt="next-button"
+          />
         </Link>
       </div>
     </div>

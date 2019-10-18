@@ -16,15 +16,33 @@ export default () => {
     <div className="prizepage">
       <div className="scroll-up-menu">
         <Link to="/">
-          <img src={require('../../images/icons/prev-button.png')} alt="next-button"/>
+          <img
+            src={
+              'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/prev-button.png'
+            }
+            alt="next-button"
+          />
         </Link>
       </div>
       <h3 className="title-schedule">PRIZE POOL</h3>
-      <img className="prize-desktop" src={require('../../images/prize.png')} alt="Giải thưởng" />
-      <img className="prize-mb" src={require('../../images/prize-mb.png')} alt="Giải thưởng"/>
+      <img
+        className="prize-desktop"
+        src={'https://cdn.vn.garenanow.com/web/kg/aic2019/images/prize.png'}
+        alt="Giải thưởng"
+      />
+      <img
+        className="prize-mb"
+        src={'https://cdn.vn.garenanow.com/web/kg/aic2019/images/prize-mb.png'}
+        alt="Giải thưởng"
+      />
       <div className="scroll-down-menu">
         <Link to="/schedule">
-          <img src={require('../../images/icons/next-button.png')} alt="next-button"/>
+          <img
+            src={
+              'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/next-button.png'
+            }
+            alt="next-button"
+          />
         </Link>
       </div>
     </div>

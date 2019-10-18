@@ -48,7 +48,9 @@ export default () => {
       >
         <Link to="/schedule">
           <img
-            src={require('../../images/icons/prev-button.png')}
+            src={
+              'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/prev-button.png'
+            }
             alt="next-button"
           />
         </Link>
@@ -76,7 +78,9 @@ export default () => {
                   onClick={() => setToggler(!toggler)}
                 >
                   <img
-                    src={require('../../images/icons/watch-video.png')}
+                    src={
+                      'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/watch-video.png'
+                    }
                     alt="watch video"
                   />{' '}
                   watch video
@@ -127,7 +131,9 @@ export default () => {
       >
         <Link to="/events">
           <img
-            src={require('../../images/icons/next-button.png')}
+            src={
+              'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/next-button.png'
+            }
             alt="next-button"
           />
         </Link>

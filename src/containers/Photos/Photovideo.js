@@ -43,7 +43,14 @@ export default () => {
       />
       <div className="photo-video-items">
         <div className="video-heighlight">
-          <Slider arrows={false} dots={true} swipe={true}>
+          <Slider
+            arrows={false}
+            dots={true}
+            swipe={true}
+            autoplay={true}
+            speed={2000}
+            autoplaySpeed={5000}
+          >
             {videos
               .sort(
                 item =>

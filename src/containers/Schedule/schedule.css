@@ -70,10 +70,10 @@
   color: #fff;
 }
 .schedulepage .slick-prev:before {
-  content: url('../../images/icons/arrow-left.png');
+  content: url('https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/arrow-left.png');
 }
 .schedulepage .slick-next:before {
-  content: url('../../images/icons/arrow-right.png');
+  content: url('https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/arrow-right.png');
 }
 .schedulepage .slick-prev,
 .schedulepage .slick-next {
@@ -115,7 +115,8 @@
   padding: 10px 0px;
   border-bottom: 1px solid #fff;
   border-top-width: 0px;
-  border-image: url('../../images/line-match.png') 1 round;
+  border-image: url('https://cdn.vn.garenanow.com/web/kg/aic2019/images/line-match.png')
+    1 round;
 }
 .match-time,
 .match-view {
@@ -145,12 +146,12 @@
   width: 42.5%;
   justify-content: flex-start;
 }
-.team-name-row{
+.team-name-row {
   display: block;
   text-align: center;
   width: 100%;
 }
-.match-teams .team:nth-child(1){
+.match-teams .team:nth-child(1) {
   justify-content: flex-end;
 }
 .match-teams .team.team-disable {
@@ -171,7 +172,7 @@
   font-family: 'Massimo UltraLight';
   text-transform: uppercase;
 }
-.match-teams .match-bo span.score{
+.match-teams .match-bo span.score {
   font-size: 0.95em;
   font-family: 'Massimo Bold';
   display: inline-block;
@@ -354,14 +355,17 @@
   .standings .react-tabs .react-tabs__tab-panel img {
     height: calc(100% - 5em);
   }
-  .day-match{
+  .day-match {
     font-size: 2em;
     padding: 6px;
   }
-  .day-round,.match-time{
+  .day-round,
+  .match-time {
     font-size: 1.3em;
   }
-  .match-on .active-view, .match-live .active-live, .match-off .active-view{
+  .match-on .active-view,
+  .match-live .active-live,
+  .match-off .active-view {
     font-size: 0.9em;
   }
 }

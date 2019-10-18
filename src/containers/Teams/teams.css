@@ -1,10 +1,10 @@
-.teamspage{
+.teamspage {
   width: 62.5%;
   margin: 0 auto;
   position: relative;
   padding: 2em 0px;
 }
-.teamspage-items{
+.teamspage-items {
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -12,84 +12,85 @@
   display: flex;
   flex-wrap: wrap;
 }
-.title-teams{
+.title-teams {
   color: #ffedd3;
   display: inline-block;
-  font-size:2em;
-  margin:10px 0px;
+  font-size: 2em;
+  margin: 10px 0px;
   text-shadow: 2px 2px 8px #333;
 }
-.teams-info{
+.teams-info {
   width: 90%;
 }
-.teams-name{
+.teams-name {
   width: 10%;
 }
-.teams-info-item{
+.teams-info-item {
   display: flex;
   flex-wrap: wrap;
 }
-.team-member,.team-info{
+.team-member,
+.team-info {
   width: 50%;
   position: relative;
 }
-.member-info .member-img{
+.member-info .member-img {
   width: 100%;
 }
-.slick-center .member-img { 
+.slick-center .member-img {
   transform: scale(2);
   transform-origin: top center;
 }
-.slick-active.slick-center.slick-current{
+.slick-active.slick-center.slick-current {
   position: relative;
   padding-bottom: 32vh;
   z-index: 9;
 }
-.teamspage .teams-info-item .slick-slide:not(.slick-active) { 
-  padding: 16vh 0; 
+.teamspage .teams-info-item .slick-slide:not(.slick-active) {
+  padding: 16vh 0;
   opacity: 0.4;
 }
-.teams-info .slick-slide > div{
+.teams-info .slick-slide > div {
   display: flex;
 }
-.teams-info-item{
+.teams-info-item {
   background: #140d22;
-  border:1px solid #ffc46f;
+  border: 1px solid #ffc46f;
 }
-.team-member{
+.team-member {
   border-right: 1px solid #ffc46f;
 }
-.member-info-text{
+.member-info-text {
   position: absolute;
   z-index: 9;
   bottom: 0px;
   display: none;
   left: -75%;
   width: 250%;
-  height: auto!important;
+  height: auto !important;
 }
-.slick-active.slick-center.slick-current .member-info-text{
+.slick-active.slick-center.slick-current .member-info-text {
   display: block;
 }
-.member-info-text img{
+.member-info-text img {
   margin: 0 auto;
   width: 10%;
 }
-.member-info-text p{
+.member-info-text p {
   margin: 0px;
   background: #140d22;
 }
-.member-info-text p.member-name{
+.member-info-text p.member-name {
   font-size: 2.2em;
   color: #ffedd3;
-  -webkit-box-shadow: 0px 0px 40px 40px rgba(20,13,34,1);
-  -moz-box-shadow: 0px 0px 40px 40px rgba(20,13,34,1);
-  box-shadow: 0px 0px 40px 40px rgba(20,13,34,1); 
+  -webkit-box-shadow: 0px 0px 40px 40px rgba(20, 13, 34, 1);
+  -moz-box-shadow: 0px 0px 40px 40px rgba(20, 13, 34, 1);
+  box-shadow: 0px 0px 40px 40px rgba(20, 13, 34, 1);
   font-family: 'Massimo SemiBold';
   padding: 2% 0px;
   text-transform: uppercase;
 }
-.member-info-text p.lane-name{
+.member-info-text p.lane-name {
   font-size: 0.8em;
   font-weight: 600;
   color: #ffc46f;
@@ -97,52 +98,53 @@
   font-family: 'Massimo SemiBold';
   text-transform: uppercase;
 }
-.team-member .slick-prev, .team-member .slick-next {
+.team-member .slick-prev,
+.team-member .slick-next {
   height: 100px;
-  background: rgba(25,9,28,0.5);
+  background: rgba(25, 9, 28, 0.5);
   border: 1px solid #ffc46f;
   width: 40px;
 }
-.team-member .slick-prev{
+.team-member .slick-prev {
   left: -1px;
   z-index: 9999;
 }
-.team-member .slick-next{
+.team-member .slick-next {
   right: -1px;
 }
-.team-member .slick-prev::before{
-  content: url('../../images/icons/arrow-left.png')
+.team-member .slick-prev::before {
+  content: url('https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/arrow-left.png');
 }
-.team-member .slick-next::before{
-  content: url('../../images/icons/arrow-right.png')
+.team-member .slick-next::before {
+  content: url('https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/arrow-right.png');
 }
-.team-info .logo-team{
+.team-info .logo-team {
   max-width: 64%;
   height: 45%;
 }
-.title-team-name{
+.title-team-name {
   font-size: 2em;
   color: #ffedd3;
-  height: auto!important;
+  height: auto !important;
   font-family: 'Massimo SemiBold';
   text-transform: uppercase;
 }
-.team-area{
+.team-area {
   font-size: 0.8em;
   font-weight: 600;
   color: #ffc46f;
   margin-bottom: 2vh;
-  height: auto!important;
+  height: auto !important;
   font-family: 'Massimo SemiBold';
   text-transform: uppercase;
 }
-.team-des{
+.team-des {
   font-size: 0.7em;
   text-align: justify;
   padding: 0px 10px;
-  height: auto!important;
+  height: auto !important;
 }
-.team-video a{
+.team-video a {
   display: flex;
   align-items: center;
   border: 1px solid #ffc46f;
@@ -152,108 +154,110 @@
   bottom: 1vh;
   left: 50%;
   transform: translateX(-50%);
-  height: auto!important;
+  height: auto !important;
   font-size: 0.6em;
 }
-.team-video a svg{
+.team-video a svg {
   font-size: 1.5em;
   margin-right: 3px;
 }
-.teams-name{
-  border:1px solid #ffc46f;
+.teams-name {
+  border: 1px solid #ffc46f;
   border-left-width: 0px;
   background: #19091c;
 }
-.teams-name.slick-vertical .slick-slide{
+.teams-name.slick-vertical .slick-slide {
   border-top-width: 0px;
   border-top: 1px solid #5e4135;
   line-height: 5.65vh;
   color: #a8a5a8;
   font-weight: 700;
 }
-.teams-name .team-name{
+.teams-name .team-name {
   font-family: 'Massimo SemiBold';
 }
-.teams-name.slick-vertical .slick-current{
-  border-left:5px solid #ffc46f;
-  background-image: url('../../images/active-button-team-name.png');
+.teams-name.slick-vertical .slick-current {
+  border-left: 5px solid #ffc46f;
+  background-image: url('https://cdn.vn.garenanow.com/web/kg/aic2019/images/active-button-team-name.png');
   background-size: 100% 100%;
   color: #ffc46f;
 }
-.teams-info-item{
+.teams-info-item {
   height: 100%;
 }
-.teams-name .slick-track{
-  height: auto!important;
+.teams-name .slick-track {
+  height: auto !important;
 }
-@media (max-width: 767px) and (min-height:480px){
-  .teamspage{
+@media (max-width: 767px) and (min-height: 480px) {
+  .teamspage {
     width: 95%;
   }
-  .teams-info,.teams-name{
+  .teams-info,
+  .teams-name {
     display: flex;
     width: 100%;
   }
-  .teams-name{
-    order:1;
+  .teams-name {
+    order: 1;
     border-left-width: 1px;
     border-bottom-width: 0px;
   }
-  .teams-info{
-    order:2;
+  .teams-info {
+    order: 2;
   }
-  .teams-name.slick-vertical .slick-current{
+  .teams-name.slick-vertical .slick-current {
     border-left-width: 1px;
     background-image: none;
   }
-  .team-name{
+  .team-name {
     font-size: 2em;
     line-height: 2em;
   }
-  .teamspage .teams-info-item .slick-slide:not(.slick-active){
+  .teamspage .teams-info-item .slick-slide:not(.slick-active) {
     padding: 3vh 0px;
   }
-  .slick-active.slick-center.slick-current{
+  .slick-active.slick-center.slick-current {
     padding-bottom: 6vh;
   }
-  .teams-info div{
+  .teams-info div {
     height: auto;
   }
-  .team-member, .team-info{
+  .team-member,
+  .team-info {
     width: 100%;
-    height: 50%!important;
+    height: 50% !important;
   }
-  .teams-info-item{
-    height: 68vh!important;
+  .teams-info-item {
+    height: 68vh !important;
     overflow: hidden;
   }
-  .team-member{
+  .team-member {
     order: 2;
   }
-  .team-info{
+  .team-info {
     order: 1;
     border-bottom: 1px solid #5e4135;
   }
-  .team-info .logo-team{
+  .team-info .logo-team {
     width: 35%;
-    margin:5%;
+    margin: 5%;
     float: right;
     height: auto;
   }
-  .team-info-content{
+  .team-info-content {
     width: 52%;
     margin-left: 3%;
     float: left;
     text-align: left;
     padding-top: 5%;
   }
-  .title-team-name{
+  .title-team-name {
     font-size: 4em;
   }
-  .team-area{
+  .team-area {
     font-size: 3em;
   }
-  .team-des{
+  .team-des {
     padding: 0px;
     font-size: 1.3em;
   }
@@ -262,30 +266,30 @@
     transform: translateX(0%);
     font-size: 1.3em;
   }
-  .team-member{
+  .team-member {
     width: 70%;
     margin: 0 auto;
     border-right-width: 0px;
   }
-  .team-member .slick-slider{
+  .team-member .slick-slider {
     height: 100%;
   }
-  .slick-center .member-img{
+  .slick-center .member-img {
     transform: scale(1.5);
   }
-  .team-member .slick-prev{
-    left: calc(-15% - 17px)
+  .team-member .slick-prev {
+    left: calc(-15% - 17px);
   }
   .team-member .slick-next {
     right: calc(-15% - 17px);
   }
-  .active-team{
+  .active-team {
     color: #ffc46f;
   }
-  .teams-name .slick-list{
+  .teams-name .slick-list {
     width: 100%;
   }
-  .member-info-text p.lane-name{
+  .member-info-text p.lane-name {
     font-size: 1.1em;
   }
 }

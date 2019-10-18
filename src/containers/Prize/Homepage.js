@@ -20,11 +20,11 @@ import {
   faUsers,
   faArrowDown
 } from '@fortawesome/free-solid-svg-icons'
-import cupAic from '../../images/cup-aic.png'
-import imageSchedule from '../../images/home-schedule.jpg'
-import imageEvent from '../../images/home-event.jpg'
-import imageNews from '../../images/home-news.jpg'
-import imageTeam from '../../images/home-team.jpg'
+import cupAic from 'https://cdn.vn.garenanow.com/web/kg/aic2019/images/cup-aic.png'
+import imageSchedule from 'https://cdn.vn.garenanow.com/web/kg/aic2019/images/home-schedule.jpg'
+import imageEvent from 'https://cdn.vn.garenanow.com/web/kg/aic2019/images/home-event.jpg'
+import imageNews from 'https://cdn.vn.garenanow.com/web/kg/aic2019/images/home-news.jpg'
+import imageTeam from 'https://cdn.vn.garenanow.com/web/kg/aic2019/images/home-team.jpg'
 import { useStateValue } from '../../State'
 
 export default () => {
@@ -72,7 +72,12 @@ export default () => {
             <img src={imageSchedule} alt="menu-schedule" />
             <div className="menu-text">
               <div className="menu-icon">
-                <img src={require('../../images/icons/schedule-acti.png')} alt="schedule"/>
+                <img
+                  src={
+                    'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/schedule-acti.png'
+                  }
+                  alt="schedule"
+                />
               </div>
               <span>SCHEDULE</span>
             </div>
@@ -83,7 +88,12 @@ export default () => {
             <img src={imageEvent} alt="menu-event" />
             <div className="menu-text">
               <div className="menu-icon">
-                <img src={require('../../images/icons/events-acti.png')} alt="events"/>
+                <img
+                  src={
+                    'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/events-acti.png'
+                  }
+                  alt="events"
+                />
               </div>
               <span>EVENTS</span>
             </div>
@@ -94,7 +104,12 @@ export default () => {
             <img src={imageNews} alt="menu-news" />
             <div className="menu-text">
               <div className="menu-icon">
-                <img src={require('../../images/icons/news-acti.png')} alt="news"/>
+                <img
+                  src={
+                    'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/news-acti.png'
+                  }
+                  alt="news"
+                />
               </div>
               <span>NEWS</span>
             </div>
@@ -105,7 +120,12 @@ export default () => {
             <img src={imageTeam} alt="menu-team" />
             <div className="menu-text">
               <div className="menu-icon">
-                <img src={require('../../images/icons/teams-acti.png')} alt="teams"/>
+                <img
+                  src={
+                    'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/teams-acti.png'
+                  }
+                  alt="teams"
+                />
               </div>
               <span>MEET THE TEAMS</span>
             </div>
@@ -114,7 +134,12 @@ export default () => {
       </div>
       <div className="scroll-down-menu">
         <Link to="/prize">
-          <img src={require('../../images/icons/next-button.png')} alt="next-button"/>
+          <img
+            src={
+              'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/next-button.png'
+            }
+            alt="next-button"
+          />
         </Link>
       </div>
     </div>

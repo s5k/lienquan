@@ -15,9 +15,6 @@ import {
   faYoutube
 } from '@fortawesome/free-brands-svg-icons'
 import { faArrowUp, faImage } from '@fortawesome/free-solid-svg-icons'
-import photoFace from '../../images/facebook.jpg'
-import photoAlbums from '../../images/photo-albums.jpg'
-import photoVideo from '../../images/match-video.jpg'
 
 export default ({ match }) => {
   library.add(fab, faArrowUp, faFacebookSquare, faYoutube, faImage)
@@ -27,7 +24,9 @@ export default ({ match }) => {
       <div className="scroll-up-menu">
         <Link to="/teams">
           <img
-            src={require('../../images/icons/prev-button.png')}
+            src={
+              'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/prev-button.png'
+            }
             alt="prev-button"
           />
         </Link>
@@ -36,11 +35,18 @@ export default ({ match }) => {
       <div className="photo-menu">
         <div className="photo-item">
           <a href=" https://www.facebook.com/pg/caothuLQM" target="blank">
-            <img src={photoFace} alt="facebook" />
+            <img
+              src={
+                'https://cdn.vn.garenanow.com/web/kg/aic2019/images/facebook.jpg'
+              }
+              alt="facebook"
+            />
             <div className="photo-text">
               <div className="photo-icon">
                 <img
-                  src={require('../../images/icons/fb-icon.png')}
+                  src={
+                    'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/fb-icon.png'
+                  }
                   alt="facebook"
                 />
               </div>
@@ -53,11 +59,18 @@ export default ({ match }) => {
         </div>
         <div className="photo-item">
           <Link to="./media/photos">
-            <img src={photoAlbums} alt="photoalbums" />
+            <img
+              src={
+                'https://cdn.vn.garenanow.com/web/kg/aic2019/images/photo-albums.jpg'
+              }
+              alt="photoalbums"
+            />
             <div className="photo-text">
               <div className="photo-icon">
                 <img
-                  src={require('../../images/icons/picture.png')}
+                  src={
+                    'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/picture.png'
+                  }
                   alt="albums"
                 />
               </div>
@@ -70,11 +83,18 @@ export default ({ match }) => {
         </div>
         <div className="photo-item">
           <Link to="./media/videos">
-            <img src={photoVideo} alt="photovideo" />
+            <img
+              src={
+                'https://cdn.vn.garenanow.com/web/kg/aic2019/images/match-video.jpg'
+              }
+              alt="photovideo"
+            />
             <div className="photo-text">
               <div className="photo-icon">
                 <img
-                  src={require('../../images/icons/youtube-photos.png')}
+                  src={
+                    'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/youtube-photos.png'
+                  }
                   alt="video"
                 />
               </div>
@@ -88,7 +108,12 @@ export default ({ match }) => {
       </div>
       <div className="company-info">
         <div className="logo-partner">
-          <img src={require('../../images/partner.png')} alt="logo partner" />
+          <img
+            src={
+              'https://cdn.vn.garenanow.com/web/kg/aic2019/images/partner.png'
+            }
+            alt="logo partner"
+          />
         </div>
         <div className="company-address">
           <p>CÔNG TY CỔ PHẦN GIẢI TRÍ VÀ THỂ THAO ĐIỆN TỬ VIỆT NAM</p>

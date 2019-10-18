@@ -69,7 +69,9 @@ export default () => {
       <div className="scroll-up-menu">
         <Link to="/prize">
           <img
-            src={require('../../images/icons/prev-button.png')}
+            src={
+              'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/prev-button.png'
+            }
             alt="next-button"
           />
         </Link>
@@ -113,7 +115,7 @@ export default () => {
           focusOnSelect={true}
           centerMode={false}
           infinite={true}
-          swipe={false}
+          swipe={true}
           initialSlide={
             schedule.dates.findIndex(x => x.date === date_chosen) || 0
           }
@@ -181,7 +183,9 @@ export default () => {
                           }
                         >
                           <img
-                            src={require('../../images/icons/youtube-icon.png')}
+                            src={
+                              'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/youtube-icon.png'
+                            }
                           />
                           <span className="active-view">LINK VOD</span>
                           <span className="active-live">
@@ -215,7 +219,9 @@ export default () => {
       <div className="scroll-down-menu">
         <Link to="/news">
           <img
-            src={require('../../images/icons/next-button.png')}
+            src={
+              'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/next-button.png'
+            }
             alt="next-button"
           />
         </Link>

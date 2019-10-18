@@ -5,25 +5,25 @@
   margin: 0px;
   text-shadow: 2px 2px 8px #333;
 }
-.newspage{
+.newspage {
   width: 62.5%;
   margin: 0 auto;
   position: relative;
   padding: 2em 0px;
 }
-.newspage-top{
+.newspage-top {
   width: 100%;
 }
 
-.news-top-item-content{
+.news-top-item-content {
   position: relative;
 }
-.news-top-item{
+.news-top-item {
   position: relative;
   margin: 0px 10px;
-  border:1px solid #ffc46f;
+  border: 1px solid #ffc46f;
 }
-.watch-video{
+.watch-video {
   position: absolute;
   z-index: 9999999;
   bottom: 10px;
@@ -33,37 +33,37 @@
   cursor: pointer;
   font-family: 'ALP Antonio-Bold';
 }
-.watch-video img{
+.watch-video img {
   display: inline;
   vertical-align: middle;
 }
-.news-top-item::before{
-  content: "";
+.news-top-item::before {
+  content: '';
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0px;
   top: 0px;
-  background-image: url('../../images/bg-news-top.png');
+  background-image: url('https://cdn.vn.garenanow.com/web/kg/aic2019/images/bg-news-top.png');
   background-size: 100% 100%;
 }
-.news-top-item img{
+.news-top-item img {
   width: 100%;
 }
-.news-top-text{
+.news-top-text {
   position: absolute;
   top: 10px;
   left: 10px;
 }
 
-.news-top-text p{
+.news-top-text p {
   font-size: 0.6em;
   text-align: left;
   font-weight: 600;
   margin: 0px;
   color: #ffc46f;
 }
-.news-top-text .news-top-title{
+.news-top-text .news-top-title {
   text-transform: uppercase;
   color: #ffedd3;
   position: relative;
@@ -71,8 +71,8 @@
   padding-bottom: 10px;
   font-family: 'ALP Antonio-Bold';
 }
-.news-top-text .news-top-title::after{
-  content: "";
+.news-top-text .news-top-title::after {
+  content: '';
   position: absolute;
   left: 0px;
   bottom: 5px;
@@ -80,10 +80,10 @@
   height: 1px;
   background: #ffc46f;
 }
-.newspage-top .slick-dots{
+.newspage-top .slick-dots {
   bottom: 10px;
 }
-.newspage-top .slick-dots li button:before{
+.newspage-top .slick-dots li button:before {
   font-size: 10px;
   color: #565050;
 }
@@ -106,7 +106,7 @@
   flex-wrap: wrap;
   border: 1px solid #ffc46f;
 }
-.news-item-img{
+.news-item-img {
   width: 100%;
 }
 .news-item .news-item-img img {
@@ -139,7 +139,7 @@
   text-align: right;
   font-size: 0.8em;
 }
-.btn-seemore-div{
+.btn-seemore-div {
   width: 100%;
 }
 .btn-seemore {
@@ -158,24 +158,24 @@
   width: 62.5%;
   margin: 0 auto;
 }
-.newpage-title{
+.newpage-title {
   font-family: 'Massimo Bold';
   font-size: 1.5em;
   color: #ffc46f;
   text-transform: uppercase;
 }
-.newpage-post-by{
+.newpage-post-by {
   font-size: 0.9em;
   color: #ffedd3;
 }
-.content-news-detail p{
+.content-news-detail p {
   text-align: justify;
 }
-.content-related{
+.content-related {
   border-top: 1px solid #e8e8e8;
   padding: 20px 0px;
 }
-.content-related-title{
+.content-related-title {
   display: inline-block;
   background: #150c21;
   border: 1px solid #ffedd3;
@@ -185,81 +185,83 @@
   padding: 1px 15px 6px;
   font-family: 'ALP Antonio-Bold';
 }
-.content-related .news-item .news-item-text-title{
+.content-related .news-item .news-item-text-title {
   padding-right: 0px;
   width: 100%;
 }
-.content-related-items{
+.content-related-items {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
 }
-.content-related-items .news-item{
+.content-related-items .news-item {
   width: 32.33%;
   padding: 0px;
 }
-.content-related-items .news-item:nth-child(2){
-  margin:0px 1.5%;
+.content-related-items .news-item:nth-child(2) {
+  margin: 0px 1.5%;
 }
-.content-related-items .news-item-content{
-  border:none;
+.content-related-items .news-item-content {
+  border: none;
 }
-.content-related-items .news-item-text{
+.content-related-items .news-item-text {
   padding: 10px 0px;
   border-top-width: 0px;
   background: none;
 }
-.content-related-items .news-item .news-item-img img{
-  border:1px solid #ffc46f;
+.content-related-items .news-item .news-item-img img {
+  border: 1px solid #ffc46f;
 }
-.see-more-clicked{
+.see-more-clicked {
   position: absolute;
 }
-@media (max-width: 800px) and (min-height:480px){
-  .newspage{
+@media (max-width: 800px) and (min-height: 480px) {
+  .newspage {
     width: 100%;
     padding-bottom: 8vh;
   }
-  .news-top-item{
+  .news-top-item {
     margin: 0px;
   }
-  .newspage .title-schedule{
-    margin:2vh 0px;
+  .newspage .title-schedule {
+    margin: 2vh 0px;
   }
-  .news-top-text{
+  .news-top-text {
     top: initial;
     bottom: 10px;
   }
-  .newspage-top .slick-dots{
-    display: none!important;
+  .newspage-top .slick-dots {
+    display: none !important;
   }
-  .newspage-items{
+  .newspage-items {
     width: 80%;
-    margin:0 auto;
+    margin: 0 auto;
   }
-  .news-item{
+  .news-item {
     width: 100%;
     padding: 5px 10px;
   }
-  .watch-video{
+  .watch-video {
     display: none;
   }
-  .news-top-text .news-top-title,.news-item .news-item-text-title{
+  .news-top-text .news-top-title,
+  .news-item .news-item-text-title {
     font-size: 1.8em;
   }
-  .news-top-text p,.news-item .news-item-text-day{
+  .news-top-text p,
+  .news-item .news-item-text-day {
     font-size: 1.4em;
   }
-  .newpage-title{
+  .newpage-title {
     font-size: 2em;
   }
-  .newpage-post-by{
+  .newpage-post-by {
     font-size: 1.3em;
   }
-  .content-news-detail p{
+  .content-news-detail p {
     font-size: 1.3em;
   }
-  .newpage{
+  .newpage {
     width: 80%;
   }
 }

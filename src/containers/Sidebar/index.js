@@ -24,9 +24,6 @@ import {
   faArrowUp,
   faArrowDown
 } from '@fortawesome/free-solid-svg-icons'
-import closeBnt from '../../images/icons/x-button.png'
-import btnSidebar from '../../images/icons/menu-button.png'
-import logoAic from '../../images/logo-aic.png'
 import { useStateValue } from '../../State'
 import NavItem from '../../components/NavItem'
 
@@ -75,9 +72,17 @@ export default () => {
     <div className={COLLAPSE_SIDEBAR ? 'sidebar open-sidebar' : 'sidebar'}>
       <div className="top-sidebar">
         <div className="btn-close-menu">
-          <img src={logoAic} alt="Logo AIC" className="logo-aic" />
           <img
-            src={closeBnt}
+            src={
+              'https://cdn.vn.garenanow.com/web/kg/aic2019/images/logo-aic.png'
+            }
+            alt="Logo AIC"
+            className="logo-aic"
+          />
+          <img
+            src={
+              'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/x-button.png'
+            }
             className="close-menu"
             onClick={() =>
               dispatch({ type: 'COLLAPSE_SIDEBAR', payload: false })
@@ -86,7 +91,9 @@ export default () => {
         </div>
         <div className="bnt-sidebar">
           <img
-            src={btnSidebar}
+            src={
+              'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/menu-button.png'
+            }
             className="bnt-sidebar"
             onClick={() =>
               dispatch({ type: 'COLLAPSE_SIDEBAR', payload: true })

@@ -35,7 +35,9 @@ export default () => {
       <div className="scroll-up-menu">
         <Link to="/events">
           <img
-            src={require('../../images/icons/prev-button.png')}
+            src={
+              'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/prev-button.png'
+            }
             alt="next-button"
           />
         </Link>
@@ -61,7 +63,7 @@ export default () => {
                       <div className="member-info-text">
                         <img
                           className="member-lane"
-                          src={`../../images/icons/lane-${member.description
+                          src={`https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/lane-${member.description
                             .split(' ')
                             .join('-')
                             .toLowerCase()}.png`}
@@ -133,7 +135,9 @@ export default () => {
       <div className="scroll-down-menu">
         <Link to="/media">
           <img
-            src={require('../../images/icons/next-button.png')}
+            src={
+              'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/next-button.png'
+            }
             alt="next-button"
           />
         </Link>

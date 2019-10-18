@@ -26,7 +26,12 @@ export default () => {
     <div className="eventspage">
       <div className="scroll-up-menu">
         <Link to="/news">
-          <img src={require('../../images/icons/prev-button.png')} alt="next-button"/>
+          <img
+            src={
+              'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/prev-button.png'
+            }
+            alt="next-button"
+          />
         </Link>
       </div>
       <h3 className="title-schedule">EVENTS</h3>
@@ -48,7 +53,12 @@ export default () => {
       </div>
       <div className="scroll-down-menu">
         <Link to="/teams">
-          <img src={require('../../images/icons/next-button.png')} alt="next-button"/>
+          <img
+            src={
+              'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/next-button.png'
+            }
+            alt="next-button"
+          />
         </Link>
       </div>
     </div>
