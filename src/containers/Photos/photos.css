@@ -290,10 +290,10 @@
   border-top: 1px solid #ffc46f;
   font-family: 'Massimo Bold';
 }
-.fslightbox-source-outer img.fslightbox-source.fslightbox-opacity-1 {
+/* .fslightbox-source-outer img.fslightbox-source.fslightbox-opacity-1 {
   height: initial !important;
   width: initial !important;
-}
+} */
 
 /* ----------- iPad Pro ----------- */
 /* Portrait and Landscape */

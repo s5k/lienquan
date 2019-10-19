@@ -15,10 +15,12 @@ import { useStateValue } from '../../State'
 export default () => {
   const [{ images }, dispatch] = useStateValue()
 
-  const [state, setState] = useState({ toggler: false, imageVideo: 0 })
+  const [index, setIndex] = useState(0)
+  const [toggler, setToggler] = useState(false)
 
   const toggleVideo = index => {
-    setState({ toggler: !state.toggler, imageVideo: index })
+    setIndex(index)
+    setToggler(!toggler)
   }
 
   useEffect(() => {
@@ -26,18 +28,18 @@ export default () => {
       type: 'COLLAPSE_SIDEBAR',
       payload: false
     })
-  }, [dispatch])
+
+    if (toggler === true) setToggler(!toggler)
+  }, [dispatch, toggler])
 
   return (
     <div className="photodetailpage">
       <Backhome />
       <FsLightbox
-        toggler={state.toggler}
-        sources={images[state.imageVideo].images.filter(item =>
-          encodeURIComponent(item)
-        )}
+        toggler={toggler}
+        sources={images[index].images}
         type="image"
-        slide={0}
+        key={index}
       />
       <div className="photo-details">
         {images.map((item, key) => (
