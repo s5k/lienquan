@@ -188,6 +188,40 @@
 .teams-name .slick-track {
   height: auto !important;
 }
+@media (width: 1024px) and (height: 1366px) {
+  .slick-active.slick-center.slick-current{
+    padding-bottom: 20vh;
+  }
+  .teamspage .teams-info-item .slick-slide:not(.slick-active){
+    padding: 10vh 0px;
+  }
+  .teams-name.slick-vertical .slick-slide{
+    line-height: 3vh;
+  }
+  .teams-info-item {
+    height: 40vh;
+  }
+  .team-member, .team-info{
+    height: 100%;
+  }
+}
+@media (width: 768px) and (height: 1024px) {
+  .slick-active.slick-center.slick-current{
+    padding-bottom: 20vh;
+  }
+  .teamspage .teams-info-item .slick-slide:not(.slick-active){
+    padding: 10vh 0px;
+  }
+  .teams-name.slick-vertical .slick-slide{
+    line-height: 3vh;
+  }
+  .teams-info-item {
+    height: 40vh;
+  }
+  .team-member, .team-info{
+    height: 100%;
+  }
+}
 @media (max-width: 767px) and (min-height: 480px) {
   .teamspage {
     width: 95%;
