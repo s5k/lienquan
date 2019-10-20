@@ -221,7 +221,7 @@
   padding: 2px;
   color: red;
 }
-.match-off a {
+.match-off div {
   pointer-events: none;
   cursor: no-drop;
   display: block;
