@@ -57,15 +57,17 @@ export default () => {
 
   return (
     <div className="schedulepageall">
-      <FsLightbox
-        toggler={state.toggler === true}
-        sources={[
-          schedule.matches.filter(el => el.date === date_chosen)[
-            state.imageVideo
-          ].video_link
-        ]}
-        slide={0}
-      />
+      {dated === true && (
+        <FsLightbox
+          toggler={state.toggler === true}
+          sources={[
+            schedule.matches.filter(el => el.date === date_chosen)[
+              state.imageVideo
+            ].video_link
+          ]}
+          slide={0}
+        />
+      )}
       <div className="scroll-up-menu">
         <Link to="/prize">
           <img
