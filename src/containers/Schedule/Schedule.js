@@ -36,6 +36,13 @@ export default () => {
   const [dated, setDated] = useState(false)
   const [state, setState] = useState({ toggler: false, imageVideo: 0 })
 
+  const groupStage = {
+    'group stage': ['Group A', 'Group B'],
+    'quater final': ['Quater Final'],
+    'semi final': ['Semi Final'],
+    final: ['Final']
+  }
+
   library.add(fab, faArrowUp, faArrowDown, faCircle)
 
   useEffect(() => {
@@ -202,19 +209,25 @@ export default () => {
             </div>
           </div>
           <div className="standings">
-            <Tabs>
-              <TabList>
-                <Tab>GROUP A</Tab>
-                <Tab>GROUP B</Tab>
-              </TabList>
+            {dated === true && (
+              <Tabs>
+                <TabList>
+                  {groupStage[
+                    schedule.dates.filter(x => x.date === date_chosen)[0].name
+                  ].map((name, key) => (
+                    <Tab key={key}>{name}</Tab>
+                  ))}
+                </TabList>
 
-              <TabPanel>
-                <img src={params['Group A'].value} />
-              </TabPanel>
-              <TabPanel>
-                <img src={params['Group B'].value} />
-              </TabPanel>
-            </Tabs>
+                {groupStage[
+                  schedule.dates.filter(x => x.date === date_chosen)[0].name
+                ].map((name, key) => (
+                  <TabPanel key={key}>
+                    <img src={params[name].value} />
+                  </TabPanel>
+                ))}
+              </Tabs>
+            )}
           </div>
         </div>
       </div>
