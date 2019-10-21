@@ -254,8 +254,8 @@
   opacity: 0.5;
   font-family: 'Massimo SemiBold';
 }
-.standings ul li:first-child {
-  border-right: 1px solid #ffc46f;
+.standings ul li:nth-child(2) {
+  border-left: 1px solid #ffc46f;
 }
 .standings .react-tabs {
   height: 100%;
@@ -268,7 +268,7 @@
   display: block;
 }
 .standings .react-tabs .react-tabs__tab-panel img {
-  width: 100%;
+  max-width: 100%;
   max-height: 100%;
 }
 .standings .react-tabs .react-tabs__tab--selected {
