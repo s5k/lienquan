@@ -74,13 +74,13 @@
     margin: 2vh 0px;
   }
   .eventspage-items{
-    height: 70vh;
+    padding-bottom: 6vh;
   }
   .events-item .events-item-text{
     position: absolute;
     width: calc(100% - 22px);
     border-bottom: 1px solid #ffc46f;
-    bottom: 0;
+    bottom: 10px;
     left: 11px;
   }
   .events-item .events-item-text-title{

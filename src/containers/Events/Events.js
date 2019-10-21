@@ -24,7 +24,7 @@ export default () => {
 
   return (
     <div className="eventspage">
-      <div className="scroll-up-menu">
+      <div className="scroll-up-menu see-more-clicked">
         <Link to="/news">
           <img
             src={
@@ -51,7 +51,7 @@ export default () => {
           </div>
         ))}
       </div>
-      <div className="scroll-down-menu">
+      <div className="scroll-down-menu see-more-clicked">
         <Link to="/teams">
           <img
             src={
