@@ -68,7 +68,7 @@ export default () => {
                     <div className="news-top-text">
                       <p className="news-top-title">{item.title}</p>
                       <p className="news-top-des">
-                        Find out the details of AIC 2019 Events
+                        {item.description}
                       </p>
                     </div>
                   </div>

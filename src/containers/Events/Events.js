@@ -44,7 +44,7 @@ export default () => {
                   <img src={item.image} />
                 </div>
                 <div className="events-item-text">
-                  <div className="events-item-text-title">Call To Action</div>
+                  <div className="events-item-text-title">{item.text}</div>
                 </div>
               </div>
             </a>
