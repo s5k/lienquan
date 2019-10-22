@@ -75,6 +75,7 @@
   width: 100%;
   padding: 1.3em 0px 0.5em 0px;
   font-size: calc(0.2em + 1vw);
+  text-transform: uppercase;
 }
 .photo-text .photo-text-content p {
   margin: 0px;
@@ -267,13 +268,11 @@
 .video-other-item {
   width: 32%;
   border: 1px solid #ffc46f;
+  margin-bottom: 2%;
 }
-.video-other-item:nth-child(1) {
-  margin-left: 0px;
-}
-.video-other-item:nth-child(2),
-.video-other-item:nth-child(3) {
+.video-other-item:nth-child(3n+2) {
   margin-left: 2%;
+  margin-right: 2%;
 }
 .video-other-item img {
   max-width: 100%;

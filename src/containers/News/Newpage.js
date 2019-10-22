@@ -46,7 +46,7 @@ export default () => {
         }}
       ></div>
       <div className="content-related">
-        <div className="content-related-title">RELATED ARTICLES</div>
+        <div className="content-related-title">TIN LIÊN QUAN</div>
         <div className="content-related-items">
           {posts
             .filter(item => item.id === parseInt(id))[0]

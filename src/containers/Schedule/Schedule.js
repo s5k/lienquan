@@ -85,7 +85,7 @@ export default () => {
           />
         </Link>
       </div>
-      <h3 className="title-schedule">SCHEDULE</h3>
+      <h3 className="title-schedule">LỊCH THI ĐẤU</h3>
       <div className="active-schedule-mb">
         <div
           className={
@@ -95,7 +95,7 @@ export default () => {
           }
           onClick={() => setCheck(true)}
         >
-          SCHEDULE
+          LỊCH THI ĐẤU
         </div>
         <div
           className={
@@ -105,7 +105,7 @@ export default () => {
           }
           onClick={() => setCheck(false)}
         >
-          STANDING
+          BXH
         </div>
       </div>
       <div

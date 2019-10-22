@@ -42,43 +42,43 @@ export const initialState = {
   menu: [
     {
       id: 0,
-      name: 'Home',
+      name: 'Trang chủ',
       icon: home,
       link: '/'
     },
     {
       id: 1,
-      name: 'Prize Pool',
+      name: 'Giải thưởng',
       icon: prize,
       link: '/prize'
     },
     {
       id: 2,
-      name: 'Schedule',
+      name: 'Lịch thi đấu',
       icon: schedule,
       link: '/schedule'
     },
     {
       id: 3,
-      name: 'News',
+      name: 'Tin tức',
       icon: news,
       link: '/news'
     },
     {
       id: 4,
-      name: 'Events',
+      name: 'Sự kiện',
       icon: events,
       link: '/events'
     },
     {
       id: 5,
-      name: 'Teams',
+      name: 'Đội tuyển',
       icon: teams,
       link: '/teams'
     },
     {
       id: 6,
-      name: 'Photos & videos',
+      name: 'Ảnh và Video',
       icon: photos,
       link: '/media'
     }

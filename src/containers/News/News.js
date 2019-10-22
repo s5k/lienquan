@@ -55,7 +55,7 @@ export default () => {
           />
         </Link>
       </div>
-      <h3 className="title-schedule">NEWS</h3>
+      <h3 className="title-schedule">TIN TỨC</h3>
       <div className="newspage-top">
         <Slider arrows={false} dots={true}>
           {posts
@@ -83,7 +83,7 @@ export default () => {
                     }
                     alt="watch video"
                   />{' '}
-                  watch video
+                  Xem video
                 </div>
               </div>
             ))}
@@ -117,7 +117,7 @@ export default () => {
         {paginate < posts.filter(item => !item.is_hot_news).length && (
           <div className="btn-seemore-div">
             <div className="btn-seemore" onClick={() => showMore()}>
-              SEE MORE
+              XEM THÊM
             </div>
           </div>
         )}

@@ -71,7 +71,7 @@ export default () => {
                     <div className="video-heightlight-text">
                       <p className="video-text-title">{item.name}</p>
                       <p className="video-text-des">
-                        Find out the details of AIC 2019 Events
+                        Những Video HOT nhất về giải AIC 2019
                       </p>
                     </div>
                   </div>

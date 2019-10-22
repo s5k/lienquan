@@ -31,7 +31,7 @@ export default ({ match }) => {
           />
         </Link>
       </div>
-      <h3 className="title-teams">PHOTOS AND VIDEOS</h3>
+      <h3 className="title-teams">ẢNH VÀ VIDEO</h3>
       <div className="photo-menu">
         <div className="photo-item">
           <a href=" https://www.facebook.com/pg/caothuLQM" target="blank">
@@ -51,8 +51,8 @@ export default ({ match }) => {
                 />
               </div>
               <div className="photo-text-content">
-                <p className="title-photo-menu">VISIT OUR FANPAGE</p>
-                <p>AND EARN REWARD</p>
+                <p className="title-photo-menu">Fanpage eSports</p>
+                <p>Tham gia sự kiện nhận quà</p>
               </div>
             </div>
           </a>
@@ -75,8 +75,8 @@ export default ({ match }) => {
                 />
               </div>
               <div className="photo-text-content">
-                <p className="title-photo-menu">PHOTO ALBUMS</p>
-                <p>PLAYER, VENUE AND MORE</p>
+                <p className="title-photo-menu">Album ảnh</p>
+                <p>Những hình ảnh mới nhất</p>
               </div>
             </div>
           </Link>
@@ -99,8 +99,8 @@ export default ({ match }) => {
                 />
               </div>
               <div className="photo-text-content">
-                <p className="title-photo-menu">WATCH VIDEO</p>
-                <p>FIND OUT WHAT'S GOING ON</p>
+                <p className="title-photo-menu">Videos</p>
+                <p>Những nội dung HOT nhất</p>
               </div>
             </div>
           </Link>

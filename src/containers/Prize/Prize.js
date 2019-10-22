@@ -24,7 +24,7 @@ export default () => {
           />
         </Link>
       </div>
-      <h3 className="title-schedule">PRIZE POOL</h3>
+      <h3 className="title-schedule">GIẢI THƯỞNG</h3>
       <img
         className="prize-desktop"
         src={'https://cdn.vn.garenanow.com/web/kg/aic2019/images/prize.png'}

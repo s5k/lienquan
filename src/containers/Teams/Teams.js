@@ -42,7 +42,7 @@ export default () => {
           />
         </Link>
       </div>
-      <h3 className="title-teams">MEET THE TEAMS</h3>
+      <h3 className="title-teams">ĐỘI TUYỂN</h3>
       <div className="teamspage-items">
         <div className="teams-info">
           <div className="teams-info-item">
@@ -84,7 +84,7 @@ export default () => {
                 <div className="team-video">
                   <a href={teams[teamIndex].video_link} target="blank">
                     {' '}
-                    <FontAwesomeIcon icon="play-circle" /> WATCH VIDEO{' '}
+                    <FontAwesomeIcon icon="play-circle" /> XEM VIDEO{' '}
                   </a>
                 </div>
               </div>

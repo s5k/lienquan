@@ -54,7 +54,7 @@ export default () => {
               target="blank"
               className="btn-watch-now"
             >
-              <FontAwesomeIcon icon="circle" className="circle" /> WATCH NOW
+              <FontAwesomeIcon icon="circle" className="circle" /> TRỰC TIẾP
             </a>
           </div>
         )}
@@ -77,7 +77,7 @@ export default () => {
                   alt="schedule"
                 />
               </div>
-              <span>SCHEDULE</span>
+              <span>LỊCH THI ĐẤU</span>
             </div>
           </Link>
         </div>
@@ -98,7 +98,7 @@ export default () => {
                   alt="events"
                 />
               </div>
-              <span>EVENTS</span>
+              <span>SỰ KIỆN</span>
             </div>
           </Link>
         </div>
@@ -119,7 +119,7 @@ export default () => {
                   alt="news"
                 />
               </div>
-              <span>NEWS</span>
+              <span>TIN TỨC</span>
             </div>
           </Link>
         </div>
@@ -140,7 +140,7 @@ export default () => {
                   alt="teams"
                 />
               </div>
-              <span>MEET THE TEAMS</span>
+              <span>ĐỘI TUYỂN</span>
             </div>
           </Link>
         </div>
