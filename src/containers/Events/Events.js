@@ -34,7 +34,7 @@ export default () => {
           />
         </Link>
       </div>
-      <h3 className="title-schedule">EVENTS</h3>
+      <h3 className="title-schedule">SỰ KIỆN</h3>
       <div className="eventspage-items">
         {events.map((item, key) => (
           <div className="events-item" key={key}>
