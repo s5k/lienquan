@@ -142,7 +142,7 @@ export default () => {
           {schedule.dates.map((item, key) => (
             <div key={key}>
               <div className="day-match">{item.date}</div>
-              <div className="day-round">{item.name}</div>
+              <div className="day-round">{item.vn_name}</div>
             </div>
           ))}
         </Slider>
