@@ -30,7 +30,7 @@ export default () => {
 
   library.add(fab, faArrowUp, faArrowDown, faCircle)
 
-  const [toggler, setToggler] = useState(false)
+  const [toggler] = useState(false)
 
   const showMore = () => {
     setPaginate(paginate + 4)
@@ -73,7 +73,7 @@ export default () => {
                     </div>
                   </div>
                 </Link>
-                <div
+                {/* <div
                   className="watch-video"
                   onClick={() => setToggler(!toggler)}
                 >
@@ -84,7 +84,7 @@ export default () => {
                     alt="watch video"
                   />{' '}
                   Xem video
-                </div>
+                </div> */}
               </div>
             ))}
         </Slider>
