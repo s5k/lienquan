@@ -17,8 +17,10 @@ export default () => {
 
   const [index, setIndex] = useState(0)
   const [toggler, setToggler] = useState(false)
+  const [firstTime, setFirstTime] = useState(true)
 
   const toggleVideo = index => {
+    setFirstTime(true)
     setIndex(index)
     setToggler(!toggler)
   }
@@ -29,18 +31,24 @@ export default () => {
       payload: false
     })
 
-    if (toggler === true) setToggler(!toggler)
-  }, [dispatch, toggler])
+    if (toggler === true && firstTime === false) setToggler(!toggler)
+
+    if (firstTime === true) {
+      setFirstTime(false)
+    }
+  }, [dispatch, toggler, firstTime])
 
   return (
     <div className="photodetailpage">
       <Backhome />
-      <FsLightbox
-        toggler={toggler}
-        sources={images[index].images}
-        type="image"
-        key={index}
-      />
+      {firstTime === false && (
+        <FsLightbox
+          toggler={toggler}
+          sources={images[index].images}
+          type="image"
+          key={index}
+        />
+      )}
       <div className="photo-details">
         {images.map((item, key) => (
           <div
