@@ -215,7 +215,7 @@ export default () => {
                   {groupStage[
                     schedule.dates.filter(x => x.date === date_chosen)[0].name
                   ].map((name, key) => (
-                    <Tab key={key}>{name}</Tab>
+                    <Tab key={key}>{params[name].vn_name}</Tab>
                   ))}
                 </TabList>
 
