@@ -57,7 +57,7 @@ export default () => {
                   moment(item.create_time, 'HH:mm:ss - DD/MM/YYYY').unix() >
                   moment().unix()
               )
-              .map((item, key) => (
+              .map((item, key) => ((key < 3 ) ? (
                 <div key={key} onClick={() => toggleVideo(key)}>
                   <div className="video-heighlight-item">
                     <div className="video-heightlight-clip">
@@ -75,8 +75,8 @@ export default () => {
                       </p>
                     </div>
                   </div>
-                </div>
-              ))}
+              </div>
+              ):''))}
           </Slider>
         </div>
         <div className="video-other">
@@ -86,11 +86,11 @@ export default () => {
                 moment(item.create_time, 'HH:mm:ss - DD/MM/YYYY').unix() >
                 moment().unix()
             )
-            .map((item, key) => (
+            .map((item, key2) => (
               <div
                 className="video-other-item"
-                key={key}
-                onClick={() => toggleVideo(key)}
+                key={key2}
+                onClick={() => toggleVideo(key2)}
               >
                 <img
                   src={`//i3.ytimg.com/vi/${

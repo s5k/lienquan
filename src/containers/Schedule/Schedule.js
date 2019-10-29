@@ -153,17 +153,11 @@ export default () => {
               {schedule.matches
                 .filter(el => el.date === date_chosen)
                 .map((item, key) => {
-                  let scores = item.score.split('-')
+                  // let scores = item.score.split('-')
                   return (
                     <div className="schedule-match-day-item" key={key}>
                       <div className="match-time">{item.time}</div>
-                      <div
-                        className={
-                          parseInt(scores[0]) > parseInt(scores[1])
-                            ? 'match-teams team-1'
-                            : 'match-teams team-2'
-                        }
-                      >
+                      <div className='match-teams'>
                         <div className="team">
                           <div className="team-name-row">
                             {item.team_1.code}
@@ -174,7 +168,7 @@ export default () => {
                           <span className="score">{item.score}</span>
                           <span>{item.description}</span>
                         </div>
-                        <div className="team team-disable">
+                        <div className="team">
                           <img src={item.team_2.logo} />{' '}
                           <div className="team-name-row">
                             {item.team_2.code}

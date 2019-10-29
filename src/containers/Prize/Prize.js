@@ -27,12 +27,12 @@ export default () => {
       <h3 className="title-schedule">GIẢI THƯỞNG</h3>
       <img
         className="prize-desktop"
-        src={'https://lienquan.garena.vn/files/upload/images/TrungAnh/banner/prize.png'}
+        src={'https://lienquan.garena.vn/files/upload/images/TrungAnh/AIC%202019/prize%20PC.png'}
         alt="Giải thưởng"
       />
       <img
         className="prize-mb"
-        src={'https://lienquan.garena.vn/files/upload/images/TrungAnh/banner/prize%20MO.png'}
+        src={'https://lienquan.garena.vn/files/upload/images/TrungAnh/banner/prize-MO.png'}
         alt="Giải thưởng"
       />
       <div className="scroll-down-menu">
