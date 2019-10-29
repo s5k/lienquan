@@ -117,38 +117,37 @@ export default () => {
             : 'schedulepage schedulepage-standing-active'
         }
       >
-        <Slider
-          slidesToShow={
-            schedule.dates.length && schedule.dates.length > 6
-              ? 6
-              : schedule.dates.length - 1
-          }
-          focusOnSelect={true}
-          centerMode={false}
-          infinite={true}
-          swipe={true}
-          initialSlide={
-            schedule.dates.findIndex(x => x.date === date_chosen) || 0
-          }
-          afterChange={i => set_date_chosen(schedule.dates[i].date)}
-          className="slide-day-match"
-          responsive={[
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 3
-              }
+        {dated === true && (
+          <Slider
+            slidesToShow={
+              schedule.dates.length && schedule.dates.length > 6
+                ? 6
+                : schedule.dates.length - 1
             }
-          ]}
-        >
-          {schedule.dates.map((item, key) => (
-            <div key={key}>
-              <div className="day-match">{item.date}</div>
-              <div className="day-round">{item.vn_name}</div>
-            </div>
-          ))}
-        </Slider>
-
+            focusOnSelect={true}
+            centerMode={false}
+            infinite={true}
+            swipe={true}
+            initialSlide={schedule.dates.findIndex(x => x.date === date_chosen)}
+            afterChange={i => set_date_chosen(schedule.dates[i].date)}
+            className="slide-day-match"
+            responsive={[
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 3
+                }
+              }
+            ]}
+          >
+            {schedule.dates.map((item, key) => (
+              <div key={key}>
+                <div className="day-match">{item.date}</div>
+                <div className="day-round">{item.vn_name}</div>
+              </div>
+            ))}
+          </Slider>
+        )}
         <div className="slide-schedule-match">
           <div className="schedule-match-day">
             <div className="schedule-match-day-items">
