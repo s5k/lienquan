@@ -59,6 +59,8 @@ export default () => {
     ) {
       set_date_chosen(schedule.dates[0].date)
       setDated(true)
+    } else {
+      setDated(true)
     }
   }, [today, schedule.dates, dated])
 
@@ -157,7 +159,7 @@ export default () => {
                   return (
                     <div className="schedule-match-day-item" key={key}>
                       <div className="match-time">{item.time}</div>
-                      <div className='match-teams'>
+                      <div className="match-teams">
                         <div className="team">
                           <div className="team-name-row">
                             {item.team_1.code}
