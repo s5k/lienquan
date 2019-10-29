@@ -169,7 +169,7 @@
   font-size: 0.5em;
   font-weight: 700;
   position: relative;
-  font-family: 'Massimo UltraLight';
+  /* font-family: 'Massimo UltraLight'; */
   text-transform: uppercase;
 }
 .match-teams .match-bo span.score {
