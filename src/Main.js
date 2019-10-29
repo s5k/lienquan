@@ -103,7 +103,7 @@ export default () => {
             />
           </div>
           <div className="play-game">
-            <a href="https://www.youtube.com">PLAY GAME</a>
+            <a href="https://ngame1137.onelink.me/jFUN/AIC2019">TRỞ LẠI GAME</a>
           </div>
         </Error>
       </Loading>
