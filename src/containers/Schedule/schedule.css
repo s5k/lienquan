@@ -253,6 +253,7 @@
   color: #ffc46f;
   opacity: 0.5;
   font-family: 'Massimo Bold';
+  text-transform: uppercase;
 }
 .standings ul li:nth-child(2) {
   border-left: 1px solid #ffc46f;
