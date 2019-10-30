@@ -209,6 +209,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  padding: 5em 0px;
 }
 .photo-video-items {
   width: 100%;
