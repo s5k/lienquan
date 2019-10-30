@@ -119,7 +119,7 @@ export default () => {
           ]}
           // afterChange={index => setTeamIndex(index)}
         >
-          {teams.map((item, key) => (
+          {teams.map((item, key) => ((item.code!=="")?(
             <div key={key} onClick={() => setTeamIndex(key)}>
               <div
                 className={
@@ -129,7 +129,7 @@ export default () => {
                 {item.code}
               </div>
             </div>
-          ))}
+          ):""))}
         </Slider>
       </div>
       <div className="scroll-down-menu">
