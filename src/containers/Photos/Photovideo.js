@@ -7,7 +7,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from 'react'
 
-import * as moment from 'moment'
+// import * as moment from 'moment'
 
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
@@ -52,11 +52,11 @@ export default () => {
             autoplaySpeed={5000}
           >
             {videos
-              .sort(
-                item =>
-                  moment(item.create_time, 'HH:mm:ss - DD/MM/YYYY').unix() >
-                  moment().unix()
-              )
+              // .sort(
+              //   item =>
+              //     moment(item.create_time, 'HH:mm:ss - DD/MM/YYYY').unix() >
+              //     moment().unix()
+              // )
               .map((item, key) => ((key < 3 ) ? (
                 <div key={key} onClick={() => toggleVideo(key)}>
                   <div className="video-heighlight-item">
@@ -81,11 +81,11 @@ export default () => {
         </div>
         <div className="video-other">
           {videos
-            .sort(
-              item =>
-                moment(item.create_time, 'HH:mm:ss - DD/MM/YYYY').unix() >
-                moment().unix()
-            )
+            // .sort(
+            //   item =>
+            //     moment(item.create_time, 'HH:mm:ss - DD/MM/YYYY').unix() >
+            //     moment().unix()
+            // )
             .map((item, key2) => (
               <div
                 className="video-other-item"

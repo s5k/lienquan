@@ -269,6 +269,7 @@
   width: 32%;
   border: 1px solid #ffc46f;
   margin-bottom: 2%;
+  background: #000;
 }
 .video-other-item:nth-child(3n+2) {
   margin-left: 2%;
@@ -382,6 +383,7 @@
   }
   .photovideopage {
     width: 90%;
+    padding: 5em 0px 7vh;
   }
   .video-heightlight-clip,
   .video-heightlight-text {
@@ -398,6 +400,7 @@
   }
   .photo-text .photo-text-content {
     font-size: 1.5em;
+    padding: 1.3em 1.3em .5em;
   }
   .photo-text .photo-text-content p.title-photo-menu {
     font-size: 2em;
