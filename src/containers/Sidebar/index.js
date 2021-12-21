@@ -6,9 +6,8 @@
  */
 
 import React, { useEffect } from 'react'
-
+import { useSelector, shallowEqual, useDispatch } from "react-redux";
 import { library } from '@fortawesome/fontawesome-svg-core'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import {
   faHome,
@@ -24,11 +23,11 @@ import {
   faArrowUp,
   faArrowDown
 } from '@fortawesome/free-solid-svg-icons'
-import { useStateValue } from '../../State'
 import NavItem from '../../components/NavItem'
 
 export default () => {
-  const [{ menu, is_mobile, COLLAPSE_SIDEBAR }, dispatch] = useStateValue()
+  const dispatch = useDispatch();
+  const {menus, is_mobile, COLLAPSE_SIDEBAR} = useSelector(state => state.app, shallowEqual);
 
   const menuClicking = () => {
     return is_mobile && dispatch({ type: 'COLLAPSE_SIDEBAR', payload: false })
@@ -102,7 +101,7 @@ export default () => {
         </div>
       </div>
       <ul>
-        {menu.map((item, key) => {
+        {menus.map((item, key) => {
           return (
             <NavItem to={item.link} key={key} exact>
               <div className="sidebar-item" onClick={() => menuClicking()}>

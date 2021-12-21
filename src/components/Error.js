@@ -6,13 +6,13 @@
 
 import React from 'react'
 
-export default ({ error, children }) => {
+export default ({ error, errorMessage, children }) => {
   return (
     <>
       {error !== false ? (
         <div className="text-center">
           <h1>Đã có lỗi xảy ra</h1>
-          <h3>{error}</h3>
+          <h3>{errorMessage}</h3>
         </div>
       ) : (
         children

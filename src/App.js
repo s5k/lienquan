@@ -5,15 +5,15 @@
  */
 
 import React from 'react'
+import { Provider } from "react-redux";
 import './App.css'
-import { StateProvider, initialState } from './State'
-import reducers from './reducers'
+import store from './store'
 import Main from './Main'
 
 export default function() {
   return (
-    <StateProvider initialState={initialState} reducer={reducers}>
+    <Provider store={store}>
       <Main />
-    </StateProvider>
+    </Provider>
   )
 }

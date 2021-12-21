@@ -5,8 +5,10 @@
  */
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useDispatch, useSelector, shallowEqual } from "react-redux";
+import { HOMEPAGE_FETCH_REQUESTED } from "../../store/homepage/reducers";
 import './homepage.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -20,10 +22,18 @@ import {
   faUsers,
   faArrowDown
 } from '@fortawesome/free-solid-svg-icons'
-import { useStateValue } from '../../State'
 
 export default () => {
-  const [{ params }] = useStateValue()
+  const {logo_src, introduce_text, watch_now_url, fetched} = useSelector(state => state.homepage, shallowEqual);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (!fetched) {
+      dispatch({
+        type: HOMEPAGE_FETCH_REQUESTED
+      })
+    }
+  }, [fetched, dispatch])
 
   library.add(
     fab,
@@ -36,28 +46,24 @@ export default () => {
     faArrowDown
   )
 
-  return (
+  return fetched && (
     <div className="homepage">
       <div className="home-intro">
         <img
-          src={'https://cdn.vn.garenanow.com/web/kg/aic2019/images/cup-aic.png'}
-          alt=">Cup Aic"
+          src={`${process.env.REACT_APP_API_SERVER}/${logo_src}`}
+          alt="Cup Aic"
           className="cup-aic"
         />
-        <p className="intro-content">
-          Arena of Valor International Championship (AIC) 2019, giải đấu thể thao điện tử quốc tế bộ môn Liên Quân Mobile được tổ chức bởi Garena và Tencent sẽ diễn ra tại Thái Lan từ 05/11 tới 24/11 với tổng giải thưởng gần 12 tỷ đồng. 12 đội tuyển tới từ 9 khu vực hàng đầu trên thế giới sẽ cùng nhau tranh tài tại một trong những giải eSports quốc tế có số tiền thưởng lớn nhất thế giới ở thể loại MOBA trên nền tảng di động. Đặc biệt lần đầu tiên trong lịch sử AIC, giải đấu 1v1 sẽ được tổ chức để các siêu sao hàng đầu thế giới trình diễn kỹ năng cá nhân thượng thừa.
-        </p>
-        {params['Watch Now'].value !== '' && (
-          <div className="watch-now">
-            <a
-              href={params['Watch Now'].value}
-              target="blank"
-              className="btn-watch-now"
-            >
-              <FontAwesomeIcon icon="circle" className="circle" /> TRỰC TIẾP
-            </a>
-          </div>
-        )}
+        <p className="intro-content">{ introduce_text }</p>
+        <div className="watch-now">
+          <a
+            href={watch_now_url}
+            target="blank"
+            className="btn-watch-now"
+          >
+            <FontAwesomeIcon icon="circle" className="circle" /> TRỰC TIẾP
+          </a>
+        </div>
       </div>
       <div className="home-menu">
         <div className="menu-item menu-schedule">
