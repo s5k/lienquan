@@ -12,11 +12,10 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faHome, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Homepage from './containers/Homepage/Homepage'
-// import Prize from './containers/Prize/Prize'
-// import Schedule from './containers/Schedule/Schedule'
-// import News from './containers/News/News'
+import Prize from './containers/Prize/Prize'
+import News from './containers/News/News'
 import Sidebar from './containers/Sidebar'
-// import NewPage from './containers/News/Newpage'
+import NewPage from './containers/News/Newpage'
 // import Events from './containers/Events/Events'
 // import Teams from './containers/Teams/Teams'
 // import Photos from './containers/Photos/Photos'
@@ -35,28 +34,11 @@ export default () => {
       <Loading loading={loading}>
         <Error error={error} errorMessage={error_message}>
           <Sidebar />
-          <div className="language">
-            <select className="select-language">
-              <option defaultValue="english">North America (English)</option>
-              <option defaultValue="vietnames">Vietnamese (Tiếng Việt)</option>
-            </select>
-            <div className="back-home">
-              <a href=".">
-                <div>
-                  <FontAwesomeIcon icon="home" />
-                </div>
-                <div className="home-left">
-                  <FontAwesomeIcon icon="arrow-left" /> HOME
-                </div>
-              </a>
-            </div>
-          </div>
           <div className="main">
             <Route exact path="/" component={Homepage} />
-            {/* <Route path="/prize" component={Prize} /> */}
-            {/* <Route path="/schedule" component={Schedule} /> */}
+            <Route path="/prize" component={Prize} />
 
-            {/* <Route
+            <Route
               path="/news"
               render={({ match: { url } }) => (
                 <>
@@ -64,7 +46,7 @@ export default () => {
                   <Route path={`${url}/:id`} component={NewPage} />
                 </>
               )}
-            /> */}
+            />
 
             {/* <Route path="/events" component={Events} />
             <Route path="/teams" component={Teams} />

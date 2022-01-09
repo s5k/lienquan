@@ -5,7 +5,7 @@
  */
 
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useRouteMatch } from 'react-router-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -17,27 +17,32 @@ import {
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import FsLightbox from 'fslightbox-react'
 import './news.css'
-import { useStateValue } from '../../State'
+import { shallowEqual, useDispatch, useSelector } from 'react-redux'
+import { NEWS_FETCH_REQUESTED } from 'store/news/reducers'
 
 export default () => {
-  const [paginate, setPaginate] = useState(2)
+  const dispatch = useDispatch();
+  const { posts, SEEMORE_CLICKING, fetched_posts } = useSelector(state => state.news, shallowEqual)
 
   let { url } = useRouteMatch()
-
-  const [{ posts, SEEMORE_CLICKING }, dispatch] = useStateValue()
-
-  library.add(fab, faArrowUp, faArrowDown, faCircle)
-
+  const [paginate, setPaginate] = useState(2)
   const [toggler] = useState(false)
+
+  useEffect(() => {
+    if (!fetched_posts) {
+      dispatch({type: NEWS_FETCH_REQUESTED})
+    }
+  }, [fetched_posts, dispatch])
 
   const showMore = () => {
     setPaginate(paginate + 4)
     dispatch({ type: 'SEEMORE_CLICKING' })
   }
 
-  return (
+  library.add(fab, faArrowUp, faArrowDown, faCircle)
+
+  return fetched_posts && (
     <div className="newspage">
       <div
         className={
@@ -73,25 +78,9 @@ export default () => {
                     </div>
                   </div>
                 </Link>
-                {/* <div
-                  className="watch-video"
-                  onClick={() => setToggler(!toggler)}
-                >
-                  <img
-                    src={
-                      'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/watch-video.png'
-                    }
-                    alt="watch video"
-                  />{' '}
-                  Xem video
-                </div> */}
               </div>
             ))}
         </Slider>
-        <FsLightbox
-          toggler={toggler}
-          sources={['https://www.youtube.com/watch?v=xshEZzpS4CQ']}
-        />
       </div>
       <div className="newspage-items">
         {posts
