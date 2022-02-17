@@ -5,7 +5,7 @@
  */
 
 /* eslint-disable jsx-a11y/alt-text */
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -15,14 +15,24 @@ import {
   faCircle
 } from '@fortawesome/free-solid-svg-icons'
 import './events.css'
-import { useStateValue } from '../../State'
+import { shallowEqual, useDispatch, useSelector } from 'react-redux'
+import { EVENTS_FETCH_REQUESTED } from 'store/events/reducers'
 
 export default () => {
-  const [{ events }] = useStateValue()
+  const {events, fetched} = useSelector(state => state.events, shallowEqual);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (!fetched) {
+      dispatch({
+        type: EVENTS_FETCH_REQUESTED
+      })
+    }
+  }, [fetched, dispatch]);
 
   library.add(fab, faArrowUp, faArrowDown, faCircle)
 
-  return (
+  return fetched && (
     <div className="eventspage">
       <div className="scroll-up-menu see-more-clicked">
         <Link to="/news">
@@ -41,10 +51,10 @@ export default () => {
             <a href={item.link} target="blank">
               <div className="events-item-content">
                 <div className="events-item-img">
-                  <img src={item.image} />
+                  <img src={`${process.env.REACT_APP_API_SERVER}/${item.thumbnail}`} />
                 </div>
                 <div className="events-item-text">
-                  <div className="events-item-text-title">{item.text}</div>
+                  <div className="events-item-text-title">{item.title}</div>
                 </div>
               </div>
             </a>
