@@ -19,6 +19,6 @@ Xem thêm chi tiết cách deploy [tại đây.](https://create-react-app.dev/do
 - [x] Prize page
 - [x] News page
 - [x] Events page
-- [x] Teams page
-- [x] Photos & Videos
+- [ ] Teams page
+- [ ] Photos & Videos
 - [ ] Change third party imgs to original
