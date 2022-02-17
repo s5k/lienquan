@@ -5,7 +5,7 @@
  */
 
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import Slider from 'react-slick'
@@ -22,15 +22,25 @@ import {
   faPlayCircle
 } from '@fortawesome/free-solid-svg-icons'
 import './teams.css'
-import { useStateValue } from '../../State'
+import { shallowEqual, useDispatch, useSelector } from 'react-redux'
+import { TEAMS_FETCH_REQUESTED } from 'store/teams/reducers'
 
 export default () => {
-  const [{ teams }] = useStateValue()
+  const {teams, fetched} = useSelector(state => state.teams, shallowEqual);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if(!fetched) {
+      dispatch({
+        type: TEAMS_FETCH_REQUESTED
+      })
+    }
+  }, [fetched, dispatch])
 
   const [teamIndex, setTeamIndex] = useState(0)
   library.add(fab, faArrowUp, faArrowDown, faCircle, faPlayCircle)
 
-  return (
+  return fetched && (
     <div className="teamspage">
       <div className="scroll-up-menu">
         <Link to="/events">
@@ -58,25 +68,25 @@ export default () => {
                   .map((member, keyChild) => (
                     <div key={keyChild}>
                       <div className="member-info">
-                        <img className="member-img" src={member.image} />
+                        <img className="member-img" src={`${process.env.REACT_APP_API_SERVER}/${member.image}`} />
                       </div>
                       <div className="member-info-text">
                         <img
                           className="member-lane"
-                          src={`https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/lane-${member.description
+                          src={`https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/lane-${member.lane
                             .split(' ')
                             .join('-')
                             .toLowerCase()}.png`}
                         />
                         <p className="member-name">{member.name}</p>
-                        <p className="lane-name">{member.description}</p>
+                        <p className="lane-name">{member.lane}</p>
                       </div>
                     </div>
                   ))}
               </Slider>
             </div>
             <div className="team-info">
-              <img className="logo-team" src={teams[teamIndex].logo} />
+              <img className="logo-team" src={`${process.env.REACT_APP_API_SERVER}/${teams[teamIndex].logo}`} />
               <div className="team-info-content">
                 <div className="title-team-name">{teams[teamIndex].name}</div>
                 <div className="team-area">{teams[teamIndex].region}</div>
