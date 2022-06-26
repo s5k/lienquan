@@ -41,7 +41,7 @@ export default () => {
         By {post.author} |{' '}
         {moment(
           post.create_time,
-          'HH:mm:ss - DD/MM/YYYY'
+          'YYYY-MM-DD HH:mm:ss'
         ).format('MMMM DD, YYYY')}
       </div>
       <div

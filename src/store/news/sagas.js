@@ -17,7 +17,7 @@ function* fetchNews() {
 function* fetchNewsDetail(action) {
     try {
         yield put({type: FETCH_STARTED})
-        const { data: res } = yield call(apiCall, "GET", "/news/" + action.newsId)
+        const { data: res } = yield call(apiCall, "GET", "/news/" + action.payload.id)
         yield put({type: NEWS_DETAIL_FETCH_SUCCEEDED, payload: res})
         yield put({type: FETCH_SUCCEESED})
     } catch(e) {

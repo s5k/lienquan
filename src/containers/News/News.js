@@ -96,7 +96,7 @@ export default () => {
                   <div className="news-item-text">
                     <div className="news-item-text-title">{item.title}</div>
                     <div className="news-item-text-day">
-                      {item.create_time.split(' - ')[1]}
+                      {item.create_time}
                     </div>
                   </div>
                 </div>
