@@ -37,12 +37,6 @@ const initialState = {
       link: '/prize'
     },
     {
-      id: 2,
-      name: 'Lịch thi đấu',
-      icon: schedule,
-      link: '/schedule'
-    },
-    {
       id: 3,
       name: 'Tin tức',
       icon: news,

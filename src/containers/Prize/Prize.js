@@ -36,7 +36,7 @@ export default () => {
         alt="Giải thưởng"
       />
       <div className="scroll-down-menu">
-        <Link to="/schedule">
+        <Link to="/news">
           <img
             src={
               'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/next-button.png'

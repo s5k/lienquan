@@ -67,12 +67,12 @@ export default () => {
       </div>
       <div className="home-menu">
         <div className="menu-item menu-schedule">
-          <Link to={'./schedule'}>
+          <Link to={'./prize'}>
             <img
               src={
                 'https://cdn.vn.garenanow.com/web/kg/aic2019/images/home-schedule.jpg'
               }
-              alt="menu-schedule"
+              alt="menu-prize"
             />
             <div className="menu-text">
               <div className="menu-icon">
@@ -80,10 +80,10 @@ export default () => {
                   src={
                     'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/schedule-acti.png'
                   }
-                  alt="schedule"
+                  alt="prize"
                 />
               </div>
-              <span>LỊCH THI ĐẤU</span>
+              <span>GIẢI THƯỞNG</span>
             </div>
           </Link>
         </div>

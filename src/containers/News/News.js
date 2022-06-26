@@ -51,7 +51,7 @@ export default () => {
             : 'scroll-up-menu'
         }
       >
-        <Link to="/schedule">
+        <Link to="/prize">
           <img
             src={
               'https://cdn.vn.garenanow.com/web/kg/aic2019/images/icons/prev-button.png'
