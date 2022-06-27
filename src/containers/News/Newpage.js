@@ -66,7 +66,7 @@ export default () => {
                       <div className="news-item-img">
                         <img
                           src={
-                            item.thumbnail
+                            `${process.env.REACT_APP_API_SERVER}/${item.thumbnail}`
                           }
                         />
                       </div>

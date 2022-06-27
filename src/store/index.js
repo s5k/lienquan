@@ -6,6 +6,7 @@ import homepageReducers from "./homepage/reducers";
 import newsReducers from "./news/reducers";
 import eventsReducers from "./events/reducers";
 import teamsReducers from "./teams/reducers";
+import prizeReducers from "./prize/reducers";
 
 // create the saga middleware
 const sagaMiddleware = createSagaMiddleware()
@@ -16,7 +17,8 @@ export const store = createStore(
     homepage: homepageReducers,
     news: newsReducers,
     events: eventsReducers,
-    teams: teamsReducers
+    teams: teamsReducers,
+    prize: prizeReducers,
   }),
   applyMiddleware(sagaMiddleware)
 )

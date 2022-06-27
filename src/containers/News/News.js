@@ -69,7 +69,7 @@ export default () => {
               <div key={key} className="news-top-item-content">
                 <Link to={`${url}/${item.id}`}>
                   <div className="news-top-item">
-                    <img src={item.thumbnail} alt="newstop" />
+                    <img src={`${process.env.REACT_APP_API_SERVER}/${item.thumbnail}`} alt="newstop" />
                     <div className="news-top-text">
                       <p className="news-top-title">{item.title}</p>
                       <p className="news-top-des">
@@ -91,7 +91,7 @@ export default () => {
               <Link to={`${url}/${item.id}`}>
                 <div className="news-item-content">
                   <div className="news-item-img">
-                    <img src={item.thumbnail} />
+                    <img src={`${process.env.REACT_APP_API_SERVER}/${item.thumbnail}`} />
                   </div>
                   <div className="news-item-text">
                     <div className="news-item-text-title">{item.title}</div>
