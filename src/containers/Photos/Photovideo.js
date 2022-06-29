@@ -15,11 +15,12 @@ import 'slick-carousel/slick/slick-theme.css'
 import FsLightbox from 'fslightbox-react'
 import Backhome from '../../components/Backhome'
 import './photos.css'
-import { useStateValue } from '../../State'
+import { shallowEqual, useDispatch, useSelector } from 'react-redux'
+import { MEDIA_FETCH_REQUESTED } from 'store/media/reducers'
 
 export default () => {
-  const [{ videos }, dispatch] = useStateValue()
-
+  const dispatch = useDispatch();
+  const {fetched, videos} = useSelector(state => state.media, shallowEqual)
   const [state, setState] = useState({ toggler: false, imageVideo: 0 })
 
   const toggleVideo = index => {
@@ -27,19 +28,22 @@ export default () => {
   }
 
   useEffect(() => {
-    dispatch({
-      type: 'COLLAPSE_SIDEBAR',
-      payload: false
-    })
-  }, [dispatch])
+    if (!fetched) {
+      dispatch({type: MEDIA_FETCH_REQUESTED})
+    } else {
+      dispatch({
+        type: 'COLLAPSE_SIDEBAR',
+        payload: false
+      })
+    }
+  }, [dispatch, fetched])
 
-  return (
+  return fetched && (
     <div className="photovideopage">
       <Backhome />
       <FsLightbox
         toggler={state.toggler === true}
         sources={[videos[state.imageVideo].link]}
-        slide={0}
       />
       <div className="photo-video-items">
         <div className="video-heighlight">
@@ -52,11 +56,6 @@ export default () => {
             autoplaySpeed={5000}
           >
             {videos
-              // .sort(
-              //   item =>
-              //     moment(item.create_time, 'HH:mm:ss - DD/MM/YYYY').unix() >
-              //     moment().unix()
-              // )
               .map((item, key) => ((key < 3 ) ? (
                 <div key={key} onClick={() => toggleVideo(key)}>
                   <div className="video-heighlight-item">
@@ -81,11 +80,6 @@ export default () => {
         </div>
         <div className="video-other">
           {videos
-            // .sort(
-            //   item =>
-            //     moment(item.create_time, 'HH:mm:ss - DD/MM/YYYY').unix() >
-            //     moment().unix()
-            // )
             .map((item, key2) => (
               <div
                 className="video-other-item"

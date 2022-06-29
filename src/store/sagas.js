@@ -4,6 +4,7 @@ import newsSagas from "./news/sagas";
 import eventsSagas from "./events/sagas";
 import teamsSagas from "./teams/sagas";
 import prizeSagas from "./prize/sagas";
+import mediaSagas from "./media/sagas";
 
 export default function* () {
   yield all([
@@ -11,6 +12,7 @@ export default function* () {
     fork(newsSagas),
     fork(eventsSagas),
     fork(teamsSagas),
-    fork(prizeSagas)
+    fork(prizeSagas),
+    fork(mediaSagas),
   ]);
 }

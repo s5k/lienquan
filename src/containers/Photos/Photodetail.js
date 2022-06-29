@@ -10,11 +10,12 @@ import React, { useState, useEffect } from 'react'
 import FsLightbox from 'fslightbox-react'
 import Backhome from '../../components/Backhome'
 import './photos.css'
-import { useStateValue } from '../../State'
+import { shallowEqual, useDispatch, useSelector } from 'react-redux'
+import { MEDIA_FETCH_REQUESTED } from 'store/media/reducers'
 
 export default () => {
-  const [{ images }, dispatch] = useStateValue()
-
+  const dispatch = useDispatch();
+  const {photos, fetched} = useSelector(state => state.media, shallowEqual)
   const [index, setIndex] = useState(0)
   const [toggler, setToggler] = useState(false)
   const [firstTime, setFirstTime] = useState(true)
@@ -26,37 +27,41 @@ export default () => {
   }
 
   useEffect(() => {
-    dispatch({
-      type: 'COLLAPSE_SIDEBAR',
-      payload: false
-    })
+    if (!fetched) {
+      dispatch({type: MEDIA_FETCH_REQUESTED})
+    } else {
+      dispatch({
+        type: 'COLLAPSE_SIDEBAR',
+        payload: false
+      })
+    }
 
     if (toggler === true && firstTime === false) setToggler(!toggler)
 
     if (firstTime === true) {
       setFirstTime(false)
     }
-  }, [dispatch, toggler, firstTime])
+  }, [dispatch, fetched, toggler, firstTime])
 
-  return (
+  return fetched && (
     <div className="photodetailpage">
       <Backhome />
       {firstTime === false && (
         <FsLightbox
           toggler={toggler}
-          sources={images[index].images}
+          sources={photos[index].images}
           type="image"
           key={index}
         />
       )}
       <div className="photo-details">
-        {images.map((item, key) => (
+        {photos.map((item, key) => (
           <div
             className="photo-details-item"
             key={key}
             onClick={() => toggleVideo(key)}
           >
-            <img src={item.images[0]} alt="facebook" />
+            <img src={`${item.images[0]}`} alt="facebook" />
             <div className="photo-text">
               <p className="photo-details-item-title">{item.name}</p>
               <p className="photo-details-item-total">

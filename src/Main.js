@@ -18,11 +18,11 @@ import Sidebar from './containers/Sidebar'
 import NewPage from './containers/News/Newpage'
 import Events from './containers/Events/Events'
 import Teams from './containers/Teams/Teams'
-// import Photos from './containers/Photos/Photos'
+import Photos from './containers/Photos/Photos'
 import Loading from './components/Loading'
 import Error from './components/Error'
-// import Photodetail from './containers/Photos/Photodetail'
-// import PhotoVideo from './containers/Photos/Photovideo'
+import Photodetail from './containers/Photos/Photodetail'
+import PhotoVideo from './containers/Photos/Photovideo'
 
 
 export default () => {
@@ -50,7 +50,7 @@ export default () => {
 
             <Route path="/events" component={Events} />
             <Route path="/teams" component={Teams} />
-            {/* <Route
+            <Route
               path="/media"
               render={({ match: { url } }) => (
                 <>
@@ -59,7 +59,7 @@ export default () => {
                   <Route path={`${url}/videos`} component={PhotoVideo} />
                 </>
               )}
-            /> */}
+            />
           </div>
           <div className="play-game">
             <a href="https://ngame1137.onelink.me/jFUN/AIC2019">TRỞ LẠI GAME</a>
